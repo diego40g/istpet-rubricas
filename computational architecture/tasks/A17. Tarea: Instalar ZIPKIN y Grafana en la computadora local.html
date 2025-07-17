@@ -1,0 +1,99 @@
+<nav aria-label="Page navigation example">
+    <ul class="pagination">
+        <li class="page-item"><a class="page-link" href="https://istpetonline.edu.ec/course/view.php?id=160#section-1"><i class="fa fa-chevron-circle-left" aria-hidden="true"></i>&nbsp;Regresar</a></li>
+    </ul>
+</nav>
+<svg id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1920 332">
+    <image width="1920" height="332" xlink:href="https://istpetonline.edu.ec/draftfile.php/54951/user/draft/654213724/banner-tarea.jpg"></image>
+    <text transform="translate(235.44 208.47)" style="fill:#fff; font-family:OpenSans-Bold, 'Open Sans'; font-size:35px; font-weight:700;">
+        <tspan x="0" y="0">Realizar un informe&nbsp;</tspan>
+    </text>
+</svg>
+<p></p>
+<div class="caja" role="alert">
+    <div class="caja" role="alert" style="font-family: sans-serif; margin: 0; background: #f9f9f9; padding: 0;">
+        <h4 style="color: #1f3864;">📝 A17. Tarea: Instalar ZIPKIN y Grafana en la computadora local</h4>
+
+        <div class="instrucciones" style="background: #eaf6fb; padding: 15px; border-radius: 8px; margin-bottom: 20px;">
+            <h5 style="color: #1f3864;">🎯 Objetivo</h5>
+            <p>Instalar y configurar correctamente ZIPKIN (para trazabilidad de servicios distribuidos) y Grafana (para monitoreo de métricas) en la computadora local, asegurando que ambas herramientas funcionen de forma independiente y con servicios básicos visibles.</p>
+            <h5 style="color: #1f3864;">📌 Instrucciones para el estudiante</h5>
+            <ul style="margin-top: 0;">
+                <li>Instala ZIPKIN en tu equipo local. Puedes usar Docker, JAR ejecutable o paquete según tu sistema operativo.</li>
+                <li>Asegúrate de que el panel web de ZIPKIN esté accesible (usualmente en <code>http://localhost:9411</code>).</li>
+                <li>Verifica que puedas ver datos o endpoints en la interfaz (puedes enviar datos con <code>curl</code> o un cliente de prueba).</li>
+                <li>Instala Grafana en la misma máquina.</li>
+                <li>Asegúrate de acceder al panel (<code>http://localhost:3000</code> por defecto).</li>
+                <li>Crea un panel básico o conecta alguna fuente de datos de prueba (influxDB, Prometheus o fuente nativa de ejemplo).</li>
+                <li>Documenta el proceso:
+                    <ul>
+                        <li>Indica los comandos utilizados, pasos de instalación y configuración.</li>
+                        <li>Incluye capturas de pantalla que demuestren que ZIPKIN y Grafana están funcionando.</li>
+                        <li>Describe brevemente qué función cumple cada herramienta.</li>
+                    </ul>
+                </li>
+                <li><strong>Formato de entrega:</strong> Documento en PDF o presentación bien estructurada con texto, imágenes y evidencia.</li>
+                <li><strong>Opcional:</strong> puedes enviar también un breve video (1-2 minutos) mostrando el funcionamiento.</li>
+                <li><strong>Fecha de entrega:</strong> [Coloca aquí la fecha correspondiente].</li>
+            </ul>
+        </div>
+
+        <div class="entrega" style="background: #eaf6fb; padding: 15px; border-radius: 8px; margin-bottom: 20px;">
+            <strong>Entrega:</strong> Sube tu archivo a la plataforma antes de la fecha límite. Asegúrate de que esté bien organizado y sin errores ortográficos.
+        </div>
+
+        <h5 style="color: #1f3864;">📊 Rúbrica de evaluación</h5>
+        <table class="rubrica" style="width:100%; border-collapse: collapse; font-family: sans-serif; margin-top: 20px;">
+            <tbody>
+                <tr>
+                    <th style="border: 1px solid black; padding: 8px; background-color: #1f3864; color: white; text-align: center;">Criterio</th>
+                    <th style="border: 1px solid black; padding: 8px; background-color: #1f3864; color: white; text-align: center;">Excelente <br> 10 pts</th>
+                    <th style="border: 1px solid black; padding: 8px; background-color: #1f3864; color: white; text-align: center;">Muy Bueno <br> 8 pts</th>
+                    <th style="border: 1px solid black; padding: 8px; background-color: #1f3864; color: white; text-align: center;">Bueno <br> 6 pts</th>
+                    <th style="border: 1px solid black; padding: 8px; background-color: #1f3864; color: white; text-align: center;">Regular <br> 4 pts</th>
+                    <th style="border: 1px solid black; padding: 8px; background-color: #1f3864; color: white; text-align: center;">Deficiente <br> 2 pts</th>
+                </tr>
+                <tr>
+                    <td class="criterio" style="text-align: left; background-color: #cfaa4f; font-weight: bold;">Instalación y ejecución de ZIPKIN <br> 2.5 pts</td>
+                    <td style="border: 1px solid black; padding: 8px; background-color: #FEF7E6;">ZIPKIN instalado, configurado y accesible con datos de prueba visibles.<br><br>2.5 pts</td>
+                    <td style="border: 1px solid black; padding: 8px; background-color: #FEF7E6;">ZIPKIN instalado y ejecutándose, sin datos de prueba.<br><br>2.0 pts</td>
+                    <td style="border: 1px solid black; padding: 8px; background-color: #FEF7E6;">ZIPKIN instalado pero con errores menores o sin prueba clara.<br><br>1.5 pts</td>
+                    <td style="border: 1px solid black; padding: 8px; background-color: #FEF7E6;">Instalación incompleta o ejecutable sin acceder a interfaz.<br><br>1.0 pts</td>
+                    <td style="border: 1px solid black; padding: 8px; background-color: #FEF7E6;">No se logra instalar o no hay evidencia de funcionamiento.<br><br>0.5 pts</td>
+                </tr>
+                <tr>
+                    <td class="criterio" style="text-align: left; background-color: #cfaa4f; font-weight: bold;">Instalación y ejecución de Grafana <br> 2.5 pts</td>
+                    <td style="border: 1px solid black; padding: 8px; background-color: #F0F5FD;">Grafana instalado, panel funcional creado o fuente conectada correctamente.<br><br>2.5 pts</td>
+                    <td style="border: 1px solid black; padding: 8px; background-color: #F0F5FD;">Grafana instalado y accesible, sin panel o datos conectados.<br><br>2.0 pts</td>
+                    <td style="border: 1px solid black; padding: 8px; background-color: #F0F5FD;">Grafana instalado con errores menores en la configuración.<br><br>1.5 pts</td>
+                    <td style="border: 1px solid black; padding: 8px; background-color: #F0F5FD;">Instalación parcial o sin evidencia funcional.<br><br>1.0 pts</td>
+                    <td style="border: 1px solid black; padding: 8px; background-color: #F0F5FD;">No se instala Grafana o no se ejecuta.<br><br>0.5 pts</td>
+                </tr>
+                <tr>
+                    <td class="criterio" style="text-align: left; background-color: #cfaa4f; font-weight: bold;">Documentación del proceso <br> 2 pts</td>
+                    <td style="border: 1px solid black; padding: 8px; background-color: #FEF7E6;">Todos los pasos descritos claramente, comandos explicados y evidencia completa.<br><br>2.0 pts</td>
+                    <td style="border: 1px solid black; padding: 8px; background-color: #FEF7E6;">Pasos bien documentados, aunque con algunas omisiones menores.<br><br>1.6 pts</td>
+                    <td style="border: 1px solid black; padding: 8px; background-color: #FEF7E6;">Documentación aceptable, pero poco detallada o desordenada.<br><br>1.2 pts</td>
+                    <td style="border: 1px solid black; padding: 8px; background-color: #FEF7E6;">Documentación incompleta, con errores o sin capturas claras.<br><br>0.8 pts</td>
+                    <td style="border: 1px solid black; padding: 8px; background-color: #FEF7E6;">No documenta o presenta evidencia irrelevante.<br><br>0.4 pts</td>
+                </tr>
+                <tr>
+                    <td class="criterio" style="text-align: left; background-color: #cfaa4f; font-weight: bold;">Explicación funcional de ZIPKIN y Grafana <br> 2 pts</td>
+                    <td style="border: 1px solid black; padding: 8px; background-color: #F0F5FD;">Describe claramente la utilidad y función de ambas herramientas.<br><br>2.0 pts</td>
+                    <td style="border: 1px solid black; padding: 8px; background-color: #F0F5FD;">Describe bien, aunque con imprecisiones menores.<br><br>1.6 pts</td>
+                    <td style="border: 1px solid black; padding: 8px; background-color: #F0F5FD;">Descripción superficial o técnica poco clara.<br><br>1.2 pts</td>
+                    <td style="border: 1px solid black; padding: 8px; background-color: #F0F5FD;">Explicación confusa o incompleta.<br><br>0.8 pts</td>
+                    <td style="border: 1px solid black; padding: 8px; background-color: #F0F5FD;">No explica o da información incorrecta sobre las herramientas.<br><br>0.4 pts</td>
+                </tr>
+                <tr>
+                    <td class="criterio" style="text-align: left; background-color: #cfaa4f; font-weight: bold;">Presentación general del trabajo <br> 1 pt</td>
+                    <td style="border: 1px solid black; padding: 8px; background-color: #FEF7E6;">Documento muy bien organizado, limpio, sin errores ortográficos.<br><br>1.0 pt</td>
+                    <td style="border: 1px solid black; padding: 8px; background-color: #FEF7E6;">Buena presentación con pequeños errores de formato.<br><br>0.8 pt</td>
+                    <td style="border: 1px solid black; padding: 8px; background-color: #FEF7E6;">Presentación básica pero comprensible.<br><br>0.6 pt</td>
+                    <td style="border: 1px solid black; padding: 8px; background-color: #FEF7E6;">Trabajo desordenado o con múltiples errores.<br><br>0.4 pt</td>
+                    <td style="border: 1px solid black; padding: 8px; background-color: #FEF7E6;">Presentación deficiente o ilegible.<br><br>0.2 pt</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

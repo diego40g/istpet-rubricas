@@ -1,0 +1,108 @@
+<nav aria-label="Page navigation example">
+    <ul class="pagination">
+        <li class="page-item"><a class="page-link" href="https://istpetonline.edu.ec/course/view.php?id=160#section-1"><i class="fa fa-chevron-circle-left" aria-hidden="true"></i>&nbsp;Regresar</a></li>
+    </ul>
+</nav>
+<svg id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1920 332">
+    <image width="1920" height="332" xlink:href="https://istpetonline.edu.ec/draftfile.php/54951/user/draft/654213724/banner-tarea.jpg"></image>
+    <text transform="translate(235.44 208.47)" style="fill:#fff; font-family:OpenSans-Bold, 'Open Sans'; font-size:35px; font-weight:700;">
+        <tspan x="0" y="0">Realizar un informe&nbsp;</tspan>
+    </text>
+</svg>
+<p></p>
+<div class="caja" role="alert">
+    <div class="caja" role="alert" style="font-family: sans-serif; margin: 0; background: #f9f9f9; padding: 0;">
+        <h4 style="color: #1f3864;">📝 A18. Tarea: Implementar dashboard para obtener los datos del local de ZIPKIN y Grafana</h4>
+
+        <div class="instrucciones" style="background: #eaf6fb; padding: 15px; border-radius: 8px; margin-bottom: 20px;">
+            <h5 style="color: #1f3864;">🎯 Objetivo de la actividad</h5>
+            <p>Configurar un dashboard funcional en Grafana que consuma datos de origen local generados por ZIPKIN o mediante una fuente de datos simulada, permitiendo visualizar información relevante de trazas o métricas del sistema.</p>
+            <h5 style="color: #1f3864;">📌 Instrucciones para el estudiante</h5>
+            <ul style="margin-top: 0;">
+                <li>Verifica que ZIPKIN y Grafana estén correctamente instalados y en funcionamiento en tu máquina local.</li>
+                <li>En Grafana, realiza la conexión con una fuente de datos adecuada para representar trazas u observabilidad:
+                    <ul>
+                        <li>Puedes integrar Prometheus, Jaeger o utilizar archivos JSON si es necesario.</li>
+                        <li>ZIPKIN no se conecta directamente a Grafana, por lo que puedes utilizar fuentes compatibles (Prometheus, Elasticsearch, InfluxDB, etc.) que reciban datos de ZIPKIN o emulen el comportamiento.</li>
+                    </ul>
+                </li>
+                <li>Crea un dashboard personalizado en Grafana que muestre al menos 3 paneles diferentes, por ejemplo:
+                    <ul>
+                        <li>Latencia de las solicitudes</li>
+                        <li>Tiempos de respuesta por servicio</li>
+                        <li>Flujo de trazas</li>
+                    </ul>
+                </li>
+                <li>Cada panel debe tener:
+                    <ul>
+                        <li>Título claro</li>
+                        <li>Métrica o consulta adecuada</li>
+                        <li>Visualización correcta (gráfica, tabla, histograma, etc.)</li>
+                    </ul>
+                </li>
+                <li>Adjunta evidencia del dashboard funcionando con capturas de pantalla.</li>
+                <li>Documenta brevemente cómo lograste conectar la fuente de datos y configurar el dashboard.</li>
+                <li><strong>Formato de entrega:</strong> Documento PDF o presentación con capturas, explicaciones técnicas y resultados.</li>
+                <li><strong>Fecha de entrega:</strong> [Agrega aquí la fecha correspondiente].</li>
+            </ul>
+        </div>
+
+        <div class="entrega" style="background: #eaf6fb; padding: 15px; border-radius: 8px; margin-bottom: 20px;">
+            <strong>Entrega:</strong> Sube tu archivo a la plataforma antes de la fecha límite. Asegúrate de que esté bien organizado y sin errores ortográficos.
+        </div>
+
+        <h5 style="color: #1f3864;">📊 Rúbrica de evaluación</h5>
+        <table class="rubrica" style="width:100%; border-collapse: collapse; font-family: sans-serif; margin-top: 20px;">
+            <tbody>
+                <tr>
+                    <th style="border: 1px solid black; padding: 8px; background-color: #1f3864; color: white; text-align: center;">Criterio</th>
+                    <th style="border: 1px solid black; padding: 8px; background-color: #1f3864; color: white; text-align: center;">Excelente <br> 10 pts</th>
+                    <th style="border: 1px solid black; padding: 8px; background-color: #1f3864; color: white; text-align: center;">Muy Bueno <br> 8 pts</th>
+                    <th style="border: 1px solid black; padding: 8px; background-color: #1f3864; color: white; text-align: center;">Bueno <br> 6 pts</th>
+                    <th style="border: 1px solid black; padding: 8px; background-color: #1f3864; color: white; text-align: center;">Regular <br> 4 pts</th>
+                    <th style="border: 1px solid black; padding: 8px; background-color: #1f3864; color: white; text-align: center;">Deficiente <br> 2 pts</th>
+                </tr>
+                <tr>
+                    <td class="criterio" style="text-align: left; background-color: #cfaa4f; font-weight: bold;">Conectividad con fuente de datos <br> 2.5 pts</td>
+                    <td style="border: 1px solid black; padding: 8px; background-color: #FEF7E6;">Fuente de datos correctamente conectada y funcional (con datos visibles).<br><br>2.5 pts</td>
+                    <td style="border: 1px solid black; padding: 8px; background-color: #FEF7E6;">Fuente conectada, pero con datos limitados o poca estabilidad.<br><br>2.0 pts</td>
+                    <td style="border: 1px solid black; padding: 8px; background-color: #FEF7E6;">Fuente conectada con errores menores o sin datos reales.<br><br>1.5 pts</td>
+                    <td style="border: 1px solid black; padding: 8px; background-color: #FEF7E6;">Conexión parcial o sin pruebas funcionales.<br><br>1.0 pts</td>
+                    <td style="border: 1px solid black; padding: 8px; background-color: #FEF7E6;">No se conecta a ninguna fuente o configuración incorrecta.<br><br>0.5 pts</td>
+                </tr>
+                <tr>
+                    <td class="criterio" style="text-align: left; background-color: #cfaa4f; font-weight: bold;">Diseño del dashboard en Grafana <br> 2.5 pts</td>
+                    <td style="border: 1px solid black; padding: 8px; background-color: #F0F5FD;">Dashboard con 3 o más paneles bien configurados, con visualizaciones adecuadas.<br><br>2.5 pts</td>
+                    <td style="border: 1px solid black; padding: 8px; background-color: #F0F5FD;">Dashboard funcional con 2 o más paneles útiles.<br><br>2.0 pts</td>
+                    <td style="border: 1px solid black; padding: 8px; background-color: #F0F5FD;">Dashboard básico con paneles genéricos o poco informativos.<br><br>1.5 pts</td>
+                    <td style="border: 1px solid black; padding: 8px; background-color: #F0F5FD;">Dashboard incompleto, con errores de visualización.<br><br>1.0 pts</td>
+                    <td style="border: 1px solid black; padding: 8px; background-color: #F0F5FD;">No se presenta el dashboard o no funciona.<br><br>0.5 pts</td>
+                </tr>
+                <tr>
+                    <td class="criterio" style="text-align: left; background-color: #cfaa4f; font-weight: bold;">Interpretación de métricas o trazas <br> 2 pts</td>
+                    <td style="border: 1px solid black; padding: 8px; background-color: #FEF7E6;">Cada panel tiene métricas relevantes y bien interpretadas.<br><br>2.0 pts</td>
+                    <td style="border: 1px solid black; padding: 8px; background-color: #FEF7E6;">Métricas entendibles con leves omisiones.<br><br>1.6 pts</td>
+                    <td style="border: 1px solid black; padding: 8px; background-color: #FEF7E6;">Métricas poco detalladas o con interpretación mínima.<br><br>1.2 pts</td>
+                    <td style="border: 1px solid black; padding: 8px; background-color: #FEF7E6;">Información poco clara o sin relación con los paneles.<br><br>0.8 pts</td>
+                    <td style="border: 1px solid black; padding: 8px; background-color: #FEF7E6;">No se interpreta ninguna métrica correctamente.<br><br>0.4 pts</td>
+                </tr>
+                <tr>
+                    <td class="criterio" style="text-align: left; background-color: #cfaa4f; font-weight: bold;">Documentación del proceso <br> 2 pts</td>
+                    <td style="border: 1px solid black; padding: 8px; background-color: #F0F5FD;">Documentación clara, ordenada y completa (pasos, herramientas, capturas).<br><br>2.0 pts</td>
+                    <td style="border: 1px solid black; padding: 8px; background-color: #F0F5FD;">Documentación clara con pequeñas omisiones.<br><br>1.6 pts</td>
+                    <td style="border: 1px solid black; padding: 8px; background-color: #F0F5FD;">Documentación básica, con explicaciones resumidas.<br><br>1.2 pts</td>
+                    <td style="border: 1px solid black; padding: 8px; background-color: #F0F5FD;">Documentación confusa o incompleta.<br><br>0.8 pts</td>
+                    <td style="border: 1px solid black; padding: 8px; background-color: #F0F5FD;">No hay documentación o es irrelevante.<br><br>0.4 pts</td>
+                </tr>
+                <tr>
+                    <td class="criterio" style="text-align: left; background-color: #cfaa4f; font-weight: bold;">Presentación general del trabajo <br> 1 pt</td>
+                    <td style="border: 1px solid black; padding: 8px; background-color: #FEF7E6;">Presentación profesional, sin errores ortográficos, con estructura lógica.<br><br>1.0 pt</td>
+                    <td style="border: 1px solid black; padding: 8px; background-color: #FEF7E6;">Presentación clara con pequeños errores formales.<br><br>0.8 pt</td>
+                    <td style="border: 1px solid black; padding: 8px; background-color: #FEF7E6;">Presentación básica, pero legible y coherente.<br><br>0.6 pt</td>
+                    <td style="border: 1px solid black; padding: 8px; background-color: #FEF7E6;">Presentación poco cuidada, con errores frecuentes.<br><br>0.4 pt</td>
+                    <td style="border: 1px solid black; padding: 8px; background-color: #FEF7E6;">Presentación deficiente o desorganizada.<br><br>0.2 pt</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

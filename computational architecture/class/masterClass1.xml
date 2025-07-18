@@ -1,0 +1,162 @@
+<?xml version="1.0" ?>
+<quiz>
+  <!-- Pregunta 1 -->
+  <question type="multichoice">
+    <name>
+      <text>Objetivo de la Arquitectura Computacional</text>
+    </name>
+    <questiontext format="html">
+      <text>¿Cuál es el objetivo principal de la Arquitectura Computacional?</text>
+    </questiontext>
+    <defaultgrade>2</defaultgrade>
+    <penalty>0.5</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="0" format="html">
+      <text>Diseñar software de entretenimiento</text>
+      <feedback><text/></feedback>
+    </answer>
+    <answer fraction="100" format="html">
+      <text>Estudiar la estructura y evolución de los sistemas de cómputo</text>
+      <feedback><text/></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>Crear redes sociales</text>
+      <feedback><text/></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>Optimizar el uso de internet</text>
+      <feedback><text/></feedback>
+    </answer>
+  </question>
+
+  <!-- Pregunta 2 -->
+  <question type="multichoice">
+    <name>
+      <text>Elementos de un sistema informático moderno</text>
+    </name>
+    <questiontext format="html">
+      <text>¿Qué elementos componen un sistema informático moderno?</text>
+    </questiontext>
+    <defaultgrade>2</defaultgrade>
+    <penalty>0.5</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="0" format="html">
+      <text>CPU, impresora y navegador</text>
+      <feedback><text/></feedback>
+    </answer>
+    <answer fraction="100" format="html">
+      <text>Unidad central de procesamiento, memoria y dispositivos de entrada/salida</text>
+      <feedback><text/></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>Monitor, teclado y mouse</text>
+      <feedback><text/></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>Software, redes y periféricos</text>
+      <feedback><text/></feedback>
+    </answer>
+  </question>
+
+  <!-- Pregunta 3 -->
+  <question type="multichoice">
+    <name>
+      <text>Fórmula Hardware + Software</text>
+    </name>
+    <questiontext format="html">
+      <text>¿Qué representa la fórmula “Hardware + Software = Eficiencia”?</text>
+    </questiontext>
+    <defaultgrade>2</defaultgrade>
+    <penalty>0.5</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="0" format="html">
+      <text>La necesidad de tener solo hardware</text>
+      <feedback><text/></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>La importancia de los videojuegos</text>
+      <feedback><text/></feedback>
+    </answer>
+    <answer fraction="100" format="html">
+      <text>La integración de componentes para un rendimiento óptimo</text>
+      <feedback><text/></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>La evolución de los sistemas operativos</text>
+      <feedback><text/></feedback>
+    </answer>
+  </question>
+
+  <!-- Pregunta 4 -->
+  <question type="multichoice">
+    <name>
+      <text>Herramienta visual para evolución de la arquitectura</text>
+    </name>
+    <questiontext format="html">
+      <text>¿Qué herramienta visual se sugiere para mostrar la evolución de la arquitectura computacional?</text>
+    </questiontext>
+    <defaultgrade>2</defaultgrade>
+    <penalty>0.5</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="0" format="html">
+      <text>Lista de bullets</text>
+      <feedback><text/></feedback>
+    </answer>
+    <answer fraction="100" format="html">
+      <text>Línea de tiempo gráfica</text>
+      <feedback><text/></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>Tabla comparativa</text>
+      <feedback><text/></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>Mapa mental</text>
+      <feedback><text/></feedback>
+    </answer>
+  </question>
+
+  <!-- Pregunta 5 -->
+  <question type="multichoice">
+    <name>
+      <text>Recorrido histórico de la arquitectura de computadoras</text>
+    </name>
+    <questiontext format="html">
+      <text>¿Qué se destaca en el recorrido histórico de la arquitectura de computadoras?</text>
+    </questiontext>
+    <defaultgrade>2</defaultgrade>
+    <penalty>0.5</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="0" format="html">
+      <text>El desarrollo de videojuegos</text>
+      <feedback><text/></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>La aparición de redes sociales</text>
+      <feedback><text/></feedback>
+    </answer>
+    <answer fraction="100" format="html">
+      <text>Los hitos tecnológicos y tendencias de diseño</text>
+      <feedback><text/></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>La creación de lenguajes de programación</text>
+      <feedback><text/></feedback>
+    </answer>
+  </question>
+</quiz>

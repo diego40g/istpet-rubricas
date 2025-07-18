@@ -1,0 +1,162 @@
+<?xml version="1.0" ?>
+<quiz>
+  <!-- Pregunta 1 -->
+  <question type="multichoice">
+    <name>
+      <text>Objetivo del mantenimiento preventivo</text>
+    </name>
+    <questiontext format="html">
+      <text>¿Cuál es el objetivo del mantenimiento preventivo?</text>
+    </questiontext>
+    <defaultgrade>2</defaultgrade>
+    <penalty>0.5</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="0" format="html">
+      <text>Reparar fallos después de que ocurren</text>
+      <feedback><text/></feedback>
+    </answer>
+    <answer fraction="100" format="html">
+      <text>Anticipar posibles fallos antes de que ocurran</text>
+      <feedback><text/></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>Ignorar problemas menores</text>
+      <feedback><text/></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>Aumentar el consumo energético</text>
+      <feedback><text/></feedback>
+    </answer>
+  </question>
+
+  <!-- Pregunta 2 -->
+  <question type="multichoice">
+    <name>
+      <text>Modalidad de soporte técnico urgente</text>
+    </name>
+    <questiontext format="html">
+      <text>¿Qué modalidad de soporte técnico se adapta mejor a situaciones urgentes y a distancia?</text>
+    </questiontext>
+    <defaultgrade>2</defaultgrade>
+    <penalty>0.5</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="0" format="html">
+      <text>Presencial</text>
+      <feedback><text/></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>Híbrido</text>
+      <feedback><text/></feedback>
+    </answer>
+    <answer fraction="100" format="html">
+      <text>Remoto</text>
+      <feedback><text/></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>Manual</text>
+      <feedback><text/></feedback>
+    </answer>
+  </question>
+
+  <!-- Pregunta 3 -->
+  <question type="multichoice">
+    <name>
+      <text>Herramienta en mantenimiento lógico</text>
+    </name>
+    <questiontext format="html">
+      <text>¿Qué herramienta se utiliza en el mantenimiento lógico?</text>
+    </questiontext>
+    <defaultgrade>2</defaultgrade>
+    <penalty>0.5</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="0" format="html">
+      <text>Destornillador</text>
+      <feedback><text/></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>Multímetro</text>
+      <feedback><text/></feedback>
+    </answer>
+    <answer fraction="100" format="html">
+      <text>Software de diagnóstico</text>
+      <feedback><text/></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>Martillo</text>
+      <feedback><text/></feedback>
+    </answer>
+  </question>
+
+  <!-- Pregunta 4 -->
+  <question type="multichoice">
+    <name>
+      <text>Función clave del técnico especializado</text>
+    </name>
+    <questiontext format="html">
+      <text>¿Cuál es una función clave del técnico especializado?</text>
+    </questiontext>
+    <defaultgrade>2</defaultgrade>
+    <penalty>0.5</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="0" format="html">
+      <text>Diseñar videojuegos</text>
+      <feedback><text/></feedback>
+    </answer>
+    <answer fraction="100" format="html">
+      <text>Diagnosticar y solucionar fallos en sistemas</text>
+      <feedback><text/></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>Crear redes sociales</text>
+      <feedback><text/></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>Redactar manuales de usuario</text>
+      <feedback><text/></feedback>
+    </answer>
+  </question>
+
+  <!-- Pregunta 5 -->
+  <question type="multichoice">
+    <name>
+      <text>Plan de mantenimiento bien estructurado</text>
+    </name>
+    <questiontext format="html">
+      <text>¿Qué incluye un plan de mantenimiento bien estructurado?</text>
+    </questiontext>
+    <defaultgrade>2</defaultgrade>
+    <penalty>0.5</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="0" format="html">
+      <text>Juegos y entretenimiento</text>
+      <feedback><text/></feedback>
+    </answer>
+    <answer fraction="100" format="html">
+      <text>Protocolos de actuación, cronogramas y asignación de responsabilidades</text>
+      <feedback><text/></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>Publicidad y marketing</text>
+      <feedback><text/></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>Manuales de usuario</text>
+      <feedback><text/></feedback>
+    </answer>
+  </question>
+</quiz>

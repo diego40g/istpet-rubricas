@@ -1,0 +1,162 @@
+<?xml version="1.0" ?>
+<quiz>
+  <!-- Pregunta 1 -->
+  <question type="multichoice">
+    <name>
+      <text>Función de la ALU en la CPU</text>
+    </name>
+    <questiontext format="html">
+      <text>¿Cuál es la función principal de la Unidad Aritmético-Lógica (ALU) en la CPU?</text>
+    </questiontext>
+    <defaultgrade>2</defaultgrade>
+    <penalty>0.5</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="0" format="html">
+      <text>Almacenar datos temporalmente</text>
+      <feedback><text/></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>Coordinar el flujo de información</text>
+      <feedback><text/></feedback>
+    </answer>
+    <answer fraction="100" format="html">
+      <text>Realizar cálculos y operaciones lógicas</text>
+      <feedback><text/></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>Representar caracteres en código binario</text>
+      <feedback><text/></feedback>
+    </answer>
+  </question>
+
+  <!-- Pregunta 2 -->
+  <question type="multichoice">
+    <name>
+      <text>Componente de control en la CPU</text>
+    </name>
+    <questiontext format="html">
+      <text>¿Qué componente de la CPU se encarga de dirigir y coordinar las operaciones internas?</text>
+    </questiontext>
+    <defaultgrade>2</defaultgrade>
+    <penalty>0.5</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="0" format="html">
+      <text>ALU</text>
+      <feedback><text/></feedback>
+    </answer>
+    <answer fraction="100" format="html">
+      <text>Unidad de Control</text>
+      <feedback><text/></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>Registros</text>
+      <feedback><text/></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>Buses de datos</text>
+      <feedback><text/></feedback>
+    </answer>
+  </question>
+
+  <!-- Pregunta 3 -->
+  <question type="multichoice">
+    <name>
+      <text>Características de los registros de la CPU</text>
+    </name>
+    <questiontext format="html">
+      <text>¿Qué característica distingue a los registros dentro de la CPU?</text>
+    </questiontext>
+    <defaultgrade>2</defaultgrade>
+    <penalty>0.5</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="0" format="html">
+      <text>Son más lentos que la memoria RAM</text>
+      <feedback><text/></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>Almacenan datos de forma permanente</text>
+      <feedback><text/></feedback>
+    </answer>
+    <answer fraction="100" format="html">
+      <text>Son de acceso ultra rápido y temporales</text>
+      <feedback><text/></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>Solo almacenan instrucciones</text>
+      <feedback><text/></feedback>
+    </answer>
+  </question>
+
+  <!-- Pregunta 4 -->
+  <question type="multichoice">
+    <name>
+      <text>Función del Código ASCII</text>
+    </name>
+    <questiontext format="html">
+      <text>¿Cuál es la función del Código ASCII en los sistemas digitales?</text>
+    </questiontext>
+    <defaultgrade>2</defaultgrade>
+    <penalty>0.5</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="0" format="html">
+      <text>Ejecutar instrucciones de bajo nivel</text>
+      <feedback><text/></feedback>
+    </answer>
+    <answer fraction="100" format="html">
+      <text>Representar caracteres mediante valores numéricos</text>
+      <feedback><text/></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>Controlar el flujo de datos</text>
+      <feedback><text/></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>Realizar operaciones lógicas</text>
+      <feedback><text/></feedback>
+    </answer>
+  </question>
+
+  <!-- Pregunta 5 -->
+  <question type="multichoice">
+    <name>
+      <text>Buses de datos en la arquitectura</text>
+    </name>
+    <questiontext format="html">
+      <text>¿Qué representan los buses de datos en la arquitectura de un ordenador?</text>
+    </questiontext>
+    <defaultgrade>2</defaultgrade>
+    <penalty>0.5</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="0" format="html">
+      <text>Unidades de almacenamiento</text>
+      <feedback><text/></feedback>
+    </answer>
+    <answer fraction="100" format="html">
+      <text>Canales de comunicación entre componentes</text>
+      <feedback><text/></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>Instrucciones de control</text>
+      <feedback><text/></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>Segmentos de memoria</text>
+      <feedback><text/></feedback>
+    </answer>
+  </question>
+</quiz>

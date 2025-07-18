@@ -1,0 +1,200 @@
+<?xml version="1.0" ?>
+<quiz>
+  <!-- Pregunta 1 -->
+  <question type="multichoice">
+    <name>
+      <text>Ecuación de segundo grado - Forma general</text>
+    </name>
+    <questiontext format="html">
+      <text>¿Cuál es la forma general de una ecuación de segundo grado?</text>
+    </questiontext>
+    <defaultgrade>2</defaultgrade>
+    <penalty>0.5</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="0" format="html">
+      <text>\(ax + b = 0\)</text>
+      <feedback>
+        <text/>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="html">
+      <text>\(ax^2 + bx + c = 0\)</text>
+      <feedback>
+        <text/>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>\(ax^3 + bx^2 + c = 0\)</text>
+      <feedback>
+        <text/>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>\(ax^2 + b = 0\)</text>
+      <feedback>
+        <text/>
+      </feedback>
+    </answer>
+  </question>
+
+  <!-- Pregunta 2 -->
+  <question type="multichoice">
+    <name>
+      <text>Discriminante en ecuaciones cuadráticas</text>
+    </name>
+    <questiontext format="html">
+      <text>¿Qué indica el valor del discriminante \(b^2 - 4ac\) en una ecuación cuadrática?</text>
+    </questiontext>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.1</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="0" format="html">
+      <text>El número de soluciones complejas</text>
+      <feedback>
+        <text/>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="html">
+      <text>El tipo de soluciones que tiene la ecuación</text>
+      <feedback>
+        <text/>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>El valor de la incógnita</text>
+      <feedback>
+        <text/>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>El coeficiente principal</text>
+      <feedback>
+        <text/>
+      </feedback>
+    </answer>
+  </question>
+
+  <!-- Pregunta 3 -->
+  <question type="multichoice">
+    <name>
+      <text>Métodos para resolver sistemas de ecuaciones</text>
+    </name>
+    <questiontext format="html">
+      <text>¿Cuál de los siguientes métodos NO se utiliza para resolver un sistema de ecuaciones lineales con dos incógnitas?</text>
+    </questiontext>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.1</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="0" format="html">
+      <text>Método gráfico</text>
+      <feedback>
+        <text/>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>Método de sustitución</text>
+      <feedback>
+        <text/>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>Método de igualación</text>
+      <feedback>
+        <text/>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="html">
+      <text>Método del vértice</text>
+      <feedback>
+        <text/>
+      </feedback>
+    </answer>
+  </question>
+
+  <!-- Pregunta 4 -->
+  <question type="multichoice">
+    <name>
+      <text>Solución gráfica de sistemas lineales</text>
+    </name>
+    <questiontext format="html">
+      <text>¿Qué representa gráficamente la solución de un sistema de dos ecuaciones lineales?</text>
+    </questiontext>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.1</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="0" format="html">
+      <text>El punto medio entre las dos rectas</text>
+      <feedback>
+        <text/>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="html">
+      <text>El punto de intersección de las rectas</text>
+      <feedback>
+        <text/>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>El área entre las rectas</text>
+      <feedback>
+        <text/>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>El punto más alejado del origen</text>
+      <feedback>
+        <text/>
+      </feedback>
+    </answer>
+  </question>
+
+  <!-- Pregunta 5 -->
+  <question type="multichoice">
+    <name>
+      <text>Método de matrices en sistemas de ecuaciones</text>
+    </name>
+    <questiontext format="html">
+      <text>¿Cuál es el objetivo del método de matrices al resolver un sistema de ecuaciones?</text>
+    </questiontext>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.1</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="0" format="html">
+      <text>Encontrar el valor del discriminante</text>
+      <feedback>
+        <text/>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>Representar gráficamente las soluciones</text>
+      <feedback>
+        <text/>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="html">
+      <text>Transformar la matriz aumentada en una matriz identidad</text>
+      <feedback>
+        <text/>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>Eliminar las variables por sustitución</text>
+      <feedback>
+        <text/>
+      </feedback>
+    </answer>

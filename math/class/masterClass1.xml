@@ -1,0 +1,202 @@
+<?xml version="1.0" ?>
+<quiz>
+  <!-- Pregunta 1 -->
+  <question type="multichoice">
+    <name>
+      <text>Factorización por factor común</text>
+    </name>
+    <questiontext format="html">
+      <text>¿Cuál es el resultado de factorizar la expresión \(3x + 6\) por factor común?</text>
+    </questiontext>
+    <defaultgrade>2</defaultgrade>
+    <penalty>0.5</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="0" format="html">
+      <text>\(x(3 + 6)\)</text>
+      <feedback>
+        <text/>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="html">
+      <text>\(3(x + 2)\)</text>
+      <feedback>
+        <text/>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>\(3x(1 + 2)\)</text>
+      <feedback>
+        <text/>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>\(x + 6\)</text>
+      <feedback>
+        <text/>
+      </feedback>
+    </answer>
+  </question>
+
+  <!-- Pregunta 2 -->
+  <question type="multichoice">
+    <name>
+      <text>Propiedad de logaritmos</text>
+    </name>
+    <questiontext format="html">
+      <text>¿Qué propiedad de los logaritmos permite transformar \(\log(a^n)\) en otra expresión equivalente?</text>
+    </questiontext>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.1</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="0" format="html">
+      <text>\(\log(a) + \log(n)\)</text>
+      <feedback>
+        <text/>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="html">
+      <text>\(n \log(a)\)</text>
+      <feedback>
+        <text/>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>\(\log(a) - \log(n)\)</text>
+      <feedback>
+        <text/>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>\(\log(a n)\)</text>
+      <feedback>
+        <text/>
+      </feedback>
+    </answer>
+  </question>
+
+  <!-- Pregunta 3 -->
+  <question type="multichoice">
+    <name>
+      <text>Disyunción lógica</text>
+    </name>
+    <questiontext format="html">
+      <text>¿Cuál de las siguientes proposiciones describe correctamente una disyunción lógica?</text>
+    </questiontext>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.1</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="0">
+      <text>Es verdadera solo si ambas proposiciones son verdaderas.</text>
+      <feedback>
+        <text/>
+      </feedback>
+    </answer>
+    <answer fraction="100">
+      <text>Es falsa solo si ambas proposiciones son falsas.</text>
+      <feedback>
+        <text/>
+      </feedback>
+    </answer>
+    <answer fraction="0">
+      <text>Es verdadera solo si una proposición es falsa.</text>
+      <feedback>
+        <text/>
+      </feedback>
+    </answer>
+    <answer fraction="0">
+      <text>Es falsa si la primera es falsa y la segunda es verdadera.</text>
+      <feedback>
+        <text/>
+      </feedback>
+    </answer>
+  </question>
+
+  <!-- Pregunta 4 -->
+  <question type="multichoice">
+    <name>
+      <text>Trinomio cuadrado perfecto</text>
+    </name>
+    <questiontext format="html">
+      <text>¿Cómo se representa el trinomio perfecto \(a^2 + 2ab + b^2\) en forma factorizada?</text>
+    </questiontext>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.1</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="100" format="html">
+      <text>\((a + b)^2\)</text>
+      <feedback>
+        <text/>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>\((a - b)^2\)</text>
+      <feedback>
+        <text/>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>\(a^2 - b^2\)</text>
+      <feedback>
+        <text/>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>\((a + b)(a - b)\)</text>
+      <feedback>
+        <text/>
+      </feedback>
+    </answer>
+  </question>
+
+  <!-- Pregunta 5 -->
+  <question type="multichoice">
+    <name>
+      <text>Sucesión de Fibonacci</text>
+    </name>
+    <questiontext format="html">
+      <text>¿Qué término sigue en la sucesión de Fibonacci: 0, 1, 1, 2, 3, 5, 8, ...?</text>
+    </questiontext>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.1</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="0">
+      <text>10</text>
+      <feedback>
+        <text/>
+      </feedback>
+    </answer>
+    <answer fraction="0">
+      <text>11</text>
+      <feedback>
+        <text/>
+      </feedback>
+    </answer>
+    <answer fraction="100">
+      <text>13</text>
+      <feedback>
+        <text/>
+      </feedback>
+    </answer>
+    <answer fraction="0">
+      <text>15</text>
+      <feedback>
+        <text/>
+      </feedback>
+    </answer>
+  </question>
+</quiz>

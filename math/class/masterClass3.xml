@@ -1,0 +1,201 @@
+<?xml version="1.0" ?>
+<quiz>
+  <!-- Pregunta 1 -->
+  <question type="multichoice">
+    <name>
+      <text>Concepto de vecindad en heurísticas</text>
+    </name>
+    <questiontext format="html">
+      <text>¿Cuál de las siguientes afirmaciones describe mejor el concepto de "vecindad" en heurísticas?</text>
+    </questiontext>
+    <defaultgrade>2</defaultgrade>
+    <penalty>0.5</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="0" format="html">
+      <text>Es la solución óptima global de un problema.</text>
+      <feedback>
+        <text/>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="html">
+      <text>Es el conjunto de soluciones cercanas a una solución dada.</text>
+      <feedback>
+        <text/>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>Es una técnica para dividir un problema en subproblemas.</text>
+      <feedback>
+        <text/>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>Es una estrategia para verificar soluciones rápidamente.</text>
+      <feedback>
+        <text/>
+      </feedback>
+    </answer>
+  </question>
+
+  <!-- Pregunta 2 -->
+  <question type="multichoice">
+    <name>
+      <text>Problemas NP vs P</text>
+    </name>
+    <questiontext format="html">
+      <text>¿Qué caracteriza a los problemas NP en comparación con los problemas P?</text>
+    </questiontext>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.1</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="0" format="html">
+      <text>Son más fáciles de resolver que los problemas P.</text>
+      <feedback>
+        <text/>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>Tienen soluciones que no pueden verificarse.</text>
+      <feedback>
+        <text/>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="html">
+      <text>Su solución puede verificarse rápidamente, pero es difícil de encontrar.</text>
+      <feedback>
+        <text/>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>Siempre se resuelven en tiempo polinomial.</text>
+      <feedback>
+        <text/>
+      </feedback>
+    </answer>
+  </question>
+
+  <!-- Pregunta 3 -->
+  <question type="multichoice">
+    <name>
+      <text>Ventajas de heurísticas en problemas grandes</text>
+    </name>
+    <questiontext format="html">
+      <text>¿Por qué se prefieren las heurísticas sobre los algoritmos exactos en problemas grandes?</text>
+    </questiontext>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.1</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="0" format="html">
+      <text>Porque siempre encuentran la solución óptima.</text>
+      <feedback>
+        <text/>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>Porque son más fáciles de programar.</text>
+      <feedback>
+        <text/>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="html">
+      <text>Porque los algoritmos exactos pueden requerir demasiado tiempo de cómputo.</text>
+      <feedback>
+        <text/>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>Porque no necesitan datos de entrada.</text>
+      <feedback>
+        <text/>
+      </feedback>
+    </answer>
+  </question>
+
+  <!-- Pregunta 4 -->
+  <question type="multichoice">
+    <name>
+      <text>Ejemplo clásico de heurísticas</text>
+    </name>
+    <questiontext format="html">
+      <text>¿Cuál de los siguientes problemas es un ejemplo clásico donde se aplican heurísticas?</text>
+    </questiontext>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.1</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="0" format="html">
+      <text>Ordenamiento de números.</text>
+      <feedback>
+        <text/>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>Cálculo de raíces cuadradas.</text>
+      <feedback>
+        <text/>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="html">
+      <text>Problema del viajante de comercio.</text>
+      <feedback>
+        <text/>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>Suma de matrices.</text>
+      <feedback>
+        <text/>
+      </feedback>
+    </answer>
+  </question>
+
+  <!-- Pregunta 5 -->
+  <question type="multichoice">
+    <name>
+      <text>Técnica heurística para el problema de la mochila</text>
+    </name>
+    <questiontext format="html">
+      <text>¿Qué técnica heurística se puede aplicar al problema de la mochila?</text>
+    </questiontext>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.1</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="0" format="html">
+      <text>Recocido simulado.</text>
+      <feedback>
+        <text/>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>Algoritmos de partición de grafos.</text>
+      <feedback>
+        <text/>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="html">
+      <text>Greedy y branch &amp; bound heurístico.</text>
+      <feedback>
+        <text/>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>Ordenamiento por burbuja.</text>
+      <feedback>
+        <text/>
+      </feedback>
+    </answer>
+  </question>

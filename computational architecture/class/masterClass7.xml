@@ -1,0 +1,162 @@
+<?xml version="1.0" ?>
+<quiz>
+  <!-- Pregunta 1 -->
+  <question type="multichoice">
+    <name>
+      <text>Función principal de la CPU</text>
+    </name>
+    <questiontext format="html">
+      <text>¿Cuál es la principal función de una CPU en un sistema informático?</text>
+    </questiontext>
+    <defaultgrade>2</defaultgrade>
+    <penalty>0.5</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="0" format="html">
+      <text>Procesar gráficos en paralelo</text>
+      <feedback><text/></feedback>
+    </answer>
+    <answer fraction="100" format="html">
+      <text>Ejecutar instrucciones y cálculos complejos</text>
+      <feedback><text/></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>Reconfigurar hardware mediante programación</text>
+      <feedback><text/></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>Simular redes neuronales</text>
+      <feedback><text/></feedback>
+    </answer>
+  </question>
+
+  <!-- Pregunta 2 -->
+  <question type="multichoice">
+    <name>
+      <text>Característica de las GPU</text>
+    </name>
+    <questiontext format="html">
+      <text>¿Qué característica distingue a las GPU de las CPU?</text>
+    </questiontext>
+    <defaultgrade>2</defaultgrade>
+    <penalty>0.5</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="0" format="html">
+      <text>Mayor eficiencia energética</text>
+      <feedback><text/></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>Capacidad de procesamiento secuencial</text>
+      <feedback><text/></feedback>
+    </answer>
+    <answer fraction="100" format="html">
+      <text>Uso de núcleos múltiples para tareas paralelas</text>
+      <feedback><text/></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>Integración de lógica programable</text>
+      <feedback><text/></feedback>
+    </answer>
+  </question>
+
+  <!-- Pregunta 3 -->
+  <question type="multichoice">
+    <name>
+      <text>Componentes de una APU</text>
+    </name>
+    <questiontext format="html">
+      <text>¿Qué combinación de componentes caracteriza a una APU?</text>
+    </questiontext>
+    <defaultgrade>2</defaultgrade>
+    <penalty>0.5</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="0" format="html">
+      <text>CPU y memoria RAM</text>
+      <feedback><text/></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>GPU y disco duro</text>
+      <feedback><text/></feedback>
+    </answer>
+    <answer fraction="100" format="html">
+      <text>CPU y GPU en un solo chip</text>
+      <feedback><text/></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>FPGA y ASIC</text>
+      <feedback><text/></feedback>
+    </answer>
+  </question>
+
+  <!-- Pregunta 4 -->
+  <question type="multichoice">
+    <name>
+      <text>Arquitectura eficiente en dispositivos móviles</text>
+    </name>
+    <questiontext format="html">
+      <text>¿Cuál de las siguientes arquitecturas es conocida por su eficiencia energética y uso en dispositivos móviles?</text>
+    </questiontext>
+    <defaultgrade>2</defaultgrade>
+    <penalty>0.5</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="0" format="html">
+      <text>ASIC</text>
+      <feedback><text/></feedback>
+    </answer>
+    <answer fraction="100" format="html">
+      <text>ARM</text>
+      <feedback><text/></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>FPGA</text>
+      <feedback><text/></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>Neuromórfica</text>
+      <feedback><text/></feedback>
+    </answer>
+  </question>
+
+  <!-- Pregunta 5 -->
+  <question type="multichoice">
+    <name>
+      <text>Procesador inspirado en el cerebro humano</text>
+    </name>
+    <questiontext format="html">
+      <text>¿Qué tipo de procesador está inspirado en el cerebro humano y se utiliza en inteligencia artificial?</text>
+    </questiontext>
+    <defaultgrade>2</defaultgrade>
+    <penalty>0.5</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="0" format="html">
+      <text>CPU</text>
+      <feedback><text/></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>GPU</text>
+      <feedback><text/></feedback>
+    </answer>
+    <answer fraction="100" format="html">
+      <text>Neuromórfico</text>
+      <feedback><text/></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>Cuántico</text>
+      <feedback><text/></feedback>
+    </answer>
+  </question>
+</quiz>

@@ -1,0 +1,162 @@
+<?xml version="1.0" ?>
+<quiz>
+  <!-- Pregunta 1 -->
+  <question type="multichoice">
+    <name>
+      <text>Primera parte de la videoclase</text>
+    </name>
+    <questiontext format="html">
+      <text>¿Qué se analiza en la primera parte de la videoclase de la Parte 2?</text>
+    </questiontext>
+    <defaultgrade>2</defaultgrade>
+    <penalty>0.5</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="0" format="html">
+      <text>Diseño de compuertas lógicas</text>
+      <feedback><text/></feedback>
+    </answer>
+    <answer fraction="100" format="html">
+      <text>Diferencias en el uso de procesadores y avances tecnológicos</text>
+      <feedback><text/></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>Implementación de redes neuronales</text>
+      <feedback><text/></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>Programación de sistemas embebidos</text>
+      <feedback><text/></feedback>
+    </answer>
+  </question>
+
+  <!-- Pregunta 2 -->
+  <question type="multichoice">
+    <name>
+      <text>Hardware en Ecuador</text>
+    </name>
+    <questiontext format="html">
+      <text>¿Qué se destaca sobre el hardware en Ecuador?</text>
+    </questiontext>
+    <defaultgrade>2</defaultgrade>
+    <penalty>0.5</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="0" format="html">
+      <text>Su bajo costo y alta disponibilidad</text>
+      <feedback><text/></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>Su uso exclusivo en universidades</text>
+      <feedback><text/></feedback>
+    </answer>
+    <answer fraction="100" format="html">
+      <text>La diversidad y acceso a tecnologías avanzadas</text>
+      <feedback><text/></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>La falta total de infraestructura tecnológica</text>
+      <feedback><text/></feedback>
+    </answer>
+  </question>
+
+  <!-- Pregunta 3 -->
+  <question type="multichoice">
+    <name>
+      <text>Evaluación de casos prácticos de IA</text>
+    </name>
+    <questiontext format="html">
+      <text>¿Qué se evalúa en los casos prácticos relacionados con IA?</text>
+    </questiontext>
+    <defaultgrade>2</defaultgrade>
+    <penalty>0.5</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="0" format="html">
+      <text>La estética de las interfaces gráficas</text>
+      <feedback><text/></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>La velocidad de conexión a internet</text>
+      <feedback><text/></feedback>
+    </answer>
+    <answer fraction="100" format="html">
+      <text>Métricas de rendimiento y eficiencia en tareas de aprendizaje automático</text>
+      <feedback><text/></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>El diseño de videojuegos</text>
+      <feedback><text/></feedback>
+    </answer>
+  </question>
+
+  <!-- Pregunta 4 -->
+  <question type="multichoice">
+    <name>
+      <text>Análisis de visión por computadora</text>
+    </name>
+    <questiontext format="html">
+      <text>¿Qué se muestra en el análisis de visión por computadora?</text>
+    </questiontext>
+    <defaultgrade>2</defaultgrade>
+    <penalty>0.5</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="0" format="html">
+      <text>Diagramas de redes sociales</text>
+      <feedback><text/></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>Capturas de pantalla de videojuegos</text>
+      <feedback><text/></feedback>
+    </answer>
+    <answer fraction="100" format="html">
+      <text>Procesamiento de imágenes y precisión en análisis visual</text>
+      <feedback><text/></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>Comparación entre CPU y GPU</text>
+      <feedback><text/></feedback>
+    </answer>
+  </question>
+
+  <!-- Pregunta 5 -->
+  <question type="multichoice">
+    <name>
+      <text>Caso práctico de IoT</text>
+    </name>
+    <questiontext format="html">
+      <text>¿Qué representa el caso práctico de IoT?</text>
+    </questiontext>
+    <defaultgrade>2</defaultgrade>
+    <penalty>0.5</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="0" format="html">
+      <text>El uso de redes sociales en dispositivos móviles</text>
+      <feedback><text/></feedback>
+    </answer>
+    <answer fraction="100" format="html">
+      <text>La integración de electrónica, software y procesamiento en entornos conectados</text>
+      <feedback><text/></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>El diseño de videojuegos en la nube</text>
+      <feedback><text/></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>La programación de aplicaciones móviles</text>
+      <feedback><text/></feedback>
+    </answer>
+  </question>
+</quiz>

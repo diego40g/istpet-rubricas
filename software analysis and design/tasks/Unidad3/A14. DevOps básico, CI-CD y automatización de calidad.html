@@ -1,0 +1,1182 @@
+<!-- Tarea A14 — Análisis y Diseño de Software -->
+<nav style="margin-bottom: 12px">
+  <a
+    href="https://istpetonline.edu.ec/course/view.php?id=160#section-3"
+    style="
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      text-decoration: none;
+      color: #1f3864;
+      font-family: Arial, sans-serif;
+      font-size: 0.9em;
+    "
+  >
+    &#8592; Volver al aula
+  </a>
+</nav>
+
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 1920 332"
+  style="width: 100%; display: block; margin-bottom: 18px"
+>
+  <image
+    href="https://istpetonline.edu.ec/pluginfile.php/1/theme_moove/slideshow/0/banner-tarea.jpg"
+    width="1920"
+    height="332"
+    preserveAspectRatio="xMidYMid slice"
+  />
+  <text
+    x="960"
+    y="148"
+    text-anchor="middle"
+    font-family="Arial,sans-serif"
+    font-size="52"
+    font-weight="bold"
+    fill="white"
+    opacity="0.97"
+  >
+    Análisis y Diseño de Software
+  </text>
+  <text
+    x="960"
+    y="214"
+    text-anchor="middle"
+    font-family="Arial,sans-serif"
+    font-size="34"
+    fill="white"
+    opacity="0.93"
+  >
+    Unidad 3 — Implementación y Calidad
+  </text>
+</svg>
+
+<p></p>
+
+<div
+  class="caja"
+  style="
+    font-family: Arial, sans-serif;
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 12px;
+  "
+>
+  <div
+    class="caja"
+    style="
+      border: 1px solid #c8d6e8;
+      border-radius: 8px;
+      padding: 24px 28px;
+      margin-bottom: 22px;
+      background: #fff;
+    "
+  >
+    <h4
+      style="
+        color: #1f3864;
+        font-size: 1.25em;
+        margin: 0 0 18px 0;
+        padding-bottom: 10px;
+        border-bottom: 2px solid #cfaa4f;
+      "
+    >
+      A14. DevOps básico, CI/CD y automatización de calidad
+    </h4>
+
+    <!-- INSTRUCCIONES -->
+    <div
+      style="
+        background: #eaf6fb;
+        border-left: 4px solid #1f3864;
+        border-radius: 6px;
+        padding: 16px 20px;
+        margin-bottom: 18px;
+      "
+    >
+      <h5 style="color: #1f3864; margin: 0 0 10px 0; font-size: 1em">
+        📋 Descripción
+      </h5>
+      <p style="margin: 0 0 10px 0; font-size: 0.95em; line-height: 1.6">
+        En esta actividad configurarás el flujo de entrega continua del
+        <strong>Sistema de Biblioteca Digital</strong> usando herramientas de
+        <strong>DevOps</strong> reales. Automatizarás las verificaciones de
+        calidad tanto en el entorno local (hooks de pre-commit y pre-push) como
+        en la nube (pipeline de GitHub Actions), y documentarás el estado del
+        proyecto con badges visibles en el README.
+      </p>
+      <p style="margin: 0 0 10px 0; font-size: 0.95em; line-height: 1.6">
+        Al finalizar, el repositorio contará con un ciclo profesional: cada
+        <code>commit</code> es verificado localmente por ESLint y Prettier, cada
+        <code>push</code> ejecuta los tests, y cada integración a
+        <code>main</code> dispara un pipeline que valida lint, cobertura y
+        compilación antes de permitir el merge.
+      </p>
+      <h5 style="color: #1f3864; margin: 12px 0 8px 0; font-size: 1em">
+        🎯 Objetivos de Aprendizaje
+      </h5>
+      <ol
+        style="
+          margin: 0;
+          padding-left: 20px;
+          font-size: 0.95em;
+          line-height: 1.7;
+        "
+      >
+        <li>
+          Configurar un pipeline de CI/CD con GitHub Actions que ejecute lint,
+          tests y build de forma automática en cada push o pull request.
+        </li>
+        <li>
+          Implementar hooks de pre-commit y pre-push con Husky para garantizar
+          calidad del código antes de cada integración.
+        </li>
+        <li>
+          Documentar el estado del repositorio con badges de CI y cobertura
+          visibles en el README.
+        </li>
+      </ol>
+      <h5 style="color: #1f3864; margin: 12px 0 8px 0; font-size: 1em">
+        📝 Enunciado del caso
+      </h5>
+      <p style="margin: 0 0 6px 0; font-size: 0.95em">
+        El repositorio del
+        <strong>Sistema de Biblioteca Digital</strong> (creado en la actividad
+        A13) debe tener su flujo de calidad completamente automatizado:
+      </p>
+      <ul
+        style="
+          margin: 0;
+          padding-left: 20px;
+          font-size: 0.95em;
+          line-height: 1.7;
+        "
+      >
+        <li>
+          <strong>Pipeline CI:</strong> Cada push a <code>main</code> o
+          <code>develop</code>, y cada pull request a <code>main</code>, debe
+          disparar el pipeline con los 3 jobs en secuencia. Si alguno falla, los
+          siguientes no se ejecutan y no se puede hacer merge.
+        </li>
+        <li>
+          <strong>Hooks locales:</strong> Antes de cada <code>git commit</code>,
+          lint-staged debe formatear y verificar solo los archivos modificados.
+          Antes de cada <code>git push</code>, deben ejecutarse la verificación
+          de tipos y la suite completa de tests.
+        </li>
+        <li>
+          <strong>README:</strong> El archivo <code>README.md</code> debe
+          mostrar el badge de estado del CI (verde/rojo) y el porcentaje de
+          cobertura actualizado automáticamente por Codecov.
+        </li>
+      </ul>
+    </div>
+
+    <!-- ENTREGA -->
+    <div
+      style="
+        background: #eaf6fb;
+        border-left: 4px solid #cfaa4f;
+        border-radius: 6px;
+        padding: 16px 20px;
+        margin-bottom: 18px;
+      "
+    >
+      <h5 style="color: #1f3864; margin: 0 0 10px 0; font-size: 1em">
+        📤 Entrega
+      </h5>
+      <table style="width: 100%; border-collapse: collapse; font-size: 0.93em">
+        <tr>
+          <td
+            style="
+              padding: 5px 10px;
+              font-weight: bold;
+              color: #1f3864;
+              width: 38%;
+            "
+          >
+            Modalidad
+          </td>
+          <td style="padding: 5px 10px">Individual o en pares</td>
+        </tr>
+        <tr style="background: #f5faff">
+          <td style="padding: 5px 10px; font-weight: bold; color: #1f3864">
+            Formato
+          </td>
+          <td style="padding: 5px 10px">
+            Repositorio GitHub funcional con el pipeline activo + capturas de
+            pantalla de ejecuciones exitosas
+          </td>
+        </tr>
+        <tr>
+          <td style="padding: 5px 10px; font-weight: bold; color: #1f3864">
+            Fecha de entrega
+          </td>
+          <td style="padding: 5px 10px">
+            Según calendario académico de la semana 6
+          </td>
+        </tr>
+        <tr style="background: #f5faff">
+          <td style="padding: 5px 10px; font-weight: bold; color: #1f3864">
+            Entregables
+          </td>
+          <td style="padding: 5px 10px">
+            <ul style="margin: 0; padding-left: 18px; line-height: 1.7">
+              <li>
+                Archivo <code>.github/workflows/ci.yml</code> con
+                <strong>3 jobs</strong>: <code>lint</code>, <code>test</code> y
+                <code>build</code> en secuencia
+              </li>
+              <li>
+                Husky con hook <code>pre-commit</code> (lint-staged sobre
+                <code>.ts</code>) y hook <code>pre-push</code> (type-check + npm
+                test), con demostración de commit fallido
+              </li>
+              <li>
+                <code>README.md</code> con badge de CI (GitHub Actions), badge
+                de cobertura (Codecov) y badges de stack (Node.js, TypeScript)
+              </li>
+            </ul>
+          </td>
+        </tr>
+      </table>
+    </div>
+
+    <!-- RÚBRICA -->
+    <h5 style="color: #1f3864; font-size: 1em; margin: 0 0 10px 0">
+      📊 Rúbrica de Evaluación
+    </h5>
+    <div style="overflow-x: auto; margin-bottom: 22px">
+      <table style="width: 100%; border-collapse: collapse; font-size: 0.88em">
+        <thead>
+          <tr style="background: #1f3864; color: white">
+            <th style="padding: 9px 10px; text-align: left; min-width: 130px">
+              Criterio
+            </th>
+            <th style="padding: 9px 10px; text-align: left; min-width: 160px">
+              Excelente (10)
+            </th>
+            <th style="padding: 9px 10px; text-align: left; min-width: 140px">
+              Muy Bueno (8)
+            </th>
+            <th style="padding: 9px 10px; text-align: left; min-width: 130px">
+              Bueno (6)
+            </th>
+            <th style="padding: 9px 10px; text-align: left; min-width: 120px">
+              Regular (4)
+            </th>
+            <th style="padding: 9px 10px; text-align: left; min-width: 110px">
+              Deficiente (2)
+            </th>
+            <th style="padding: 9px 10px; text-align: center; min-width: 50px">
+              Pts
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr style="background: #fef7e6">
+            <td
+              style="
+                padding: 8px 10px;
+                font-weight: bold;
+                color: #7a5c00;
+                background: #cfaa4f22;
+                border-left: 4px solid #cfaa4f;
+              "
+            >
+              GitHub Actions CI
+            </td>
+            <td style="padding: 8px 10px">
+              3 jobs configurados correctamente (lint → test → build) con
+              dependencias <code>needs</code>, cobertura subida a Codecov,
+              artefactos guardados con <code>upload-artifact</code> y protección
+              de rama configurada en GitHub.
+            </td>
+            <td style="padding: 8px 10px">
+              3 jobs presentes y funcionales pero sin dependencias
+              <code>needs</code> explícitas o sin subida de cobertura a Codecov.
+            </td>
+            <td style="padding: 8px 10px">
+              2 jobs configurados o los 3 presentes pero con errores de YAML
+              (jobs no se ejecutan en el pipeline real).
+            </td>
+            <td style="padding: 8px 10px">
+              1 job configurado o el workflow existe pero no se ejecuta (error
+              de trigger o nombre de archivo incorrecto).
+            </td>
+            <td style="padding: 8px 10px">
+              No hay archivo de CI o el archivo YAML tiene errores de sintaxis
+              que lo inutilizan.
+            </td>
+            <td
+              style="padding: 8px 10px; text-align: center; font-weight: bold"
+            >
+              4
+            </td>
+          </tr>
+          <tr style="background: #f0f5fd">
+            <td
+              style="
+                padding: 8px 10px;
+                font-weight: bold;
+                color: #7a5c00;
+                background: #cfaa4f22;
+                border-left: 4px solid #cfaa4f;
+              "
+            >
+              Pre-commit Hooks
+            </td>
+            <td style="padding: 8px 10px">
+              Husky instalado con <code>pre-commit</code> (lint-staged sobre
+              <code>.ts</code>) y <code>pre-push</code> (type-check + npm test);
+              demostración documentada con un commit que falla por error de lint
+              y uno que pasa correctamente.
+            </td>
+            <td style="padding: 8px 10px">
+              Ambos hooks configurados y funcionales; falta demostración de
+              fallo o lint-staged sin configuración específica para
+              <code>.ts</code>.
+            </td>
+            <td style="padding: 8px 10px">
+              Solo <code>pre-commit</code> configurado;
+              <code>pre-push</code> ausente o Husky instalado pero hooks sin
+              ejecutar comandos reales.
+            </td>
+            <td style="padding: 8px 10px">
+              Husky instalado pero sin hooks definidos o hooks que no ejecutan
+              ninguna verificación.
+            </td>
+            <td style="padding: 8px 10px">
+              No se usa Husky; no hay automatización de calidad en el flujo Git
+              local.
+            </td>
+            <td
+              style="padding: 8px 10px; text-align: center; font-weight: bold"
+            >
+              3
+            </td>
+          </tr>
+          <tr style="background: #fef7e6">
+            <td
+              style="
+                padding: 8px 10px;
+                font-weight: bold;
+                color: #7a5c00;
+                background: #cfaa4f22;
+                border-left: 4px solid #cfaa4f;
+              "
+            >
+              Badge de Estado
+            </td>
+            <td style="padding: 8px 10px">
+              README con badge de CI (GitHub Actions), badge de cobertura
+              (Codecov), badges de stack (Node.js, TypeScript), sección de
+              arquitectura y guía de contribución con convención de commits
+              documentada.
+            </td>
+            <td style="padding: 8px 10px">
+              Badge de CI y cobertura correctamente configurados; README con
+              descripción y scripts pero sin guía de contribución completa.
+            </td>
+            <td style="padding: 8px 10px">
+              Badge de CI presente pero con URL incorrecta (no refleja estado
+              real) o solo badges estáticos sin CI conectado.
+            </td>
+            <td style="padding: 8px 10px">
+              Badge presente en el README pero no apunta al repositorio correcto
+              o el workflow no existe en GitHub.
+            </td>
+            <td style="padding: 8px 10px">
+              No hay badges o el README está vacío / es el generado por defecto.
+            </td>
+            <td
+              style="padding: 8px 10px; text-align: center; font-weight: bold"
+            >
+              3
+            </td>
+          </tr>
+          <tr style="background: #1f3864">
+            <td
+              colspan="6"
+              style="
+                padding: 8px 10px;
+                color: white;
+                font-weight: bold;
+                text-align: right;
+              "
+            >
+              Puntaje total:
+            </td>
+            <td
+              style="
+                padding: 8px 10px;
+                text-align: center;
+                font-weight: bold;
+                color: #cfaa4f;
+                font-size: 1.1em;
+              "
+            >
+              10
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- SOLUCIÓN DE REFERENCIA -->
+    <div
+      style="
+        background: #f0f4e8;
+        border: 2px solid #4a7c2f;
+        border-radius: 8px;
+        padding: 20px 24px;
+        margin-bottom: 22px;
+      "
+    >
+      <h5 style="color: #2d5a1b; margin: 0 0 14px 0; font-size: 1.05em">
+        💡 Solución de Referencia
+      </h5>
+
+      <!-- EJERCICIO 1 -->
+      <h6
+        style="
+          color: #1f3864;
+          font-size: 0.97em;
+          margin: 0 0 10px 0;
+          border-bottom: 1px solid #b5cc9a;
+          padding-bottom: 5px;
+        "
+      >
+        Ejercicio 1 — Configurar GitHub Actions
+      </h6>
+
+      <p style="margin: 0 0 6px 0; font-size: 0.93em">
+        <strong>Archivo <code>.github/workflows/ci.yml</code></strong>
+      </p>
+      <pre
+        style="
+          background: #1e1e1e;
+          color: #d4d4d4;
+          padding: 12px 14px;
+          border-radius: 5px;
+          font-family: monospace;
+          font-size: 0.82em;
+          overflow-x: auto;
+          white-space: pre;
+          margin: 0 0 14px 0;
+        "
+      >
+name: CI Pipeline — Biblioteca Digital
+
+on:
+  push:
+    branches: [main, develop]
+  pull_request:
+    branches: [main]
+
+env:
+  NODE_VERSION: "20"
+
+jobs:
+  # ── JOB 1: Lint y análisis estático ─────────────────────────────────────
+  lint:
+    name: 🔍 Lint &amp; Type Check
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: "${{ env.NODE_VERSION }}", cache: "npm" }
+      - run: npm ci
+      - run: npm run format:check
+      - run: npm run lint
+      - run: npm run type-check
+
+  # ── JOB 2: Tests + cobertura ────────────────────────────────────────────
+  test:
+    name: 🧪 Unit Tests &amp; Coverage
+    runs-on: ubuntu-latest
+    needs: lint
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: "${{ env.NODE_VERSION }}", cache: "npm" }
+      - run: npm ci
+      - run: npm run test:coverage
+      - uses: codecov/codecov-action@v3
+        with:
+          files: ./coverage/lcov.info
+          flags: unittests
+          fail_ci_if_error: false
+      - uses: actions/upload-artifact@v4
+        with: { name: coverage-report, path: coverage/, retention-days: 7 }
+
+  # ── JOB 3: Build ────────────────────────────────────────────────────────
+  build:
+    name: 🏗️ Build
+    runs-on: ubuntu-latest
+    needs: [lint, test]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: "${{ env.NODE_VERSION }}", cache: "npm" }
+      - run: npm ci
+      - run: npm run build
+      - uses: actions/upload-artifact@v4
+        with: { name: dist, path: dist/, retention-days: 1 }</pre
+      >
+
+      <p style="margin: 0 0 6px 0; font-size: 0.93em">
+        <strong>Flujo de ejecución de jobs</strong>
+      </p>
+      <pre
+        style="
+          background: #1e1e1e;
+          color: #d4d4d4;
+          padding: 10px 14px;
+          border-radius: 5px;
+          font-family: monospace;
+          font-size: 0.83em;
+          overflow-x: auto;
+          white-space: pre;
+          margin: 0 0 14px 0;
+        "
+      >
+push/PR a main o develop
+         │
+         ▼
+┌─────────────────┐
+│  🔍 lint        │  ← ESLint + Prettier + tsc --noEmit
+└────────┬────────┘
+         │ si pasa
+         ▼
+┌─────────────────┐
+│  🧪 test        │  ← Jest --coverage + Codecov
+└────────┬────────┘
+         │ si pasa
+         ▼
+┌─────────────────┐
+│  🏗️ build       │  ← tsc + artefacto dist/
+└─────────────────┘
+         ✅ Pipeline completado</pre
+      >
+
+      <p style="margin: 0 0 6px 0; font-size: 0.93em">
+        <strong>Protección de rama (Recomendado)</strong>
+      </p>
+      <p style="margin: 0 0 4px 0; font-size: 0.92em">
+        En GitHub → Settings → Branches → Add rule para <code>main</code>:
+      </p>
+      <ul
+        style="
+          margin: 0 0 10px 0;
+          padding-left: 20px;
+          font-size: 0.92em;
+          line-height: 1.7;
+        "
+      >
+        <li>
+          ✅ <strong>Require status checks to pass:</strong> seleccionar
+          <code>lint</code>, <code>test</code>, <code>build</code>
+        </li>
+        <li>✅ <strong>Require branches to be up to date</strong></li>
+        <li>✅ <strong>Require a pull request before merging</strong></li>
+      </ul>
+
+      <p style="margin: 0 0 6px 0; font-size: 0.93em">
+        <strong>Errores comunes y soluciones</strong>
+      </p>
+      <div style="overflow-x: auto; margin-bottom: 18px">
+        <table
+          style="width: 100%; border-collapse: collapse; font-size: 0.88em"
+        >
+          <thead>
+            <tr style="background: #1f3864; color: white">
+              <th style="padding: 6px 10px">Error</th>
+              <th style="padding: 6px 10px">Causa</th>
+              <th style="padding: 6px 10px">Solución</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr style="background: #fef7e6">
+              <td style="padding: 6px 10px; font-family: monospace">
+                format:check falla
+              </td>
+              <td style="padding: 6px 10px">Código sin formato</td>
+              <td style="padding: 6px 10px; font-family: monospace">
+                npm run format &amp;&amp; git commit
+              </td>
+            </tr>
+            <tr style="background: #f0f5fd">
+              <td style="padding: 6px 10px; font-family: monospace">
+                lint falla
+              </td>
+              <td style="padding: 6px 10px">Reglas ESLint violadas</td>
+              <td style="padding: 6px 10px; font-family: monospace">
+                npm run lint:fix
+              </td>
+            </tr>
+            <tr style="background: #fef7e6">
+              <td style="padding: 6px 10px; font-family: monospace">
+                type-check falla
+              </td>
+              <td style="padding: 6px 10px">Errores de tipos TS</td>
+              <td style="padding: 6px 10px">
+                Corregir con error exacto y línea
+              </td>
+            </tr>
+            <tr style="background: #f0f5fd">
+              <td style="padding: 6px 10px">
+                Tests fallan en CI pero no local
+              </td>
+              <td style="padding: 6px 10px">Archivos no commiteados</td>
+              <td style="padding: 6px 10px; font-family: monospace">
+                git status
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- EJERCICIO 2 -->
+      <h6
+        style="
+          color: #1f3864;
+          font-size: 0.97em;
+          margin: 0 0 10px 0;
+          border-bottom: 1px solid #b5cc9a;
+          padding-bottom: 5px;
+        "
+      >
+        Ejercicio 2 — Pre-commit Hooks con Husky
+      </h6>
+
+      <p style="margin: 0 0 6px 0; font-size: 0.93em">
+        <strong>Instalación y configuración</strong>
+      </p>
+      <pre
+        style="
+          background: #1e1e1e;
+          color: #d4d4d4;
+          padding: 10px 14px;
+          border-radius: 5px;
+          font-family: monospace;
+          font-size: 0.83em;
+          overflow-x: auto;
+          white-space: pre;
+          margin: 0 0 10px 0;
+        "
+      >
+# 1. Instalar
+npm install -D husky lint-staged
+npx husky install
+
+# 2. Crear hooks
+npx husky add .husky/pre-commit "npx lint-staged"
+npx husky add .husky/pre-push "npm run type-check &amp;&amp; npm test"
+
+# 3. Dar permisos
+chmod +x .husky/pre-commit .husky/pre-push
+
+# 4. Commitear configuración
+git add .husky/ package.json
+git commit -m "chore: configure husky hooks"</pre
+      >
+
+      <p style="margin: 0 0 6px 0; font-size: 0.93em">
+        <strong>Agregar a <code>package.json</code></strong>
+      </p>
+      <pre
+        style="
+          background: #1e1e1e;
+          color: #d4d4d4;
+          padding: 10px 14px;
+          border-radius: 5px;
+          font-family: monospace;
+          font-size: 0.83em;
+          overflow-x: auto;
+          white-space: pre;
+          margin: 0 0 10px 0;
+        "
+      >
+{
+  "scripts": { "prepare": "husky install" },
+  "lint-staged": {
+    "*.{ts,tsx}": ["eslint --fix", "prettier --write"],
+    "*.{json,md,yml,yaml}": ["prettier --write"]
+  }
+}</pre
+      >
+
+      <p style="margin: 0 0 6px 0; font-size: 0.93em">
+        <strong>Archivo <code>.husky/pre-commit</code></strong>
+      </p>
+      <pre
+        style="
+          background: #1e1e1e;
+          color: #d4d4d4;
+          padding: 10px 14px;
+          border-radius: 5px;
+          font-family: monospace;
+          font-size: 0.83em;
+          overflow-x: auto;
+          white-space: pre;
+          margin: 0 0 10px 0;
+        "
+      >
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+echo "🔍 Ejecutando lint-staged..."
+npx lint-staged
+echo "✅ Pre-commit checks passed!"</pre
+      >
+
+      <p style="margin: 0 0 6px 0; font-size: 0.93em">
+        <strong>Archivo <code>.husky/pre-push</code></strong>
+      </p>
+      <pre
+        style="
+          background: #1e1e1e;
+          color: #d4d4d4;
+          padding: 10px 14px;
+          border-radius: 5px;
+          font-family: monospace;
+          font-size: 0.83em;
+          overflow-x: auto;
+          white-space: pre;
+          margin: 0 0 10px 0;
+        "
+      >
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+echo "🔎 Verificando tipos TypeScript..."
+npm run type-check
+echo "🧪 Ejecutando tests..."
+npm test
+echo "✅ Pre-push checks passed!"</pre
+      >
+
+      <p style="margin: 0 0 6px 0; font-size: 0.93em">
+        <strong>Demostración: commit que falla vs. commit que pasa</strong>
+      </p>
+      <pre
+        style="
+          background: #1e1e1e;
+          color: #d4d4d4;
+          padding: 10px 14px;
+          border-radius: 5px;
+          font-family: monospace;
+          font-size: 0.83em;
+          overflow-x: auto;
+          white-space: pre;
+          margin: 0 0 10px 0;
+        "
+      >
+# CASO 1 — Código con error (debe fallar)
+cat &gt; src/test-error.ts &lt;&lt; 'EOF'
+const unusedVariable = "no se usa";        // error: unused var
+function bad(a: any) { return a == null; } // error: == y any
+EOF
+git add src/test-error.ts
+git commit -m "test: debe fallar"
+# → ✖ eslint --fix [FAILED] — el commit NO se realiza
+
+# CASO 2 — Código correcto (debe pasar)
+rm src/test-error.ts
+cat &gt; src/greet.ts &lt;&lt; 'EOF'
+export const greet = (name: string): string =&gt; `Hola, ${name}!`;
+EOF
+git add src/greet.ts
+git commit -m "feat: add greet"
+# → ✅ Pre-commit checks passed! — commit creado</pre
+      >
+
+      <div style="overflow-x: auto; margin-bottom: 18px">
+        <table
+          style="width: 100%; border-collapse: collapse; font-size: 0.88em"
+        >
+          <thead>
+            <tr style="background: #1f3864; color: white">
+              <th style="padding: 7px 10px">Hook</th>
+              <th style="padding: 7px 10px">Cuándo</th>
+              <th style="padding: 7px 10px">Verifica</th>
+              <th style="padding: 7px 10px">Si falla</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr style="background: #fef7e6">
+              <td
+                style="
+                  padding: 6px 10px;
+                  font-family: monospace;
+                  font-weight: bold;
+                "
+              >
+                pre-commit
+              </td>
+              <td style="padding: 6px 10px; font-family: monospace">
+                git commit
+              </td>
+              <td style="padding: 6px 10px">
+                ESLint + Prettier (solo archivos staged)
+              </td>
+              <td style="padding: 6px 10px">
+                Commit <strong>NO</strong> se crea
+              </td>
+            </tr>
+            <tr style="background: #f0f5fd">
+              <td
+                style="
+                  padding: 6px 10px;
+                  font-family: monospace;
+                  font-weight: bold;
+                "
+              >
+                pre-push
+              </td>
+              <td style="padding: 6px 10px; font-family: monospace">
+                git push
+              </td>
+              <td style="padding: 6px 10px">
+                TypeScript tipos + suite de tests
+              </td>
+              <td style="padding: 6px 10px">
+                Push <strong>NO</strong> se realiza
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p style="margin: 0 0 18px 0; font-size: 0.91em; color: #555">
+        Para saltarse en emergencias: <code>git commit --no-verify</code> /
+        <code>git push --no-verify</code>. ⚠️ El pipeline de CI atrapará los
+        errores igualmente.
+      </p>
+
+      <!-- EJERCICIO 3 -->
+      <h6
+        style="
+          color: #1f3864;
+          font-size: 0.97em;
+          margin: 0 0 10px 0;
+          border-bottom: 1px solid #b5cc9a;
+          padding-bottom: 5px;
+        "
+      >
+        Ejercicio 3 — Badge de Estado en el README
+      </h6>
+
+      <p style="margin: 0 0 6px 0; font-size: 0.93em">
+        <strong>README.md completo</strong>
+      </p>
+      <pre
+        style="
+          background: #1e1e1e;
+          color: #d4d4d4;
+          padding: 10px 14px;
+          border-radius: 5px;
+          font-family: monospace;
+          font-size: 0.82em;
+          overflow-x: auto;
+          white-space: pre;
+          margin: 0 0 10px 0;
+        "
+      >
+# 📚 Biblioteca Digital
+
+&gt; Sistema de gestión de préstamos y reservas, construido con TypeScript
+&gt; y arquitectura hexagonal.
+
+![CI Pipeline](https://github.com/TU_USUARIO/biblioteca-digital/actions/workflows/ci.yml/badge.svg?branch=main)
+[![codecov](https://codecov.io/gh/TU_USUARIO/biblioteca-digital/branch/main/graph/badge.svg)](https://codecov.io/gh/TU_USUARIO/biblioteca-digital)
+![Node.js](https://img.shields.io/badge/node-%3E%3D20.0.0-brightgreen?logo=node.js)
+![TypeScript](https://img.shields.io/badge/TypeScript-5.x-blue?logo=typescript)
+![License](https://img.shields.io/badge/license-MIT-green)
+
+## 🚀 Quick Start
+
+```bash
+git clone https://github.com/TU_USUARIO/biblioteca-digital.git
+cd biblioteca-digital
+npm install   # también instala hooks de Husky
+npm run dev
+```
+
+## 📋 Scripts
+
+| Script                  | Descripción                  |
+| ----------------------- | ---------------------------- |
+| npm test                | Ejecuta la suite de tests    |
+| npm run test:coverage   | Tests + reporte de cobertura |
+| npm run lint            | ESLint                       |
+| npm run format          | Prettier                     |
+| npm run type-check      | Verificar tipos sin compilar |
+| npm run build           | Compilar TypeScript          |
+
+## 🏗️ Arquitectura Hexagonal
+
+src/
+├── domain/         # Núcleo: entidades, puertos y servicios
+├── application/    # Casos de uso
+├── infrastructure/ # Adaptadores secundarios (DB, email)
+└── presentation/   # Adaptadores primarios (HTTP API)
+
+## 🤝 Contribuir
+
+1. Fork → rama feat/nombre → cambios con tests
+2. Verificar: npm run lint &amp;&amp; npm run type-check &amp;&amp; npm test &amp;&amp; npm run build
+3. Commit convencional → Pull Request a main
+
+### Convención de Commits
+
+| Prefijo     | Uso                        |
+| ----------- | -------------------------- |
+| feat:       | Nueva funcionalidad        |
+| fix:        | Corrección de bug          |
+| docs:       | Documentación              |
+| refactor:   | Refactorización            |
+| test:       | Tests                      |
+| chore:      | Mantenimiento (CI, deps)   |
+| ci:         | Cambios en pipeline        |</pre
+      >
+
+      <p style="margin: 0 0 6px 0; font-size: 0.93em">
+        <strong>URLs de cada badge</strong>
+      </p>
+      <div style="overflow-x: auto; margin-bottom: 6px">
+        <table
+          style="width: 100%; border-collapse: collapse; font-size: 0.87em"
+        >
+          <thead>
+            <tr style="background: #1f3864; color: white">
+              <th style="padding: 7px 10px">Badge</th>
+              <th style="padding: 7px 10px">URL (reemplazar USER/REPO)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr style="background: #fef7e6">
+              <td style="padding: 6px 10px; font-weight: bold">
+                CI GitHub Actions
+              </td>
+              <td
+                style="
+                  padding: 6px 10px;
+                  font-family: monospace;
+                  font-size: 0.9em;
+                "
+              >
+                https://github.com/USER/REPO/actions/workflows/ci.yml/badge.svg?branch=main
+              </td>
+            </tr>
+            <tr style="background: #f0f5fd">
+              <td style="padding: 6px 10px; font-weight: bold">
+                Cobertura Codecov
+              </td>
+              <td
+                style="
+                  padding: 6px 10px;
+                  font-family: monospace;
+                  font-size: 0.9em;
+                "
+              >
+                https://codecov.io/gh/USER/REPO/branch/main/graph/badge.svg
+              </td>
+            </tr>
+            <tr style="background: #fef7e6">
+              <td style="padding: 6px 10px; font-weight: bold">
+                Node.js (shields.io)
+              </td>
+              <td
+                style="
+                  padding: 6px 10px;
+                  font-family: monospace;
+                  font-size: 0.9em;
+                "
+              >
+                https://img.shields.io/badge/node-%3E%3D20-brightgreen?logo=node.js
+              </td>
+            </tr>
+            <tr style="background: #f0f5fd">
+              <td style="padding: 6px 10px; font-weight: bold">
+                TypeScript (shields.io)
+              </td>
+              <td
+                style="
+                  padding: 6px 10px;
+                  font-family: monospace;
+                  font-size: 0.9em;
+                "
+              >
+                https://img.shields.io/badge/TypeScript-5.x-blue?logo=typescript
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p style="margin: 8px 0 0 0; font-size: 0.91em; color: #555">
+        Para Codecov: registrarse en <strong>codecov.io</strong> con GitHub,
+        activar el repo y agregar <code>CODECOV_TOKEN</code> en GitHub Settings
+        → Secrets → Actions.
+      </p>
+    </div>
+    <!-- fin solución -->
+
+    <!-- CONCEPTOS CLAVE -->
+    <h5 style="color: #1f3864; font-size: 1em; margin: 22px 0 10px 0">
+      🎓 Conceptos Clave
+    </h5>
+    <div style="overflow-x: auto">
+      <table style="width: 100%; border-collapse: collapse; font-size: 0.88em">
+        <thead>
+          <tr style="background: #1f3864; color: white">
+            <th style="padding: 8px 12px; text-align: left; min-width: 200px">
+              Concepto
+            </th>
+            <th style="padding: 8px 12px; text-align: left">
+              Descripción breve
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr style="background: #fef7e6">
+            <td style="padding: 7px 12px; font-weight: bold">DevOps</td>
+            <td style="padding: 7px 12px">
+              Cultura y conjunto de prácticas que unifican el desarrollo (Dev) y
+              las operaciones (Ops) para entregar software de manera continua
+            </td>
+          </tr>
+          <tr style="background: #f0f5fd">
+            <td style="padding: 7px 12px; font-weight: bold">
+              CI (Integración Continua)
+            </td>
+            <td style="padding: 7px 12px">
+              Práctica de integrar cambios frecuentemente al repositorio
+              principal, con verificación automática en cada integración
+            </td>
+          </tr>
+          <tr style="background: #fef7e6">
+            <td style="padding: 7px 12px; font-weight: bold">
+              CD (Entrega Continua)
+            </td>
+            <td style="padding: 7px 12px">
+              Práctica de mantener el código siempre en un estado desplegable;
+              cada cambio que pasa CI puede ir a producción
+            </td>
+          </tr>
+          <tr style="background: #f0f5fd">
+            <td style="padding: 7px 12px; font-weight: bold">GitHub Actions</td>
+            <td style="padding: 7px 12px">
+              Plataforma de automatización integrada en GitHub; ejecuta
+              workflows definidos en YAML ante eventos del repositorio
+            </td>
+          </tr>
+          <tr style="background: #fef7e6">
+            <td style="padding: 7px 12px; font-weight: bold">
+              Workflow (flujo de trabajo)
+            </td>
+            <td style="padding: 7px 12px">
+              Archivo YAML en <code>.github/workflows/</code> que define los
+              triggers, jobs y steps del pipeline de CI/CD
+            </td>
+          </tr>
+          <tr style="background: #f0f5fd">
+            <td style="padding: 7px 12px; font-weight: bold">Job</td>
+            <td style="padding: 7px 12px">
+              Unidad de trabajo en GitHub Actions que se ejecuta en una máquina
+              virtual independiente (<code>runs-on: ubuntu-latest</code>)
+            </td>
+          </tr>
+          <tr style="background: #fef7e6">
+            <td style="padding: 7px 12px; font-weight: bold">Step</td>
+            <td style="padding: 7px 12px">
+              Paso dentro de un job: puede ser un comando shell
+              (<code>run:</code>) o una action reutilizable (<code>uses:</code>)
+            </td>
+          </tr>
+          <tr style="background: #f0f5fd">
+            <td
+              style="
+                padding: 7px 12px;
+                font-weight: bold;
+                font-family: monospace;
+              "
+            >
+              needs
+            </td>
+            <td style="padding: 7px 12px">
+              Dependencia entre jobs; un job con <code>needs: lint</code> solo
+              se ejecuta si el job <code>lint</code> terminó exitosamente
+            </td>
+          </tr>
+          <tr style="background: #fef7e6">
+            <td style="padding: 7px 12px; font-weight: bold">
+              Artefacto de CI
+            </td>
+            <td style="padding: 7px 12px">
+              Archivo generado durante el pipeline (reporte de cobertura,
+              binario compilado) guardado con
+              <code>actions/upload-artifact</code>
+            </td>
+          </tr>
+          <tr style="background: #f0f5fd">
+            <td style="padding: 7px 12px; font-weight: bold">Hook de Git</td>
+            <td style="padding: 7px 12px">
+              Script que se ejecuta automáticamente en eventos del flujo Git
+              (pre-commit, pre-push, commit-msg)
+            </td>
+          </tr>
+          <tr style="background: #fef7e6">
+            <td style="padding: 7px 12px; font-weight: bold">Husky</td>
+            <td style="padding: 7px 12px">
+              Librería que facilita la configuración de hooks de Git en
+              proyectos Node.js
+            </td>
+          </tr>
+          <tr style="background: #f0f5fd">
+            <td style="padding: 7px 12px; font-weight: bold">lint-staged</td>
+            <td style="padding: 7px 12px">
+              Herramienta que ejecuta linters solo sobre los archivos que están
+              en el área de stage de Git, haciendo el pre-commit muy rápido
+            </td>
+          </tr>
+          <tr style="background: #fef7e6">
+            <td style="padding: 7px 12px; font-weight: bold">
+              Protección de rama
+            </td>
+            <td style="padding: 7px 12px">
+              Regla en GitHub que impide el merge a <code>main</code> si los
+              checks de CI no pasan o si no hay revisión de código aprobada
+            </td>
+          </tr>
+          <tr style="background: #f0f5fd">
+            <td style="padding: 7px 12px; font-weight: bold">Badge de CI</td>
+            <td style="padding: 7px 12px">
+              Imagen dinámica en el README que muestra el estado actual del
+              pipeline (passing/failing) actualizada en cada ejecución
+            </td>
+          </tr>
+          <tr style="background: #fef7e6">
+            <td style="padding: 7px 12px; font-weight: bold">Codecov</td>
+            <td style="padding: 7px 12px">
+              Plataforma que recibe reportes de cobertura de tests y muestra un
+              badge con el porcentaje actualizado
+            </td>
+          </tr>
+          <tr style="background: #f0f5fd">
+            <td style="padding: 7px 12px; font-weight: bold">
+              Conventional Commits
+            </td>
+            <td style="padding: 7px 12px">
+              Convención de mensajes de commit estructurados
+              (<code>feat:</code>, <code>fix:</code>, <code>ci:</code>,
+              <code>chore:</code>) que facilitan la generación automática de
+              changelog
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <!-- fin caja interna -->
+</div>
+<!-- fin caja principal -->

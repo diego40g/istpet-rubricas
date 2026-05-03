@@ -1,0 +1,453 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rubrica de Evaluación</title>
+    <style>
+      /* Estilos copiados y adaptados para mantener la consistencia */
+      .caja {
+        font-family: sans-serif;
+        margin: 0;
+        background: #f9f9f9;
+        padding: 0;
+      }
+      .instrucciones,
+      .entrega {
+        background: #eaf6fb;
+        padding: 15px;
+        border-radius: 8px;
+        margin-bottom: 20px;
+      }
+      h4,
+      h5,
+      h6 {
+        color: #1f3864;
+      }
+      .rubrica {
+        width: 100%;
+        border-collapse: collapse;
+        font-family: sans-serif;
+        margin-bottom: 20px;
+      }
+      .rubrica th {
+        border: 1px solid black;
+        padding: 8px;
+        background-color: #1f3864;
+        color: white;
+        text-align: center;
+      }
+      .rubrica td {
+        border: 1px solid black;
+        padding: 8px;
+      }
+      .criterio {
+        text-align: left;
+        background-color: #cfaa4f;
+        font-weight: bold;
+      }
+      .excelente {
+        background-color: #f0f5fd;
+      }
+      .regular {
+        background-color: #fef7e6;
+      }
+      .insuficiente {
+        background-color: #f0f5fd; /* Alternando colores si se desea, o igual */
+      }
+    </style>
+  </head>
+  <body>
+    <nav aria-label="Page navigation example">
+      <ul class="pagination">
+        <li class="page-item">
+          <a class="page-link" href="#" onclick="history.back()"
+            ><i class="fa fa-chevron-circle-left" aria-hidden="true"></i
+            >&nbsp;Regresar</a
+          >
+        </li>
+      </ul>
+    </nav>
+
+    <svg
+      id="Capa_1"
+      xmlns="http://www.w3.org/2000/svg"
+      xmlns:xlink="http://www.w3.org/1999/xlink"
+      viewBox="0 0 1920 332"
+    >
+      <image
+        width="1920"
+        height="332"
+        xlink:href="https://istpetonline.edu.ec/draftfile.php/54951/user/draft/654213724/banner-tarea.jpg"
+      ></image>
+      <text
+        transform="translate(235.44 208.47)"
+        style="
+          fill: #fff;
+          font-family: OpenSans-Bold, &quot;Open Sans&quot;;
+          font-size: 35px;
+          font-weight: 700;
+        "
+      >
+        <tspan x="0" y="0">
+          Proyecto Final - Análisis y Diseño de Software&nbsp;
+        </tspan>
+      </text>
+    </svg>
+    <p></p>
+
+    <div class="caja" role="alert">
+      <h4 style="color: #1f3864">Rúbrica de Evaluación por Unidad</h4>
+
+      <div class="instrucciones">
+        <h5 style="color: #1f3864">📝 Descripción General</h5>
+        <p style="margin-top: 0">
+          La nota final del curso se compone de
+          <strong>Prácticas Semanales (40 pts)</strong>,
+          <strong>Participación (10 pts)</strong> y el
+          <strong>Proyecto Final (50 pts)</strong>.
+        </p>
+        <p>
+          A continuación se detalla la distribución de puntos y criterios de
+          evaluación para cada componente.
+        </p>
+      </div>
+
+      <!-- 1. Prácticas Semanales -->
+      <h5 style="color: #1f3864">📊 Rúbrica de evaluación por Unidad</h5>
+
+      <!-- Unidad 1 -->
+      <h6 style="color: #1f3864; margin-top: 20px">
+        Unidad 1: Fundamentos del Análisis (Semanas 1-2) - Entregable 1 (10 pts)
+      </h6>
+      <table class="rubrica">
+        <tbody>
+          <tr>
+            <th style="width: 20%">Criterio</th>
+            <th style="width: 26%">Excelente</th>
+            <th style="width: 26%">Regular</th>
+            <th style="width: 26%">Insuficiente</th>
+          </tr>
+          <tr>
+            <td class="criterio">
+              Identificación de Actores y Alcance<br />2.5 pts
+            </td>
+            <td class="excelente">
+              (2.5 pts) Claridad en la definición de usuarios y límites del
+              sistema.
+            </td>
+            <td class="regular">
+              (1.25 pts) Definición vaga de usuarios o límites difusos.
+            </td>
+            <td class="insuficiente">
+              (0 pts) No se identifican actores o alcance.
+            </td>
+          </tr>
+          <tr>
+            <td class="criterio">Historias de Usuario<br />5.0 pts</td>
+            <td class="excelente">
+              (5.0 pts) Redacción correcta siguiendo INVEST, con criterios de
+              aceptación claros. Mínimo 5 historias.
+            </td>
+            <td class="regular">
+              (2.5 pts) Historias mal redactadas o sin criterios de aceptación.
+            </td>
+            <td class="insuficiente">
+              (0 pts) No se presentan historias de usuario.
+            </td>
+          </tr>
+          <tr>
+            <td class="criterio">Especificación de Requisitos<br />2.5 pts</td>
+            <td class="excelente">
+              (2.5 pts) Documento SRS preliminar con estructura base.
+            </td>
+            <td class="regular">
+              (1.25 pts) Documento incompleto o sin estructura clara.
+            </td>
+            <td class="insuficiente">
+              (0 pts) No se entrega especificación de requisitos.
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <!-- Unidad 2 -->
+      <h6 style="color: #1f3864; margin-top: 20px">
+        Unidad 2: Diseño y Arquitectura (Semanas 3-4) - Entregable 2 (10 pts)
+      </h6>
+      <table class="rubrica">
+        <tbody>
+          <tr>
+            <th style="width: 20%">Criterio</th>
+            <th style="width: 26%">Excelente</th>
+            <th style="width: 26%">Regular</th>
+            <th style="width: 26%">Insuficiente</th>
+          </tr>
+          <tr>
+            <td class="criterio">Diagrama de Arquitectura<br />4.0 pts</td>
+            <td class="excelente">
+              (4.0 pts) Representación visual clara de componentes y capas (C4
+              model o similar).
+            </td>
+            <td class="regular">
+              (2.0 pts) Diagrama confuso o con errores en la representación de
+              capas.
+            </td>
+            <td class="insuficiente">
+              (0 pts) No se incluye diagrama de arquitectura.
+            </td>
+          </tr>
+          <tr>
+            <td class="criterio">
+              ADRs (Architecture Decision Records)<br />4.0 pts
+            </td>
+            <td class="excelente">
+              (4.0 pts) Documentación de al menos 2 decisiones clave (ej: Stack,
+              DB) con justificación.
+            </td>
+            <td class="regular">
+              (2.0 pts) Documentación incompleta o sin justificación clara.
+            </td>
+            <td class="insuficiente">
+              (0 pts) No se documentan decisiones arquitectónicas.
+            </td>
+          </tr>
+          <tr>
+            <td class="criterio">Estructura del Proyecto<br />2.0 pts</td>
+            <td class="excelente">
+              (2.0 pts) Inicialización correcta del repositorio y estructura de
+              carpetas (scaffolding).
+            </td>
+            <td class="regular">
+              (1.0 pts) Estructura desordenada o sin seguir estándares.
+            </td>
+            <td class="insuficiente">
+              (0 pts) Repositorio mal inicializado o estructura incorrecta.
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h6 style="color: #1f3864; margin-top: 20px">
+        Unidad 2: Diseño y Arquitectura (Semanas 3-4) - Entregable 3 (10 pts)
+      </h6>
+      <table class="rubrica">
+        <tbody>
+          <tr>
+            <th style="width: 20%">Criterio</th>
+            <th style="width: 26%">Excelente</th>
+            <th style="width: 26%">Regular</th>
+            <th style="width: 26%">Insuficiente</th>
+          </tr>
+          <tr>
+            <td class="criterio">Diagrama de Clases / ER<br />5.0 pts</td>
+            <td class="excelente">
+              (5.0 pts) Modelo de datos coherente y normalizado. Relaciones
+              correctas.
+            </td>
+            <td class="regular">
+              (2.5 pts) Modelo con errores de normalización o relaciones
+              incorrectas.
+            </td>
+            <td class="insuficiente">
+              (0 pts) No se incluye diagrama de clases o ER.
+            </td>
+          </tr>
+          <tr>
+            <td class="criterio">Diagramas de Comportamiento<br />3.0 pts</td>
+            <td class="excelente">
+              (3.0 pts) Diagrama de secuencia o de estados para un flujo crítico
+              (ej: Préstamo).
+            </td>
+            <td class="regular">(1.5 pts) Diagrama incompleto o poco claro.</td>
+            <td class="insuficiente">
+              (0 pts) No se incluyen diagramas de comportamiento.
+            </td>
+          </tr>
+          <tr>
+            <td class="criterio">Aplicación de Patrones<br />2.0 pts</td>
+            <td class="excelente">
+              (2.0 pts) Identificación y propuesta de uso de al menos un patrón
+              de diseño.
+            </td>
+            <td class="regular">
+              (1.0 pts) Identificación errónea o propuesta no justificada.
+            </td>
+            <td class="insuficiente">
+              (0 pts) No se aplican patrones de diseño.
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <!-- Unidad 3 -->
+      <h6 style="color: #1f3864; margin-top: 20px">
+        Unidad 3: Implementación y Calidad (Semana 5) - Entregable 4 (10 pts)
+      </h6>
+      <table class="rubrica">
+        <tbody>
+          <tr>
+            <th style="width: 20%">Criterio</th>
+            <th style="width: 26%">Excelente</th>
+            <th style="width: 26%">Regular</th>
+            <th style="width: 26%">Insuficiente</th>
+          </tr>
+          <tr>
+            <td class="criterio">Pruebas Unitarias<br />4.0 pts</td>
+            <td class="excelente">
+              (4.0 pts) Implementación de tests para lógica de negocio crítica
+              (ej: cálculo de multas).
+            </td>
+            <td class="regular">
+              (2.0 pts) Tests insuficientes o que no cubren casos críticos.
+            </td>
+            <td class="insuficiente">
+              (0 pts) No se implementan pruebas unitarias.
+            </td>
+          </tr>
+          <tr>
+            <td class="criterio">Pipeline CI/CD<br />3.0 pts</td>
+            <td class="excelente">
+              (3.0 pts) Configuración básica de GitHub Actions (lint, test).
+            </td>
+            <td class="regular">
+              (1.5 pts) Configuración incompleta o con errores.
+            </td>
+            <td class="insuficiente">
+              (0 pts) No se configura pipeline CI/CD.
+            </td>
+          </tr>
+          <tr>
+            <td class="criterio">Reporte de Calidad<br />3.0 pts</td>
+            <td class="excelente">
+              (3.0 pts) Análisis estático de código o justificación de cobertura
+              de tests.
+            </td>
+            <td class="regular">
+              (1.5 pts) Reporte superficial o sin análisis adecuado.
+            </td>
+            <td class="insuficiente">
+              (0 pts) No se entrega reporte de calidad.
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <!-- 2. Participación -->
+      <h5 style="color: #1f3864; margin-top: 30px">
+        2. Participación (10 pts)
+      </h5>
+      <div class="instrucciones" style="background-color: #fff8e1">
+        <p>
+          Se evalúa la colaboración y asistencia activa durante las sesiones.
+        </p>
+        <ul>
+          <li>
+            <strong>Asistencia Activa (5 pts):</strong> Presencia y
+            participación en discusiones y ejercicios en clase.
+          </li>
+          <li>
+            <strong>Code Reviews / Aportes (5 pts):</strong> Revisión
+            constructiva del código de compañeros o aportes significativos al
+            repositorio común.
+          </li>
+        </ul>
+      </div>
+
+      <!-- 3. Proyecto Final -->
+      <h5 style="color: #1f3864; margin-top: 30px">
+        3. Proyecto Final (50 pts)
+      </h5>
+      <div class="instrucciones">
+        <p>
+          El proyecto integra todo lo aprendido. Se evalúa el
+          <strong>MVP (Producto Mínimo Viable)</strong> del Sistema de
+          Biblioteca Digital.
+        </p>
+      </div>
+
+      <table class="rubrica">
+        <tbody>
+          <tr>
+            <th style="width: 20%">Criterio</th>
+            <th style="width: 26%">Excelente</th>
+            <th style="width: 26%">Regular</th>
+            <th style="width: 26%">Insuficiente</th>
+          </tr>
+          <tr>
+            <td class="criterio">Funcionalidad (MVP)<br />15 pts</td>
+            <td class="excelente">
+              (15 pts) El sistema permite realizar los flujos principales
+              (Registrar libro, Buscar, Prestar, Devolver). Sin errores
+              críticos.
+            </td>
+            <td class="regular">
+              (7.5 pts) El sistema tiene errores menores o falta algún flujo
+              principal.
+            </td>
+            <td class="insuficiente">
+              (0 pts) El sistema no funciona o tiene errores críticos.
+            </td>
+          </tr>
+          <tr>
+            <td class="criterio">Arquitectura y Código<br />15 pts</td>
+            <td class="excelente">
+              (15 pts) Estructura limpia, uso correcto de Next.js/React,
+              separación de responsabilidades, tipos de TypeScript.
+            </td>
+            <td class="regular">
+              (7.5 pts) Estructura algo desordenada, mezcla de lógica o tipos
+              incompletos.
+            </td>
+            <td class="insuficiente">
+              (0 pts) Código espagueti o mal estructurado.
+            </td>
+          </tr>
+          <tr>
+            <td class="criterio">Documentación<br />10 pts</td>
+            <td class="excelente">
+              (10 pts) README completo, ADRs finales, diagramas arquitectónicos
+              actualizados, instrucciones de despliegue.
+            </td>
+            <td class="regular">
+              (5 pts) Documentación incompleta o desactualizada.
+            </td>
+            <td class="insuficiente">(0 pts) Sin documentación.</td>
+          </tr>
+          <tr>
+            <td class="criterio">UI/UX (Vibe Coding)<br />5 pts</td>
+            <td class="excelente">
+              (5 pts) Interfaz moderna, responsive (shadcn/ui), uso efectivo de
+              componentes.
+            </td>
+            <td class="regular">
+              (2.5 pts) Interfaz básica o problemas de diseño responsive.
+            </td>
+            <td class="insuficiente">(0 pts) Interfaz pobre o inutilizable.</td>
+          </tr>
+          <tr>
+            <td class="criterio">Despliegue<br />5 pts</td>
+            <td class="excelente">
+              (5 pts) Aplicación funcional desplegada en Vercel (o similar) y
+              accesible públicamente.
+            </td>
+            <td class="regular">
+              (2.5 pts) Despliegue con errores o no accesible siempre.
+            </td>
+            <td class="insuficiente">
+              (0 pts) No se ha desplegado la aplicación.
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div
+        class="entrega"
+        style="background-color: #e8f5e9; border: 1px solid #c8e6c9"
+      >
+        <strong>Nota:</strong> Para aprobar el curso se requiere una nota mínima
+        de <strong>70/100</strong> y haber entregado el Proyecto Final.
+      </div>
+    </div>
+  </body>
+</html>

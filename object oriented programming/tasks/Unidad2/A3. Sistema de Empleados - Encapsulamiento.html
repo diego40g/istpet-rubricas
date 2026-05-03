@@ -41,7 +41,7 @@
     style="font-family: sans-serif; margin: 0; background: #f9f9f9; padding: 0"
   >
     <h4 style="color: #1f3864">
-      A3. Sistema de Empleados - Encapsulamiento (Python / Java)
+      A3. Sistema de Empleados — Encapsulamiento (Java · C#)
     </h4>
 
     <div
@@ -55,34 +55,49 @@
     >
       <h5 style="color: #1f3864">📝 Instrucciones para el estudiante</h5>
       <p style="margin-top: 0">
-        Esta actividad tiene como objetivo aplicar principios de
-        <strong>encapsulamiento</strong> y seguridad de datos. Elige tu lenguaje
-        de preferencia.
+        Esta actividad aplica <strong>encapsulamiento</strong>, getters/setters
+        con validación e historial de cambios. Elige tu lenguaje (Java o C#) y
+        completa ambas partes.
       </p>
       <ul style="margin-top: 10px">
         <li>
-          <strong>Objetivo:</strong> Implementar una clase
-          <code>Empleado</code> que proteja sus datos sensibles, valide la
-          información y mantenga un historial de cambios.
+          <strong>Objetivo:</strong> Implementar las clases
+          <code>Empleado</code>, <code>CambioSalario</code> y
+          <code>Departamento</code> con atributos privados, validaciones en
+          setters/propiedades e historial salarial. Luego conectarlas a una
+          interfaz gráfica con validaciones en tiempo real.
         </li>
         <li>
           <strong>Producto esperado:</strong>
           <ul>
             <li>
-              <strong>En Python:</strong> Archivo
-              <code>sistema_empleados.py</code>. Uso de
-              <code>__atributos</code> privados, decorador
-              <code>@property</code> para getters/setters y validaciones.
+              <strong>En Java:</strong> Paquete <code>model/</code> con
+              <code>Empleado.java</code>, <code>CambioSalario.java</code>,
+              <code>Departamento.java</code>. Modificador <code>private</code>
+              en todos los atributos. Getters/Setters con
+              <code>IllegalArgumentException</code>. Paquete
+              <code>ui/</code> con
+              <code>VentanaSistemaEmpleados.java</code> (Swing).
             </li>
             <li>
-              <strong>En Java:</strong> Archivos <code>Empleado.java</code> y
-              <code>Departamento.java</code>. Uso de modificador
-              <code>private</code>, métodos públicos Getters/Setters con
-              validación, y <code>ArrayList</code> para el historial.
+              <strong>En C#:</strong> Carpeta <code>Models/</code> con
+              <code>Empleado.cs</code>, <code>CambioSalario.cs</code>,
+              <code>Departamento.cs</code>. Propiedades
+              <code>{ get; set; }</code> con validación en <code>set</code>.
+              Carpeta <code>Forms/</code> con
+              <code>FormSistemaEmpleados.cs</code> (WinForms).
             </li>
             <li>
-              Implementación de validaciones (ej. RFC, salario > 0) y un
-              historial de cambios de salario.
+              Todos los atributos privados. Validaciones: nombre ≥ 3 chars,
+              salario ≥ $172, edad 18-65, email con <code>@</code>.
+            </li>
+            <li>
+              Historial de cambios: lista interna que registra fecha, salario
+              anterior/nuevo y razón.
+            </li>
+            <li>
+              GUI funcional: agregar empleados, aumentar salario 10%, ver
+              historial, mostrar nómina total.
             </li>
           </ul>
         </li>
@@ -98,8 +113,11 @@
         margin-bottom: 20px;
       "
     >
-      <strong>Entrega:</strong> Sube tus archivos de código (.py o .java) a la
-      plataforma.
+      <strong>Entrega:</strong> Sube el código fuente completo (<code
+        >.java</code
+      >
+      o <code>.cs</code>) y una captura de pantalla de la aplicación en
+      ejecución a la plataforma.
     </div>
 
     <h5 style="color: #1f3864">📊 Rúbrica de evaluación</h5>
@@ -205,9 +223,12 @@
               background-color: #fef7e6;
             "
           >
-            <strong>Python:</strong> Atributos con `__` (doble guion bajo).<br />
-            <strong>Java:</strong> Atributos marcados como `private`.<br />
-            Acceso restringido correctamente.<br /><br />3.0 pts
+            <strong>Java:</strong> Atributos marcados como
+            <code>private</code> + getters/setters públicos.<br />
+            <strong>C#:</strong> <code>private _campo</code> + propiedades
+            <code>{ get; set; }</code>.<br />
+            Acceso restringido correctamente en todos los atributos.<br /><br />3.0
+            pts
           </td>
           <td
             style="
@@ -267,8 +288,10 @@
               background-color: #f0f5fd;
             "
           >
-            <strong>Py:</strong> Usa `@property` y `@x.setter`.<br />
-            <strong>Java:</strong> Usa Getters/Setters públicos.<br />
+            <strong>Java:</strong> Getters/Setters públicos con
+            <code>IllegalArgumentException</code>.<br />
+            <strong>C#:</strong> Propiedades <code>{ get; set; }</code> con
+            validación en <code>set</code>.<br />
             Implementación limpia y correcta.<br /><br />3.0 pts
           </td>
           <td
@@ -329,8 +352,9 @@
               background-color: #fef7e6;
             "
           >
-            Validaciones robustas (RFC, salario positivo, etc.) dentro de los
-            setters/constructores. Protege la integridad.<br /><br />2.0 pts
+            Validaciones robustas (nombre ≥ 3 chars, salario ≥ $172, edad 18-65,
+            email con <code>@</code>) dentro de los setters/propiedades. Protege
+            la integridad del objeto.<br /><br />2.0 pts
           </td>
           <td
             style="

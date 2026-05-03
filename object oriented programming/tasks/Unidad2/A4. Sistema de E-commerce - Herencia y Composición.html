@@ -41,7 +41,7 @@
     style="font-family: sans-serif; margin: 0; background: #f9f9f9; padding: 0"
   >
     <h4 style="color: #1f3864">
-      A4. Sistema de E-commerce - Herencia y Composición (Python / Java)
+      A4. Sistema de E-commerce — Herencia y Composición (Java · C#)
     </h4>
 
     <div
@@ -56,30 +56,41 @@
       <h5 style="color: #1f3864">📝 Instrucciones para el estudiante</h5>
       <p style="margin-top: 0">
         Esta actividad explora la diferencia entre relaciones "Es un" (Herencia)
-        y "Tiene un" (Composición).
+        y "Tiene un" (Composición). Elige tu lenguaje (Java o C#) y completa
+        ambas partes.
       </p>
       <ul style="margin-top: 10px">
         <li>
           <strong>Objetivo:</strong> Diseñar un sistema de E-commerce utilizando
           clases abstractas para los productos (Herencia) y objetos contenedores
-          para pedidos (Composición).
+          para pedidos (Composición). Luego conectarlas a una interfaz gráfica
+          con catálogo, carrito y pedidos.
         </li>
         <li>
           <strong>Producto esperado:</strong>
           <ul>
             <li>
-              <strong>En Python:</strong> Uso de modulo <code>abc</code>, clases
-              heredadas de <code>Producto</code>.
+              <strong>En Java:</strong> Paquete <code>model/</code> con clase
+              <code>abstract Producto</code> y subclases
+              <code>ProductoFisico</code>, <code>ProductoDigital</code>,
+              <code>Servicio</code>. Clases <code>ItemCarrito</code>,
+              <code>Carrito</code>, <code>Pedido</code> por composición. Paquete
+              <code>ui/</code> con <code>VentanaEcommerce.java</code> (Swing).
             </li>
             <li>
-              <strong>En Java:</strong> Uso de
-              <code>abstract class Producto</code> y `extends`.
+              <strong>En C#:</strong> Carpeta <code>Models/</code> con
+              <code>abstract class Producto</code> y subclases equivalentes.
+              Carpeta <code>Forms/</code> con
+              <code>FormEcommerce.cs</code> (WinForms).
             </li>
             <li>
-              Implementación de <strong>Composición</strong> en la clase
-              <code>Pedido</code> (que contiene Cliente, Carrito, Dirección).
+              Demostración de polimorfismo: <code>calcularCosto()</code> /
+              <code>CalcularCosto()</code> con comportamiento distinto por tipo.
             </li>
-            <li>Demostracion de polimorfismo en el cálculo de costos.</li>
+            <li>
+              GUI funcional: agregar productos al catálogo, gestionar carrito y
+              generar pedido con ticket.
+            </li>
           </ul>
         </li>
       </ul>
@@ -94,8 +105,11 @@
         margin-bottom: 20px;
       "
     >
-      <strong>Entrega:</strong> Sube tus archivos de código o enlace al
-      repositorio a la plataforma.
+      <strong>Entrega:</strong> Sube el código fuente completo (<code
+        >.java</code
+      >
+      o <code>.cs</code>) y una captura de pantalla de la aplicación en
+      ejecución a la plataforma.
     </div>
 
     <h5 style="color: #1f3864">📊 Rúbrica de evaluación</h5>
@@ -201,9 +215,10 @@
               background-color: #fef7e6;
             "
           >
-            <strong>Python:</strong> Clases <code>ABC</code> y subclases.<br />
-            <strong>Java:</strong> Clase <code>abstract</code> y
-            <code>extends</code>.<br />
+            <strong>Java:</strong> <code>abstract class Producto</code> +
+            <code>extends</code> en subclases.<br />
+            <strong>C#:</strong> <code>abstract class Producto</code> +
+            <code>: Producto</code> en subclases.<br />
             Jerarquía lógica y correcta ("Es un").<br /><br />3.0 pts
           </td>
           <td
@@ -324,8 +339,10 @@
               background-color: #fef7e6;
             "
           >
-            Sobrescribe métodos (`calcularCosto`, `toString` etc) correctamente
-            en cada subclase.<br /><br />2.0 pts
+            Sobrescribe métodos (<code>calcularCosto()</code> /
+            <code>CalcularCosto()</code>, <code>toString()</code> /
+            <code>ToString()</code>) correctamente en cada subclase.<br /><br />2.0
+            pts
           </td>
           <td
             style="
@@ -384,8 +401,8 @@
               background-color: #f0f5fd;
             "
           >
-            Código organizado (paquetes en Java o módulos en Py), uso de Enums,
-            manejo de clases limpias.<br /><br />2.0 pts
+            Código organizado (paquetes en Java o namespaces en C#), uso de
+            Enums, manejo de clases limpias.<br /><br />2.0 pts
           </td>
           <td
             style="

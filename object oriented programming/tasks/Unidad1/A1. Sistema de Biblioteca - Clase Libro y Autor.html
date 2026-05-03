@@ -41,7 +41,7 @@
     style="font-family: sans-serif; margin: 0; background: #f9f9f9; padding: 0"
   >
     <h4 style="color: #1f3864">
-      A1. Sistema de Biblioteca - Clase Libro y Autor (Python / Java)
+      A1. Sistema de Biblioteca — Clase Libro y Autor (Python · Java · C#)
     </h4>
 
     <div
@@ -57,26 +57,42 @@
       <ul style="margin-top: 0">
         <li>
           <strong>Objetivo:</strong> Implementar un sistema básico de biblioteca
-          utilizando clases, objetos, atributos y métodos en
-          <strong>Python</strong> o <strong>Java</strong>.
+          aplicando los conceptos fundamentales de POO:
+          <strong>clases, objetos, atributos y métodos</strong>. El sistema
+          gestiona dos entidades: <strong>Autor</strong> y
+          <strong>Libro</strong>.
+        </li>
+        <li>
+          <strong>Lenguaje:</strong> Elige <strong>Python</strong>,
+          <strong>Java</strong> o <strong>C#</strong>. La rúbrica evalúa lógica
+          y conceptos, no la sintaxis del lenguaje.
         </li>
         <li>
           <strong>Producto esperado:</strong>
           <ul>
             <li>
-              <strong>En Python:</strong> Archivo <code>biblioteca.py</code>.
-              Clases <strong>Autor</strong> y <strong>Libro</strong> con
-              atributos y métodos funcionales.
+              <strong>Python:</strong> Archivo <code>biblioteca.py</code> con
+              clases <code>Autor</code> y <code>Libro</code> y función
+              <code>main()</code>.
             </li>
             <li>
-              <strong>En Java:</strong> Archivos <code>Autor.java</code> y
-              <code>Libro.java</code>. Uso estricto de
-              <strong>atributos privados</strong> y métodos
-              <strong>Getters/Setters</strong>.
+              <strong>Java (IntelliJ IDEA — Maven):</strong> Archivos
+              <code>Autor.java</code>, <code>Libro.java</code> y
+              <code>Main.java</code>. Atributos <code>private</code> con
+              getters. Extensión GUI: <code>VentanaBiblioteca.java</code>
+              (Swing).
             </li>
             <li>
-              Un bloque de ejecución principal (o clase Main) que instancie
-              objetos y demuestre su funcionamiento.
+              <strong>C# (JetBrains Rider — Windows Forms):</strong> Archivos
+              <code>Models/Autor.cs</code>, <code>Models/Libro.cs</code> y
+              <code>Program.cs</code>. Propiedades con
+              <code>{ get; private set; }</code>. Extensión GUI:
+              <code>Forms/FormBiblioteca.cs</code>.
+            </li>
+            <li>
+              Estructura de proyecto recomendada:
+              <code>model/ → ui/ → Main</code> (Java) /
+              <code>Models/ → Forms/ → Program.cs</code> (C#).
             </li>
           </ul>
         </li>
@@ -92,8 +108,10 @@
         margin-bottom: 20px;
       "
     >
-      <strong>Entrega:</strong> Sube tu archivo .py o un enlace al repositorio a
-      la plataforma antes de la fecha límite.
+      <strong>Entrega:</strong> Sube el archivo <code>.py</code>, o un enlace al
+      repositorio con los archivos <code>.java</code> / <code>.cs</code>, antes
+      de la fecha límite. Si implementas la extensión GUI, incluye capturas de
+      pantalla de la ventana funcionando.
     </div>
 
     <h5 style="color: #1f3864">📊 Rúbrica de evaluación</h5>
@@ -199,9 +217,11 @@
               background-color: #fef7e6;
             "
           >
-            <strong>Python:</strong> Define <code>__init__</code> y
-            atributos.<br /><strong>Java:</strong> Atributos
-            <code>private</code> y constructores correctos.<br /><br />2.5 pts
+            Clases bien definidas con todos los atributos del tipo correcto.<br />
+            <strong>Java/C#:</strong> atributos <code>private</code> con
+            getters/setters.<br />
+            <strong>Python:</strong> convención <code>_</code> o
+            <code>__</code>.<br /><br />2.5 pts
           </td>
           <td
             style="
@@ -261,8 +281,10 @@
               background-color: #f0f5fd;
             "
           >
-            Todos los métodos (edad, prestar, devolver, etc.) funcionan
-            correctamente y cumplen su lógica.<br /><br />2.5 pts
+            Todos los métodos (<code>edad</code>, <code>prestar</code>,
+            <code>devolver</code>, <code>mostrarInfo</code>,
+            <code>esAntiguo</code>) funcionan correctamente y cumplen su
+            lógica.<br /><br />2.5 pts
           </td>
           <td
             style="
@@ -322,8 +344,9 @@
               background-color: #fef7e6;
             "
           >
-            Logica correcta en cálculo de edad y gestión de estado (disponible).
-            Usa tipos de datos adecuados.<br /><br />3.0 pts
+            Lógica correcta en cálculo de edad y gestión de estado
+            (<code>disponible</code>). Usa tipos de datos adecuados para el
+            lenguaje elegido.<br /><br />3.0 pts
           </td>
           <td
             style="
@@ -343,7 +366,7 @@
             "
           >
             Errores de lógica que impiden el funcionamiento esperado de
-            `prestar` o `edad`.<br /><br />1.8 pts
+            <code>prestar</code> o <code>edad</code>.<br /><br />1.8 pts
           </td>
           <td
             style="
@@ -383,8 +406,9 @@
               background-color: #f0f5fd;
             "
           >
-            Crea instancias válidas y demuestra el funcionamiento de todo el
-            sistema en el bloque main.<br /><br />2.0 pts
+            Crea instancias válidas y demuestra el funcionamiento completo en el
+            bloque <code>main</code> / función principal. Mínimo 3 autores y 4
+            libros.<br /><br />2.0 pts
           </td>
           <td
             style="

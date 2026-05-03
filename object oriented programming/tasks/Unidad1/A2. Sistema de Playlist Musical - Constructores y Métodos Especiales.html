@@ -41,8 +41,8 @@
     style="font-family: sans-serif; margin: 0; background: #f9f9f9; padding: 0"
   >
     <h4 style="color: #1f3864">
-      A2. Sistema de Playlist Musical - Constructores y Métodos Especiales
-      (Python / Java)
+      A2. Sistema de Playlist Musical — Constructores y Métodos Especiales
+      (Python · Java · C#)
     </h4>
 
     <div
@@ -58,26 +58,43 @@
       <ul style="margin-top: 0">
         <li>
           <strong>Objetivo:</strong> Implementar un sistema de gestión de
-          playlists musicales aplicando constructores avanzados y colecciones.
+          playlists musicales aplicando
+          <strong
+            >constructores múltiples / alternativos, métodos especiales,
+            colecciones y métodos estáticos</strong
+          >.
+        </li>
+        <li>
+          <strong>Lenguaje:</strong> Elige <strong>Python</strong>,
+          <strong>Java</strong> o <strong>C#</strong>. La rúbrica evalúa lógica
+          y conceptos, no la sintaxis.
         </li>
         <li>
           <strong>Producto esperado:</strong>
           <ul>
             <li>
-              <strong>En Python:</strong> Archivo <code>playlist.py</code>.
-              Clase <strong>Cancion</strong> con dunder methods
-              (<code>__str__</code>, <code>__eq__</code>) y
-              <code>@classmethod</code>.
+              <strong>Python:</strong> Archivo
+              <code>playlist_musical.py</code> con clases <code>Cancion</code> y
+              <code>Playlist</code> (dunder methods +
+              <code>@classmethod</code>).
             </li>
             <li>
-              <strong>En Java:</strong> Archivos <code>Cancion.java</code> y
-              <code>Playlist.java</code>. Uso de
-              <strong>sobrecarga de constructores</strong>, métodos
-              <code>static</code> y <code>ArrayList</code>.
+              <strong>Java (IntelliJ IDEA — Maven):</strong> Archivos
+              <code>Cancion.java</code>, <code>Playlist.java</code> y
+              <code>Main.java</code>. Sobrecarga de constructores, métodos
+              <code>static</code> factory y <code>ArrayList</code>. Extensión
+              GUI: <code>VentanaPlaylist.java</code> (Swing).
             </li>
             <li>
-              Script Principal de demostración que pruebe todas las
-              funcionalidades.
+              <strong>C# (JetBrains Rider — Windows Forms):</strong> Archivos
+              <code>Models/Cancion.cs</code>, <code>Models/Playlist.cs</code> y
+              <code>Program.cs</code>. Extensión GUI:
+              <code>Forms/FormPlaylist.cs</code>.
+            </li>
+            <li>
+              Clase / script principal que demuestre: mínimo 5 canciones con
+              distintos constructores, 2 playlists, <code>combinar()</code>,
+              <code>mezclar()</code> y cálculo de duración total.
             </li>
           </ul>
         </li>
@@ -93,8 +110,10 @@
         margin-bottom: 20px;
       "
     >
-      <strong>Entrega:</strong> Sube tu archivo .py o un enlace al repositorio a
-      la plataforma antes de la fecha límite.
+      <strong>Entrega:</strong> Sube el archivo <code>.py</code>, o un enlace al
+      repositorio con los archivos <code>.java</code> / <code>.cs</code>, antes
+      de la fecha límite. Si implementas la extensión GUI, incluye capturas de
+      pantalla de la ventana funcionando.
     </div>
 
     <h5 style="color: #1f3864">📊 Rúbrica de evaluación</h5>
@@ -200,10 +219,11 @@
               background-color: #fef7e6;
             "
           >
-            <strong>Py:</strong> Dunder methods (<code>__str__</code>,
-            <code>__eq__</code>).<br />
-            <strong>Java:</strong> Sobrecarga de constructores eficiente.<br /><br />3.0
-            pts
+            <strong>Python:</strong> Dunder methods completos
+            (<code>__str__</code>, <code>__eq__</code>,
+            <code>__add__</code>).<br />
+            <strong>Java/C#:</strong> Sobrecarga de constructores + factory
+            methods eficientes.<br /><br />3.0 pts
           </td>
           <td
             style="
@@ -263,8 +283,9 @@
               background-color: #f0f5fd;
             "
           >
-            Usa <code>@classmethod</code> (Py) o métodos
-            <code>static</code> (Java) como factories.<br /><br />2.0 pts
+            Usa <code>@classmethod</code> / <code>@staticmethod</code> (Python)
+            o métodos <code>static</code> (Java/C#) como factories con lógica
+            completa.<br /><br />2.0 pts
           </td>
           <td
             style="
@@ -273,8 +294,8 @@
               background-color: #f0f5fd;
             "
           >
-            Implementa @classmethod pero con lógica simple o errores de
-            validación.<br /><br />1.6 pts
+            Implementa los métodos pero con lógica simple o errores de
+            validación en los factory methods.<br /><br />1.6 pts
           </td>
           <td
             style="
@@ -283,8 +304,8 @@
               background-color: #f0f5fd;
             "
           >
-            Intenta usar @classmethod pero no funciona como constructor.<br /><br />1.2
-            pts
+            Intenta usar métodos estáticos / factory pero no funcionan como
+            constructores alternativos.<br /><br />1.2 pts
           </td>
           <td
             style="
@@ -324,8 +345,9 @@
               background-color: #fef7e6;
             "
           >
-            Uso experto de colecciones (Listas/ArrayList) y propiedades
-            (<code>@property</code>/Getters).<br /><br />2.0 pts
+            Uso experto de colecciones (<code>list</code> /
+            <code>ArrayList&lt;Cancion&gt;</code> / <code>List&lt;T&gt;</code>)
+            y propiedades/getters correctamente encapsulados.<br /><br />2.0 pts
           </td>
           <td
             style="
@@ -334,17 +356,7 @@
               background-color: #fef7e6;
             "
           >
-            Usa @property correctamente pero la lógica de cálculo tiene fallos
-            menores.<br /><br />1.6 pts
-          </td>
-          <td
-            style="
-              border: 1px solid black;
-              padding: 8px;
-              background-color: #fef7e6;
-            "
-          >
-            Implementación incorrecta de propiedades o uso innecesario.<br /><br />1.2
+            Usa colecciones pero la lógica de cálculo tiene fallos menores.<br /><br />1.6
             pts
           </td>
           <td
@@ -354,7 +366,8 @@
               background-color: #fef7e6;
             "
           >
-            Errores de sintaxis con decoradores.<br /><br />0.8 pts
+            Implementación incorrecta de propiedades o colecciones.<br /><br />1.2
+            pts
           </td>
           <td
             style="
@@ -363,7 +376,17 @@
               background-color: #fef7e6;
             "
           >
-            No utiliza @property.<br /><br />0.4 pts
+            Errores de sintaxis con decoradores o tipos genéricos.<br /><br />0.8
+            pts
+          </td>
+          <td
+            style="
+              border: 1px solid black;
+              padding: 8px;
+              background-color: #fef7e6;
+            "
+          >
+            No utiliza colecciones ni encapsulamiento.<br /><br />0.4 pts
           </td>
         </tr>
         <tr>
@@ -385,8 +408,9 @@
               background-color: #f0f5fd;
             "
           >
-            El sistema funciona perfectamente, mezcla canciones, calcula
-            duraciones y pasa todas las pruebas.<br /><br />3.0 pts
+            El sistema funciona completamente: mezcla canciones, calcula
+            duraciones y pasa todas las pruebas del
+            <code>main</code>.<br /><br />3.0 pts
           </td>
           <td
             style="

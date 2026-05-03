@@ -1,0 +1,637 @@
+<nav aria-label="Page navigation example">
+  <ul class="pagination">
+    <li class="page-item">
+      <a
+        class="page-link"
+        href="https://istpetonline.edu.ec/course/view.php?id=160#section-4"
+        ><i class="fa fa-chevron-circle-left" aria-hidden="true"></i
+        >&nbsp;Regresar</a
+      >
+    </li>
+  </ul>
+</nav>
+<svg
+  id="Capa_1"
+  xmlns="http://www.w3.org/2000/svg"
+  xmlns:xlink="http://www.w3.org/1999/xlink"
+  viewBox="0 0 1920 332"
+>
+  <image
+    width="1920"
+    height="332"
+    xlink:href="https://istpetonline.edu.ec/draftfile.php/54951/user/draft/654213724/banner-tarea.jpg"
+  ></image>
+  <text
+    transform="translate(235.44 208.47)"
+    style="
+      fill: #fff;
+      font-family: OpenSans-Bold, &quot;Open Sans&quot;;
+      font-size: 35px;
+      font-weight: 700;
+    "
+  >
+    <tspan x="0" y="0">Resolución de Problemas&nbsp;</tspan>
+  </text>
+</svg>
+<p></p>
+<div class="caja" role="alert">
+  <div
+    class="caja"
+    role="alert"
+    style="font-family: sans-serif; margin: 0; background: #f9f9f9; padding: 0"
+  >
+    <h4 style="color: #1f3864">
+      A8. Sistema de Gestión de Inventario — Proyecto Final (Java · C#)
+    </h4>
+
+    <div
+      class="instrucciones"
+      style="
+        background: #eaf6fb;
+        padding: 15px;
+        border-radius: 8px;
+        margin-bottom: 20px;
+      "
+    >
+      <h5 style="color: #1f3864">📝 Instrucciones para el estudiante</h5>
+      <p style="margin-top: 0">
+        Este es el <strong>proyecto final integrador</strong> del curso. Debes
+        implementar un <strong>Sistema de Gestión de Inventario</strong> que
+        demuestre <em>todos</em> los pilares de POO junto con una interfaz
+        gráfica completa y persistencia en base de datos.
+      </p>
+      <ul style="margin-top: 10px">
+        <li>
+          <strong>Objetivo:</strong> Integrar abstracción, encapsulamiento,
+          herencia y polimorfismo en una aplicación de escritorio real. La clase
+          abstracta <code>Producto</code> es la base;
+          <code>ProductoElectronico</code> y <code>ProductoRopa</code> la
+          extienden. La interface <code>IRepositorio&lt;T&gt;</code> define el
+          contrato CRUD; <code>ProductoDAO</code> /
+          <code>ProductoRepositorio</code> y <code>ProveedorDAO</code> la
+          implementan. La GUI muestra <code>JTabbedPane</code> /
+          <code>TabControl</code> con paneles por entidad.
+        </li>
+        <li>
+          <strong>Producto esperado:</strong>
+          <ul>
+            <li>
+              <strong>En Java (IntelliJ IDEA — Maven):</strong>
+              <code>model/Producto.java</code> (abstracta, validaciones en
+              setters), <code>ProductoElectronico.java</code>,
+              <code>ProductoRopa.java</code> (herencia),
+              <code>Proveedor.java</code>, <code>Venta.java</code> +
+              <code>ItemVenta.java</code> (composición),
+              <code>interfaces/IRepositorio.java</code>,
+              <code>data/ConexionBD.java</code> (Singleton),
+              <code>data/ProductoDAO.java</code> y
+              <code>data/ProveedorDAO.java</code> (JDBC),
+              <code>ui/VentanaPrincipal.java</code>,
+              <code>ui/PanelProductos.java</code>,
+              <code>ui/PanelProveedores.java</code>.
+            </li>
+            <li>
+              <strong>En C# (JetBrains Rider — WinForms .NET 8):</strong>
+              <code>Models/Producto.cs</code> (abstracta),
+              <code>ProductoElectronico.cs</code>, <code>ProductoRopa.cs</code>,
+              <code>Proveedor.cs</code>, <code>Venta.cs</code> +
+              <code>ItemVenta.cs</code>,
+              <code>Interfaces/IRepositorio.cs</code>,
+              <code>Data/InventarioContext.cs</code> (EF Core),
+              <code>Data/ProductoRepositorio.cs</code>,
+              <code>Data/ProveedorRepositorio.cs</code>,
+              <code>Forms/FormPrincipal.cs</code>,
+              <code>Forms/FormProductos.cs</code>,
+              <code>Forms/FormProveedores.cs</code>.
+            </li>
+            <li>
+              Script SQL completo con tablas
+              <code>categorias</code>, <code>proveedores</code>,
+              <code>productos</code>, <code>ventas</code>,
+              <code>items_venta</code> y datos de prueba (Java/MySQL).
+            </li>
+            <li>
+              GUI funcional: menú principal, pestañas por módulo, tabla que
+              carga al iniciar, formulario lateral con validaciones, botones
+              CRUD y búsqueda por nombre.
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+
+    <div
+      class="entrega"
+      style="
+        background: #eaf6fb;
+        padding: 15px;
+        border-radius: 8px;
+        margin-bottom: 20px;
+      "
+    >
+      <strong>Entrega:</strong> Sube el código fuente completo (<code
+        >.java</code
+      >
+      o <code>.cs</code>), el script SQL (Java) o las migraciones EF Core (C#) y
+      una captura de pantalla de la aplicación funcionando con datos reales en
+      la tabla a la plataforma.
+    </div>
+
+    <h5 style="color: #1f3864">📊 Rúbrica de evaluación</h5>
+    <table
+      class="rubrica"
+      style="
+        width: 100%;
+        border-collapse: collapse;
+        font-family: sans-serif;
+        margin-top: 20px;
+      "
+    >
+      <tbody>
+        <tr>
+          <th
+            style="
+              border: 1px solid black;
+              padding: 8px;
+              background-color: #1f3864;
+              color: white;
+              text-align: center;
+            "
+          >
+            Criterio
+          </th>
+          <th
+            style="
+              border: 1px solid black;
+              padding: 8px;
+              background-color: #1f3864;
+              color: white;
+              text-align: center;
+            "
+          >
+            Excelente <br />
+            10 pts
+          </th>
+          <th
+            style="
+              border: 1px solid black;
+              padding: 8px;
+              background-color: #1f3864;
+              color: white;
+              text-align: center;
+            "
+          >
+            Muy Bueno <br />
+            8 pts
+          </th>
+          <th
+            style="
+              border: 1px solid black;
+              padding: 8px;
+              background-color: #1f3864;
+              color: white;
+              text-align: center;
+            "
+          >
+            Bueno <br />
+            6 pts
+          </th>
+          <th
+            style="
+              border: 1px solid black;
+              padding: 8px;
+              background-color: #1f3864;
+              color: white;
+              text-align: center;
+            "
+          >
+            Regular <br />
+            4 pts
+          </th>
+          <th
+            style="
+              border: 1px solid black;
+              padding: 8px;
+              background-color: #1f3864;
+              color: white;
+              text-align: center;
+            "
+          >
+            Deficiente <br />
+            2 pts
+          </th>
+        </tr>
+        <tr>
+          <td
+            class="criterio"
+            style="
+              text-align: left;
+              background-color: #cfaa4f;
+              font-weight: bold;
+            "
+          >
+            Modelos y Herencia <br />
+            2 pts
+          </td>
+          <td
+            style="
+              border: 1px solid black;
+              padding: 8px;
+              background-color: #fef7e6;
+            "
+          >
+            <code>Producto</code> abstracta con método/propiedad abstracta
+            <code>getTipo()</code> / <code>Tipo</code>.
+            <code>ProductoElectronico</code> y <code>ProductoRopa</code> la
+            extienden correctamente con sus atributos adicionales. Composición
+            <code>Venta</code> →
+            <code>List&lt;ItemVenta&gt;</code> presente.<br /><br />2.0 pts
+          </td>
+          <td
+            style="
+              border: 1px solid black;
+              padding: 8px;
+              background-color: #fef7e6;
+            "
+          >
+            Herencia correcta pero <code>Producto</code> no es abstracta o falta
+            una subclase.<br /><br />1.6 pts
+          </td>
+          <td
+            style="
+              border: 1px solid black;
+              padding: 8px;
+              background-color: #fef7e6;
+            "
+          >
+            Solo una subclase o sin método abstracto
+            <code>getTipo()</code>.<br /><br />1.2 pts
+          </td>
+          <td
+            style="
+              border: 1px solid black;
+              padding: 8px;
+              background-color: #fef7e6;
+            "
+          >
+            Clases sin herencia — modelos planos sin
+            <code>extends</code> / <code>:</code>.<br /><br />0.8 pts
+          </td>
+          <td
+            style="
+              border: 1px solid black;
+              padding: 8px;
+              background-color: #fef7e6;
+            "
+          >
+            No define jerarquía de modelos.<br /><br />0.4 pts
+          </td>
+        </tr>
+        <tr>
+          <td
+            class="criterio"
+            style="
+              text-align: left;
+              background-color: #cfaa4f;
+              font-weight: bold;
+            "
+          >
+            Encapsulamiento <br />
+            1 pt
+          </td>
+          <td
+            style="
+              border: 1px solid black;
+              padding: 8px;
+              background-color: #f0f5fd;
+            "
+          >
+            Propiedades/atributos <code>private</code> con validaciones en
+            setters: precio &gt; 0, stock ≥ 0, nombre no vacío. Excepciones
+            descriptivas lanzadas.<br /><br />1.0 pt
+          </td>
+          <td
+            style="
+              border: 1px solid black;
+              padding: 8px;
+              background-color: #f0f5fd;
+            "
+          >
+            Atributos privados pero validaciones incompletas (solo 1 o 2).<br /><br />0.8
+            pts
+          </td>
+          <td
+            style="
+              border: 1px solid black;
+              padding: 8px;
+              background-color: #f0f5fd;
+            "
+          >
+            Getters y setters presentes pero sin ninguna validación.<br /><br />0.6
+            pts
+          </td>
+          <td
+            style="
+              border: 1px solid black;
+              padding: 8px;
+              background-color: #f0f5fd;
+            "
+          >
+            Atributos públicos sin encapsulamiento.<br /><br />0.4 pts
+          </td>
+          <td
+            style="
+              border: 1px solid black;
+              padding: 8px;
+              background-color: #f0f5fd;
+            "
+          >
+            Sin encapsulamiento ni getters.<br /><br />0.2 pts
+          </td>
+        </tr>
+        <tr>
+          <td
+            class="criterio"
+            style="
+              text-align: left;
+              background-color: #cfaa4f;
+              font-weight: bold;
+            "
+          >
+            Interface <code>IRepositorio&lt;T&gt;</code> <br />
+            2 pts
+          </td>
+          <td
+            style="
+              border: 1px solid black;
+              padding: 8px;
+              background-color: #fef7e6;
+            "
+          >
+            Interface genérica definida e implementada correctamente por al
+            menos <code>ProductoDAO</code> y <code>ProveedorDAO</code> (o sus
+            equivalentes C#). Los 6 métodos del contrato presentes y
+            funcionales.<br /><br />2.0 pts
+          </td>
+          <td
+            style="
+              border: 1px solid black;
+              padding: 8px;
+              background-color: #fef7e6;
+            "
+          >
+            Interface presente e implementada por 1 DAO; falta el segundo.<br /><br />1.6
+            pts
+          </td>
+          <td
+            style="
+              border: 1px solid black;
+              padding: 8px;
+              background-color: #fef7e6;
+            "
+          >
+            Interface definida pero no implementada con
+            <code>implements</code> / <code>:</code>.<br /><br />1.2 pts
+          </td>
+          <td
+            style="
+              border: 1px solid black;
+              padding: 8px;
+              background-color: #fef7e6;
+            "
+          >
+            Sin interface — DAOs sin contrato compartido.<br /><br />0.8 pts
+          </td>
+          <td
+            style="
+              border: 1px solid black;
+              padding: 8px;
+              background-color: #fef7e6;
+            "
+          >
+            Sin DAOs ni repositorios.<br /><br />0.4 pts
+          </td>
+        </tr>
+        <tr>
+          <td
+            class="criterio"
+            style="
+              text-align: left;
+              background-color: #cfaa4f;
+              font-weight: bold;
+            "
+          >
+            CRUD con BD <br />
+            3 pts
+          </td>
+          <td
+            style="
+              border: 1px solid black;
+              padding: 8px;
+              background-color: #f0f5fd;
+            "
+          >
+            <code>JTable</code> / <code>DataGridView</code> conectado a BD.
+            Insertar, leer (al abrir), actualizar y eliminar operativos en la
+            GUI. Sentencias preparadas sin concatenación SQL directa.<br /><br />3.0
+            pts
+          </td>
+          <td
+            style="
+              border: 1px solid black;
+              padding: 8px;
+              background-color: #f0f5fd;
+            "
+          >
+            CRUD mayormente funcional pero falta 1 operación (p.ej. sin
+            UPDATE).<br /><br />2.4 pts
+          </td>
+          <td
+            style="
+              border: 1px solid black;
+              padding: 8px;
+              background-color: #f0f5fd;
+            "
+          >
+            Solo lectura e inserción; sin actualizar ni eliminar.<br /><br />1.8
+            pts
+          </td>
+          <td
+            style="
+              border: 1px solid black;
+              padding: 8px;
+              background-color: #f0f5fd;
+            "
+          >
+            Conexión a BD pero sin tabla en GUI o sin operaciones desde la
+            interfaz gráfica.<br /><br />1.2 pts
+          </td>
+          <td
+            style="
+              border: 1px solid black;
+              padding: 8px;
+              background-color: #f0f5fd;
+            "
+          >
+            Sin conexión a BD o no compila.<br /><br />0.6 pts
+          </td>
+        </tr>
+        <tr>
+          <td
+            class="criterio"
+            style="
+              text-align: left;
+              background-color: #cfaa4f;
+              font-weight: bold;
+            "
+          >
+            GUI funcional <br />
+            1 pt
+          </td>
+          <td
+            style="
+              border: 1px solid black;
+              padding: 8px;
+              background-color: #fef7e6;
+            "
+          >
+            Ventana principal con <code>JMenuBar</code> /
+            <code>MenuStrip</code> y <code>JTabbedPane</code> /
+            <code>TabControl</code> con al menos 2 paneles (Productos y
+            Proveedores). Validaciones visuales antes de guardar. Tabla cargada
+            al abrir la aplicación.<br /><br />1.0 pt
+          </td>
+          <td
+            style="
+              border: 1px solid black;
+              padding: 8px;
+              background-color: #fef7e6;
+            "
+          >
+            GUI presente pero sin menú o sin múltiples paneles/pestañas.<br /><br />0.8
+            pts
+          </td>
+          <td
+            style="
+              border: 1px solid black;
+              padding: 8px;
+              background-color: #fef7e6;
+            "
+          >
+            Solo 1 panel/ventana; sin organización por módulo.<br /><br />0.6
+            pts
+          </td>
+          <td
+            style="
+              border: 1px solid black;
+              padding: 8px;
+              background-color: #fef7e6;
+            "
+          >
+            GUI básica sin validaciones ni menú.<br /><br />0.4 pts
+          </td>
+          <td
+            style="
+              border: 1px solid black;
+              padding: 8px;
+              background-color: #fef7e6;
+            "
+          >
+            Sin GUI (solo consola).<br /><br />0.2 pts
+          </td>
+        </tr>
+        <tr>
+          <td
+            class="criterio"
+            style="
+              text-align: left;
+              background-color: #cfaa4f;
+              font-weight: bold;
+            "
+          >
+            Búsqueda <br />
+            1 pt
+          </td>
+          <td
+            style="
+              border: 1px solid black;
+              padding: 8px;
+              background-color: #f0f5fd;
+            "
+          >
+            Filtrar productos/empleados por nombre con
+            <code>LIKE</code> / <code>EF.Functions.Like</code> funcional. Botón
+            "Todos" recarga la lista completa desde la BD.<br /><br />1.0 pt
+          </td>
+          <td
+            style="
+              border: 1px solid black;
+              padding: 8px;
+              background-color: #f0f5fd;
+            "
+          >
+            Búsqueda presente pero sin parámetros (concatenación directa) o sin
+            botón "Todos".<br /><br />0.8 pts
+          </td>
+          <td
+            style="
+              border: 1px solid black;
+              padding: 8px;
+              background-color: #f0f5fd;
+            "
+          >
+            Búsqueda solo por coincidencia exacta (sin
+            <code>LIKE</code>).<br /><br />0.6 pts
+          </td>
+          <td
+            style="
+              border: 1px solid black;
+              padding: 8px;
+              background-color: #f0f5fd;
+            "
+          >
+            Búsqueda declarada en la interface pero sin implementar.<br /><br />0.4
+            pts
+          </td>
+          <td
+            style="
+              border: 1px solid black;
+              padding: 8px;
+              background-color: #f0f5fd;
+            "
+          >
+            Sin búsqueda.<br /><br />0.2 pts
+          </td>
+        </tr>
+        <tr>
+          <td
+            class="criterio"
+            style="
+              text-align: left;
+              background-color: #2e7d32;
+              color: white;
+              font-weight: bold;
+            "
+          >
+            🌟 Bono: Módulo Ventas <br />
+            +1 pt
+          </td>
+          <td
+            colspan="5"
+            style="
+              border: 1px solid black;
+              padding: 8px;
+              background-color: #f1f8e9;
+            "
+          >
+            Panel de Ventas completo: registrar una venta con uno o más
+            <code>ItemVenta</code>, calcular el total automáticamente, descontar
+            el stock del producto al confirmar la venta y mostrar el historial
+            de ventas en la tabla.<br /><br />+1.0 pt (puntuación máxima con
+            bono: 11/10)
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

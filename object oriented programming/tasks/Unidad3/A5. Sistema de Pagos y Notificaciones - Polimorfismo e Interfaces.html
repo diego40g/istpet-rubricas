@@ -41,8 +41,8 @@
     style="font-family: sans-serif; margin: 0; background: #f9f9f9; padding: 0"
   >
     <h4 style="color: #1f3864">
-      A5. Sistema de Pagos y Notificaciones - Polimorfismo e Interfaces (Python
-      / Java)
+      A5. Sistema de Pagos y Notificaciones — Polimorfismo e Interfaces (Java ·
+      C#)
     </h4>
 
     <div
@@ -57,36 +57,45 @@
       <h5 style="color: #1f3864">📝 Instrucciones para el estudiante</h5>
       <p style="margin-top: 0">
         Esta actividad se centra en el uso de <strong>polimorfismo</strong> e
-        <strong>interfaces</strong> para crear sistemas flexibles.
+        <strong>interfaces</strong> para crear sistemas flexibles y extensibles.
+        Elige tu lenguaje (Java o C#) y completa ambas partes.
       </p>
       <ul style="margin-top: 10px">
         <li>
           <strong>Objetivo:</strong> Implementar un sistema de pagos que soporte
-          múltiples métodos (Tarjeta, PayPal, Cripto, etc.) tratados de manera
-          uniforme mediante el polimorfismo, y un sistema de notificaciones
-          flexible.
+          múltiples métodos (Tarjeta, Efectivo, Transferencia) tratados
+          uniformemente mediante polimorfismo, y un sistema de notificaciones
+          con múltiples canales.
         </li>
         <li>
           <strong>Producto esperado:</strong>
           <ul>
             <li>
-              <strong>En Python:</strong> Uso de clases abstractas
-              (<code>ABC</code>) para <code>MetodoPago</code> y Protocolos
-              (<code>Protocol</code>) para <code>Notificador</code>.
+              <strong>En Java:</strong> Paquete <code>model/</code> con
+              <code>interface MetodoPago</code> e implementaciones
+              <code>PagoTarjeta</code>, <code>PagoEfectivo</code>,
+              <code>PagoTransferencia</code>.
+              <code>interface Notificador</code> con
+              <code>NotificadorEmail</code> y <code>NotificadorSMS</code>. Clase
+              <code>ProcesadorPagos</code> polimórfica. Paquete
+              <code>ui/</code> con <code>VentanaPagos.java</code> (Swing +
+              <code>CardLayout</code>).
             </li>
             <li>
-              <strong>En Java:</strong> Uso explicito de
-              <code>interface</code> para definir contratos
-              (<code>MetodoPago</code>, <code>Notificador</code>) y clases que
-              las implementen (<code>implements</code>).
+              <strong>En C#:</strong> Carpeta <code>Models/</code> con
+              <code>interface IMetodoPago</code> e implementaciones
+              equivalentes. <code>interface INotificador</code> con
+              implementaciones de Email y SMS. Carpeta <code>Forms/</code> con
+              <code>FormPagos.cs</code> (WinForms + <code>TabControl</code>).
             </li>
             <li>
-              Implementación de al menos 3 métodos de pago y 2 canales de
-              notificación distintos.
+              El <code>ProcesadorPagos</code> no debe contener
+              <code>instanceof</code> / <code>is</code> ni <code>if/else</code>
+              por tipo — el polimorfismo debe manejarlo todo.
             </li>
             <li>
-              Demostracion práctica del polimorfismo: una sola funcion/clase que
-              procese cualquier tipo de pago sin conocer sus detalles internos.
+              GUI funcional: selector de método, panel dinámico que cambia según
+              el tipo, historial de transacciones y resumen.
             </li>
           </ul>
         </li>
@@ -102,8 +111,11 @@
         margin-bottom: 20px;
       "
     >
-      <strong>Entrega:</strong> Sube tus archivos de código o enlace al
-      repositorio a la plataforma.
+      <strong>Entrega:</strong> Sube el código fuente completo (<code
+        >.java</code
+      >
+      o <code>.cs</code>) y una captura de pantalla de la aplicación en
+      ejecución a la plataforma.
     </div>
 
     <h5 style="color: #1f3864">📊 Rúbrica de evaluación</h5>
@@ -209,11 +221,12 @@
               background-color: #fef7e6;
             "
           >
-            <strong>Python:</strong> Define correctamente <code>ABC</code> y
-            métodos abstractos o <code>Protocol</code>.<br />
-            <strong>Java:</strong> Define <code>interface</code> clara y
-            completa.<br />
-            Contratos bien definidos.<br /><br />3.0 pts
+            <strong>Java:</strong> Define <code>interface MetodoPago</code> con
+            todos los métodos requeridos. Define
+            <code>interface Notificador</code>.<br />
+            <strong>C#:</strong> Define <code>interface IMetodoPago</code> e
+            <code>interface INotificador</code>.<br />
+            Contratos bien definidos y completos.<br /><br />3.0 pts
           </td>
           <td
             style="
@@ -397,8 +410,9 @@
               background-color: #f0f5fd;
             "
           >
-            Código limpio, tipado correcto (Type Hints o tipos Java) y manejo de
-            errores adecuado.<br /><br />2.0 pts
+            Código limpio, tipos correctos (Java generics / tipos C#) y manejo
+            de errores adecuado.
+            <code>enum EstadoPago</code> presente.<br /><br />2.0 pts
           </td>
           <td
             style="

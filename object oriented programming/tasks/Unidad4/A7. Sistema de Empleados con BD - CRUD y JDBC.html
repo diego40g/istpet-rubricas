@@ -41,7 +41,7 @@
     style="font-family: sans-serif; margin: 0; background: #f9f9f9; padding: 0"
   >
     <h4 style="color: #1f3864">
-      A7. Implementación de Patrones de Diseño Clásicos (Python / Java)
+      A7. Sistema de Empleados con BD — CRUD y JDBC (Java · C#)
     </h4>
 
     <div
@@ -55,42 +55,55 @@
     >
       <h5 style="color: #1f3864">📝 Instrucciones para el estudiante</h5>
       <p style="margin-top: 0">
-        Esta actividad requiere implementar un Sistema de Restaurante utilizando
-        los 6 patrones de diseño más importantes.
+        Esta actividad integra <strong>POO + Bases de Datos + GUI</strong>.
+        Conecta una aplicación Java o C# a una base de datos relacional usando
+        <strong>JDBC</strong> (Java) o <strong>ADO.NET / EF Core</strong> (C#),
+        implementando el patrón <strong>Repository/DAO</strong>.
       </p>
       <ul style="margin-top: 10px">
         <li>
-          <strong>Objetivo:</strong> Demostrar el dominio de patrones
-          creacionales, estructurales y de comportamiento.
+          <strong>Objetivo:</strong> Crear un sistema de gestión de empleados
+          con CRUD completo conectado a BD. Aplicar el patrón Repository con una
+          <code>interface IEmpleadoRepositorio</code> /
+          <code>IRepositorio&lt;T&gt;</code>. Interfaz gráfica con
+          <code>JTable</code> / <code>DataGridView</code> + formulario lateral +
+          botones CRUD + búsqueda por nombre.
         </li>
         <li>
           <strong>Producto esperado:</strong>
           <ul>
             <li>
-              <strong>Singleton:</strong> Configuración global única (<code
-                >__new__</code
-              >
-              en Python, Constructor privado en Java).
+              <strong>En Java (IntelliJ IDEA — Maven):</strong> Paquetes
+              <code>model/</code> (<code>Empleado.java</code> con validaciones),
+              <code>interfaces/</code> (<code>IEmpleadoRepositorio.java</code>),
+              <code>data/</code> (<code>ConexionBD.java</code> Singleton +
+              <code>EmpleadoRepositorio.java</code> con JDBC),
+              <code>ui/</code> (<code>VentanaEmpleados.java</code> Swing).
+              Script SQL <code>empresa_db.sql</code>.
             </li>
             <li>
-              <strong>Factory Method:</strong> Creación de platos sin acoplar
-              clases concretas.
+              <strong>En C# (JetBrains Rider — WinForms):</strong> Carpetas
+              <code>Models/</code> (<code>Empleado.cs</code>),
+              <code>Interfaces/</code> (<code>IRepositorio.cs</code>),
+              <code>Data/</code> (<code>ConexionBD.cs</code> ADO.NET +
+              <code>EmpleadoRepositorio.cs</code> o
+              <code>EmpleadoRepositorioEF.cs</code> EF Core),
+              <code>Forms/</code> (<code>FormEmpleados.cs</code>).
             </li>
             <li>
-              <strong>Builder:</strong> Construcción paso a paso de menús
-              complejos.
+              Tabla <code>empleados</code>: <code>id</code>,
+              <code>nombre</code>, <code>cargo</code>, <code>salario</code>,
+              <code>activo</code>. Operaciones: Insertar, ObtenerTodos,
+              ObtenerPorId, Actualizar, Eliminar, BuscarPorNombre.
             </li>
             <li>
-              <strong>Strategy:</strong> Diferentes algoritmos de descuento o
-              pago intercambiables en tiempo de ejecución.
+              Validaciones GUI: campos vacíos muestran mensaje de advertencia;
+              salario ≤ 0 no permite guardar. Búsqueda por nombre con
+              <code>LIKE</code> / <code>EF.Functions.Like</code>.
             </li>
             <li>
-              <strong>Observer:</strong> Sistema de notificación a cocina o
-              clientes (Listas de callbacks en Python, Interfaces en Java).
-            </li>
-            <li>
-              <strong>Decorator:</strong> Añadir funcionalidad extra a objetos
-              (Decoradores de función en Python, Wrappers en Java).
+              Sentencias preparadas obligatorias — sin concatenación SQL directa
+              (prevención de inyección SQL).
             </li>
           </ul>
         </li>
@@ -106,8 +119,11 @@
         margin-bottom: 20px;
       "
     >
-      <strong>Entrega:</strong> Sube el código fuente de tu implementación
-      completa.
+      <strong>Entrega:</strong> Sube el código fuente completo (<code
+        >.java</code
+      >
+      o <code>.cs</code>), el script SQL y una captura de pantalla de la
+      aplicación en ejecución mostrando la tabla con datos a la plataforma.
     </div>
 
     <h5 style="color: #1f3864">📊 Rúbrica de evaluación</h5>
@@ -203,8 +219,8 @@
               font-weight: bold;
             "
           >
-            Patrones Creacionales (Singleton, Factory, Builder) <br />
-            3 pts
+            Modelo y Encapsulamiento <br />
+            2.5 pts
           </td>
           <td
             style="
@@ -213,17 +229,9 @@
               background-color: #fef7e6;
             "
           >
-            Implementa correctamente los 3 patrones asegurando unicidad,
-            creación desacoplada y construcción fluida.<br /><br />3.0 pts
-          </td>
-          <td
-            style="
-              border: 1px solid black;
-              padding: 8px;
-              background-color: #fef7e6;
-            "
-          >
-            Implementa correctamente 2 de los 3, o el Builder no es fluido.<br /><br />2.4
+            Clase <code>Empleado</code> con atributos privados y validaciones en
+            setters (<code>salario &gt; 0</code>, nombre y cargo no vacíos).
+            Constructores: completo (con id) y de inserción (sin id).<br /><br />2.5
             pts
           </td>
           <td
@@ -233,17 +241,7 @@
               background-color: #fef7e6;
             "
           >
-            Implementa solo 1 patrón correctamente o usa implementaciones
-            ingenuas.<br /><br />1.8 pts
-          </td>
-          <td
-            style="
-              border: 1px solid black;
-              padding: 8px;
-              background-color: #fef7e6;
-            "
-          >
-            Errores conceptuales en la implementación de patrones.<br /><br />1.2
+            Clase con atributos pero validaciones incompletas o sin setter.<br /><br />2.0
             pts
           </td>
           <td
@@ -253,7 +251,27 @@
               background-color: #fef7e6;
             "
           >
-            No implementa patrones creacionales.<br /><br />0.6 pts
+            Clase sin encapsulamiento (atributos públicos sin validación).<br /><br />1.5
+            pts
+          </td>
+          <td
+            style="
+              border: 1px solid black;
+              padding: 8px;
+              background-color: #fef7e6;
+            "
+          >
+            Clase con errores de compilación o atributos incorrectos.<br /><br />1.0
+            pts
+          </td>
+          <td
+            style="
+              border: 1px solid black;
+              padding: 8px;
+              background-color: #fef7e6;
+            "
+          >
+            No define clase <code>Empleado</code>.<br /><br />0.5 pts
           </td>
         </tr>
         <tr>
@@ -265,8 +283,8 @@
               font-weight: bold;
             "
           >
-            Patrones Comportamiento (Strategy, Observer) <br />
-            3 pts
+            Repositorio y BD <br />
+            2.5 pts
           </td>
           <td
             style="
@@ -275,17 +293,10 @@
               background-color: #f0f5fd;
             "
           >
-            Strategy permite cambio en runtime. Observer notifica a múltiples
-            suscriptores desacoplados.<br /><br />3.0 pts
-          </td>
-          <td
-            style="
-              border: 1px solid black;
-              padding: 8px;
-              background-color: #f0f5fd;
-            "
-          >
-            Implementación correcta pero Observer tiene alto acoplamiento.<br /><br />2.4
+            Interface <code>IEmpleadoRepositorio</code> /
+            <code>IRepositorio&lt;T&gt;</code> implementada. Los 5 métodos CRUD
+            funcionales. Sentencias preparadas (<code>PreparedStatement</code> /
+            <code>SqlCommand</code>) — sin concatenación SQL directa.<br /><br />2.5
             pts
           </td>
           <td
@@ -295,16 +306,7 @@
               background-color: #f0f5fd;
             "
           >
-            Solo implementa uno de los dos patrones.<br /><br />1.8 pts
-          </td>
-          <td
-            style="
-              border: 1px solid black;
-              padding: 8px;
-              background-color: #f0f5fd;
-            "
-          >
-            Implementación incorrecta que no cumple el propósito del patrón.<br /><br />1.2
+            CRUD funcional pero sin interface o falta 1 operación CRUD.<br /><br />2.0
             pts
           </td>
           <td
@@ -314,7 +316,27 @@
               background-color: #f0f5fd;
             "
           >
-            Código monolítico sin patrones de comportamiento.<br /><br />0.6 pts
+            Solo SELECT e INSERT implementados; sin UPDATE o DELETE.<br /><br />1.5
+            pts
+          </td>
+          <td
+            style="
+              border: 1px solid black;
+              padding: 8px;
+              background-color: #f0f5fd;
+            "
+          >
+            Conexión a BD pero sin operaciones CRUD completas.<br /><br />1.0
+            pts
+          </td>
+          <td
+            style="
+              border: 1px solid black;
+              padding: 8px;
+              background-color: #f0f5fd;
+            "
+          >
+            No se conecta a la BD.<br /><br />0.5 pts
           </td>
         </tr>
         <tr>
@@ -326,8 +348,8 @@
               font-weight: bold;
             "
           >
-            Patrón Estructural (Decorator) <br />
-            2 pts
+            GUI funcional <br />
+            2.5 pts
           </td>
           <td
             style="
@@ -336,8 +358,10 @@
               background-color: #fef7e6;
             "
           >
-            Usa Wrappers (Java) o Decoradores (Python) para extender
-            funcionalidad dinámicamente.<br /><br />2.0 pts
+            <code>JTable</code> / <code>DataGridView</code> carga datos al
+            iniciar. Selección de fila llena el formulario lateral. Botones
+            Guardar, Eliminar, Nuevo y Buscar operativos. Mensaje de
+            confirmación al eliminar.<br /><br />2.5 pts
           </td>
           <td
             style="
@@ -346,7 +370,8 @@
               background-color: #fef7e6;
             "
           >
-            Implementación básica funcional.<br /><br />1.6 pts
+            GUI presente pero selección de fila no llena el formulario, o falta
+            botón Eliminar.<br /><br />2.0 pts
           </td>
           <td
             style="
@@ -355,7 +380,8 @@
               background-color: #fef7e6;
             "
           >
-            Confunde Decorator con Herencia normal.<br /><br />1.2 pts
+            GUI con tabla pero sin formulario lateral ni botón Eliminar.<br /><br />1.5
+            pts
           </td>
           <td
             style="
@@ -364,7 +390,7 @@
               background-color: #fef7e6;
             "
           >
-            Implementación errónea.<br /><br />0.8 pts
+            GUI básica sin interacción completa con la BD.<br /><br />1.0 pts
           </td>
           <td
             style="
@@ -373,7 +399,7 @@
               background-color: #fef7e6;
             "
           >
-            No implementado.<br /><br />0.4 pts
+            Sin interfaz gráfica.<br /><br />0.5 pts
           </td>
         </tr>
         <tr>
@@ -385,8 +411,8 @@
               font-weight: bold;
             "
           >
-            Calidad de Código e Idioms <br />
-            2 pts
+            Validaciones y Búsqueda <br />
+            2.5 pts
           </td>
           <td
             style="
@@ -395,8 +421,10 @@
               background-color: #f0f5fd;
             "
           >
-            Uso fluído de características del lenguaje (E.g. Lambdas/Streams en
-            Java, Decoradores/@property en Python).<br /><br />2.0 pts
+            Valida campos vacíos y salario ≤ 0 con mensaje visual de error.
+            Búsqueda por nombre con <code>LIKE</code> /
+            <code>EF.Functions.Like</code> funcional. Botón "Todos" recarga la
+            tabla completa.<br /><br />2.5 pts
           </td>
           <td
             style="
@@ -405,7 +433,8 @@
               background-color: #f0f5fd;
             "
           >
-            Buen código pero estilo inconsistente.<br /><br />1.6 pts
+            Validaciones presentes pero sin mensaje visual, o búsqueda sin
+            <code>LIKE</code>.<br /><br />2.0 pts
           </td>
           <td
             style="
@@ -414,8 +443,7 @@
               background-color: #f0f5fd;
             "
           >
-            Código funcional pero no idiomático (Java al estilo C, Python al
-            estilo Java).<br /><br />1.2 pts
+            Solo valida campo vacío; sin búsqueda por nombre.<br /><br />1.5 pts
           </td>
           <td
             style="
@@ -424,7 +452,8 @@
               background-color: #f0f5fd;
             "
           >
-            Código difícil de leer.<br /><br />0.8 pts
+            Sin validaciones visuales ni funcionalidad de búsqueda.<br /><br />1.0
+            pts
           </td>
           <td
             style="
@@ -433,7 +462,7 @@
               background-color: #f0f5fd;
             "
           >
-            No ejecutable o muy pobre.<br /><br />0.4 pts
+            No compila o no ejecuta.<br /><br />0.5 pts
           </td>
         </tr>
       </tbody>

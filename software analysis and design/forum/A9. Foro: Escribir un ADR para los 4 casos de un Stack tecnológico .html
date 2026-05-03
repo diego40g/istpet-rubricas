@@ -1,0 +1,1240 @@
+<nav aria-label="Page navigation example">
+  <ul class="pagination">
+    <li class="page-item">
+      <a
+        class="page-link"
+        href="https://istpetonline.edu.ec/course/view.php?id=160#section-2"
+        ><i class="fa fa-chevron-circle-left" aria-hidden="true"></i
+        >&nbsp;Regresar</a
+      >
+    </li>
+  </ul>
+</nav>
+<svg
+  id="Capa_1"
+  xmlns="http://www.w3.org/2000/svg"
+  xmlns:xlink="http://www.w3.org/1999/xlink"
+  viewBox="0 0 1920 332"
+>
+  <image
+    width="1920"
+    height="332"
+    xlink:href="https://istpetonline.edu.ec/draftfile.php/54951/user/draft/654213724/banner-tarea.jpg"
+  ></image>
+  <text
+    transform="translate(235.44 188.47)"
+    style="
+      fill: #fff;
+      font-family: OpenSans-Bold, &quot;Open Sans&quot;;
+      font-size: 35px;
+      font-weight: 700;
+    "
+  >
+    <tspan x="0" y="0">Análisis y Diseño de Software</tspan>
+  </text>
+  <text
+    transform="translate(235.44 235.47)"
+    style="
+      fill: #fff;
+      font-family: OpenSans-Bold, &quot;Open Sans&quot;;
+      font-size: 28px;
+      font-weight: 700;
+    "
+  >
+    <tspan x="0" y="0">Unidad 2 — Diseño de Software</tspan>
+  </text>
+</svg>
+<p></p>
+<div class="caja" role="alert">
+  <div
+    class="caja"
+    role="alert"
+    style="font-family: sans-serif; margin: 0; background: #f9f9f9; padding: 0"
+  >
+    <h4 style="color: #1f3864">
+      A9. Foro: Escribir un ADR para los 4 casos de un Stack Tecnológico
+    </h4>
+
+    <!-- DESCRIPCIÓN -->
+    <div
+      class="instrucciones"
+      style="
+        background: #eaf6fb;
+        padding: 15px;
+        border-radius: 8px;
+        margin-bottom: 20px;
+      "
+    >
+      <h5 style="color: #1f3864">📋 Descripción</h5>
+      <p style="margin-top: 0">
+        Aplicando el formato estándar de
+        <strong>Architecture Decision Records (ADR)</strong>, redacta una
+        decisión arquitectónica para uno de los 4 escenarios del
+        <strong>Sistema de Biblioteca Digital</strong>. Tu ADR debe documentar
+        el contexto técnico, la decisión tomada, las consecuencias positivas y
+        negativas, y al menos dos alternativas evaluadas con criterios
+        concretos. Luego comparte y defiende tu ADR en el foro.
+      </p>
+
+      <h5 style="color: #1f3864">🎯 Objetivos de Aprendizaje</h5>
+      <ol style="margin-top: 0">
+        <li>
+          Documentar decisiones de diseño arquitectónico mediante el formato ADR
+          estándar.
+        </li>
+        <li>
+          Justificar la selección de un stack tecnológico considerando contexto,
+          escala y restricciones del proyecto.
+        </li>
+        <li>
+          Evaluar alternativas de arquitectura con criterios técnicos explícitos
+          (trade-off analysis).
+        </li>
+        <li>
+          Argumentar y defender decisiones arquitectónicas ante criterios
+          técnicos distintos propuestos por compañeros.
+        </li>
+      </ol>
+    </div>
+
+    <!-- REQUERIMIENTOS -->
+    <div
+      style="
+        background: #eaf6fb;
+        padding: 15px;
+        border-radius: 8px;
+        margin-bottom: 20px;
+      "
+    >
+      <h5 style="color: #1f3864">📝 Requerimientos del Foro</h5>
+      <p>
+        Tu publicación en el foro debe incluir
+        <strong>un ADR completo</strong> con los siguientes campos:
+      </p>
+      <table
+        style="width: 100%; border-collapse: collapse; font-family: sans-serif"
+      >
+        <tbody>
+          <tr>
+            <th
+              style="
+                background: #1f3864;
+                color: #fff;
+                padding: 8px;
+                border: 1px solid #aaa;
+                text-align: left;
+              "
+            >
+              Campo ADR
+            </th>
+            <th
+              style="
+                background: #1f3864;
+                color: #fff;
+                padding: 8px;
+                border: 1px solid #aaa;
+                text-align: left;
+              "
+            >
+              Descripción requerida
+            </th>
+          </tr>
+          <tr>
+            <td style="border: 1px solid #aaa; padding: 8px">
+              <strong>Título + Estado</strong>
+            </td>
+            <td style="border: 1px solid #aaa; padding: 8px">
+              Nombre descriptivo de la decisión y estado (Propuesto / Aceptado /
+              Rechazado)
+            </td>
+          </tr>
+          <tr>
+            <td style="border: 1px solid #aaa; padding: 8px">
+              <strong>Contexto</strong>
+            </td>
+            <td style="border: 1px solid #aaa; padding: 8px">
+              Descripción del problema técnico y el escenario (A, B, C o D) que
+              motiva la decisión
+            </td>
+          </tr>
+          <tr>
+            <td style="border: 1px solid #aaa; padding: 8px">
+              <strong>Decisión</strong>
+            </td>
+            <td style="border: 1px solid #aaa; padding: 8px">
+              Opción seleccionada con justificación técnica específica al
+              contexto
+            </td>
+          </tr>
+          <tr>
+            <td style="border: 1px solid #aaa; padding: 8px">
+              <strong>Consecuencias</strong>
+            </td>
+            <td style="border: 1px solid #aaa; padding: 8px">
+              Al menos 2 consecuencias positivas y 2 negativas concretas y
+              verificables
+            </td>
+          </tr>
+          <tr>
+            <td style="border: 1px solid #aaa; padding: 8px">
+              <strong>Alternativas consideradas</strong>
+            </td>
+            <td style="border: 1px solid #aaa; padding: 8px">
+              Mínimo 2 alternativas evaluadas con criterio técnico que explique
+              por qué fueron descartadas
+            </td>
+          </tr>
+          <tr>
+            <td style="border: 1px solid #aaa; padding: 8px">
+              <strong>Participación</strong>
+            </td>
+            <td style="border: 1px solid #aaa; padding: 8px">
+              Comentar el ADR de al menos un compañero: señala fortalezas,
+              debilidades o propone una alternativa no considerada
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h5 style="color: #1f3864; margin-top: 15px">Escenarios del caso</h5>
+      <table
+        style="width: 100%; border-collapse: collapse; font-family: sans-serif"
+      >
+        <tbody>
+          <tr>
+            <th
+              style="
+                background: #1f3864;
+                color: #fff;
+                padding: 8px;
+                border: 1px solid #aaa;
+                text-align: center;
+              "
+            >
+              Escenario
+            </th>
+            <th
+              style="
+                background: #1f3864;
+                color: #fff;
+                padding: 8px;
+                border: 1px solid #aaa;
+                text-align: left;
+              "
+            >
+              Descripción
+            </th>
+          </tr>
+          <tr>
+            <td
+              style="
+                border: 1px solid #aaa;
+                padding: 8px;
+                text-align: center;
+                font-weight: bold;
+              "
+            >
+              A — Startup MVP
+            </td>
+            <td style="border: 1px solid #aaa; padding: 8px">
+              Equipo de 3 desarrolladores, primer lanzamiento, ~1 000 usuarios
+              esperados, presupuesto reducido.
+            </td>
+          </tr>
+          <tr>
+            <td
+              style="
+                border: 1px solid #aaa;
+                padding: 8px;
+                text-align: center;
+                font-weight: bold;
+              "
+            >
+              B — Sistema bancario crítico
+            </td>
+            <td style="border: 1px solid #aaa; padding: 8px">
+              Alta disponibilidad 99.9%, equipos independientes por módulo, 50
+              desarrolladores, regulaciones de auditoría (PCI-DSS).
+            </td>
+          </tr>
+          <tr>
+            <td
+              style="
+                border: 1px solid #aaa;
+                padding: 8px;
+                text-align: center;
+                font-weight: bold;
+              "
+            >
+              C — Sistema interno RRHH
+            </td>
+            <td style="border: 1px solid #aaa; padding: 8px">
+              Empresa mediana, 200 empleados, bajo presupuesto, cambios de
+              negocio frecuentes, integraciones con sistemas legados.
+            </td>
+          </tr>
+          <tr>
+            <td
+              style="
+                border: 1px solid #aaa;
+                padding: 8px;
+                text-align: center;
+                font-weight: bold;
+              "
+            >
+              D — E-commerce estacional
+            </td>
+            <td style="border: 1px solid #aaa; padding: 8px">
+              Carga variable (x10–50 en temporadas altas), bajo costo en reposo,
+              escalado automático requerido, checkout y pagos críticos.
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- ENTREGA -->
+    <div
+      style="
+        background: #eaf6fb;
+        padding: 15px;
+        border-radius: 8px;
+        margin-bottom: 20px;
+      "
+    >
+      <strong>Entrega:</strong> Publica tu ADR completo en el foro antes de la
+      fecha límite. Escoge uno de los 4 escenarios y elige el aspecto del stack
+      que quieras documentar (base de datos, autenticación, framework,
+      infraestructura, etc.). Recuerda comentar con argumentación técnica el ADR
+      de al menos un compañero.
+    </div>
+
+    <!-- RÚBRICA -->
+    <h5 style="color: #1f3864">📊 Rúbrica de evaluación</h5>
+    <table
+      class="rubrica"
+      style="
+        width: 100%;
+        border-collapse: collapse;
+        font-family: sans-serif;
+        margin-top: 20px;
+      "
+    >
+      <tbody>
+        <tr>
+          <th
+            style="
+              background: #1f3864;
+              color: #fff;
+              padding: 8px;
+              border: 1px solid #aaa;
+              text-align: center;
+            "
+          >
+            Criterio
+          </th>
+          <th
+            style="
+              background: #1f3864;
+              color: #fff;
+              padding: 8px;
+              border: 1px solid #aaa;
+              text-align: center;
+            "
+          >
+            Excelente<br />10 pts
+          </th>
+          <th
+            style="
+              background: #1f3864;
+              color: #fff;
+              padding: 8px;
+              border: 1px solid #aaa;
+              text-align: center;
+            "
+          >
+            Muy Bueno<br />8 pts
+          </th>
+          <th
+            style="
+              background: #1f3864;
+              color: #fff;
+              padding: 8px;
+              border: 1px solid #aaa;
+              text-align: center;
+            "
+          >
+            Bueno<br />6 pts
+          </th>
+          <th
+            style="
+              background: #1f3864;
+              color: #fff;
+              padding: 8px;
+              border: 1px solid #aaa;
+              text-align: center;
+            "
+          >
+            Regular<br />4 pts
+          </th>
+          <th
+            style="
+              background: #1f3864;
+              color: #fff;
+              padding: 8px;
+              border: 1px solid #aaa;
+              text-align: center;
+            "
+          >
+            Deficiente<br />2 pts
+          </th>
+        </tr>
+        <tr>
+          <td
+            class="criterio"
+            style="
+              background-color: #cfaa4f22;
+              border: 1px solid #aaa;
+              color: #7a5800;
+              font-weight: bold;
+              padding: 8px;
+            "
+          >
+            Contexto y justificación<br />3 pts
+          </td>
+          <td
+            style="
+              border: 1px solid #aaa;
+              padding: 8px;
+              background-color: #fef7e6;
+            "
+          >
+            El contexto describe con precisión el escenario elegido, los
+            atributos de calidad requeridos y el problema técnico específico que
+            motiva la decisión. Incluye restricciones de equipo, escala y
+            presupuesto.<br /><br />3.0 pts
+          </td>
+          <td
+            style="
+              border: 1px solid #aaa;
+              padding: 8px;
+              background-color: #fef7e6;
+            "
+          >
+            Contexto claro con la mayoría de factores relevantes; 1 restricción
+            importante omitida.<br /><br />2.4 pts
+          </td>
+          <td
+            style="
+              border: 1px solid #aaa;
+              padding: 8px;
+              background-color: #fef7e6;
+            "
+          >
+            Contexto presente pero genérico; no refleja las particularidades del
+            escenario elegido.<br /><br />1.8 pts
+          </td>
+          <td
+            style="
+              border: 1px solid #aaa;
+              padding: 8px;
+              background-color: #fef7e6;
+            "
+          >
+            Contexto muy breve o no relacionado con el escenario concreto.<br /><br />1.2
+            pts
+          </td>
+          <td
+            style="
+              border: 1px solid #aaa;
+              padding: 8px;
+              background-color: #fef7e6;
+            "
+          >
+            No presenta contexto o es completamente genérico.<br /><br />0.6 pts
+          </td>
+        </tr>
+        <tr>
+          <td
+            class="criterio"
+            style="
+              background-color: #cfaa4f22;
+              border: 1px solid #aaa;
+              color: #7a5800;
+              font-weight: bold;
+              padding: 8px;
+            "
+          >
+            Decisión y consecuencias<br />4 pts
+          </td>
+          <td
+            style="
+              border: 1px solid #aaa;
+              padding: 8px;
+              background-color: #f0f5fd;
+            "
+          >
+            Decisión clara y específica (nombre de tecnología o patrón
+            concreto). Consecuencias positivas y negativas balanceadas (≥ 2 de
+            cada tipo), verificables y alineadas con el contexto del
+            escenario.<br /><br />4.0 pts
+          </td>
+          <td
+            style="
+              border: 1px solid #aaa;
+              padding: 8px;
+              background-color: #f0f5fd;
+            "
+          >
+            Decisión específica con consecuencias identificadas; las negativas
+            son superficiales o solo se enlistan sin argumentación.<br /><br />3.2
+            pts
+          </td>
+          <td
+            style="
+              border: 1px solid #aaa;
+              padding: 8px;
+              background-color: #f0f5fd;
+            "
+          >
+            Decisión presente pero las consecuencias son solo positivas o muy
+            genéricas.<br /><br />2.4 pts
+          </td>
+          <td
+            style="
+              border: 1px solid #aaa;
+              padding: 8px;
+              background-color: #f0f5fd;
+            "
+          >
+            Decisión enunciada pero sin consecuencias o con 1 consecuencia
+            vaga.<br /><br />1.6 pts
+          </td>
+          <td
+            style="
+              border: 1px solid #aaa;
+              padding: 8px;
+              background-color: #f0f5fd;
+            "
+          >
+            No presenta decisión ni consecuencias identificables.<br /><br />0.8
+            pts
+          </td>
+        </tr>
+        <tr>
+          <td
+            class="criterio"
+            style="
+              background-color: #cfaa4f22;
+              border: 1px solid #aaa;
+              color: #7a5800;
+              font-weight: bold;
+              padding: 8px;
+            "
+          >
+            Alternativas evaluadas<br />2 pts
+          </td>
+          <td
+            style="
+              border: 1px solid #aaa;
+              padding: 8px;
+              background-color: #fef7e6;
+            "
+          >
+            ≥ 2 alternativas con nombre concreto, criterio técnico explícito de
+            descarte y referencia a cómo cada una se comportaría en el escenario
+            específico.<br /><br />2.0 pts
+          </td>
+          <td
+            style="
+              border: 1px solid #aaa;
+              padding: 8px;
+              background-color: #fef7e6;
+            "
+          >
+            2 alternativas nombradas con criterio de descarte parcial; la
+            comparación no menciona el escenario específico.<br /><br />1.6 pts
+          </td>
+          <td
+            style="
+              border: 1px solid #aaa;
+              padding: 8px;
+              background-color: #fef7e6;
+            "
+          >
+            1 alternativa mencionada superficialmente sin criterio técnico de
+            descarte.<br /><br />1.2 pts
+          </td>
+          <td
+            style="
+              border: 1px solid #aaa;
+              padding: 8px;
+              background-color: #fef7e6;
+            "
+          >
+            Alternativas enlistadas como nombres sin ninguna evaluación.<br /><br />0.8
+            pts
+          </td>
+          <td
+            style="
+              border: 1px solid #aaa;
+              padding: 8px;
+              background-color: #fef7e6;
+            "
+          >
+            No presenta alternativas consideradas.<br /><br />0.4 pts
+          </td>
+        </tr>
+        <tr>
+          <td
+            class="criterio"
+            style="
+              background-color: #cfaa4f22;
+              border: 1px solid #aaa;
+              color: #7a5800;
+              font-weight: bold;
+              padding: 8px;
+            "
+          >
+            Participación en el foro<br />1 pt
+          </td>
+          <td
+            style="
+              border: 1px solid #aaa;
+              padding: 8px;
+              background-color: #f0f5fd;
+            "
+          >
+            Comenta el ADR de un compañero señalando con argumentación técnica
+            una fortaleza, una debilidad o una alternativa no considerada en su
+            análisis.<br /><br />1.0 pt
+          </td>
+          <td
+            style="
+              border: 1px solid #aaa;
+              padding: 8px;
+              background-color: #f0f5fd;
+            "
+          >
+            Comenta a un compañero con observación parcial; identifica un
+            aspecto pero sin argumentación técnica.<br /><br />0.8 pts
+          </td>
+          <td
+            style="
+              border: 1px solid #aaa;
+              padding: 8px;
+              background-color: #f0f5fd;
+            "
+          >
+            Comenta de forma superficial ("bien argumentado", "estoy de
+            acuerdo").<br /><br />0.6 pts
+          </td>
+          <td
+            style="
+              border: 1px solid #aaa;
+              padding: 8px;
+              background-color: #f0f5fd;
+            "
+          >
+            No comenta a ningún compañero pero su ADR fue publicado a tiempo.<br /><br />0.4
+            pts
+          </td>
+          <td
+            style="
+              border: 1px solid #aaa;
+              padding: 8px;
+              background-color: #f0f5fd;
+            "
+          >
+            No publica ni comenta en el foro.<br /><br />0.0 pts
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- SOLUCIÓN DE REFERENCIA -->
+    <div
+      style="
+        background: #f0f4e8;
+        border: 2px solid #4a7c2f;
+        padding: 15px;
+        border-radius: 8px;
+        margin-top: 30px;
+      "
+    >
+      <h5 style="color: #1f3864">
+        💡 Solución de Referencia — 4 ADRs del Sistema de Biblioteca Digital
+      </h5>
+
+      <!-- ADR-001 -->
+      <h6
+        style="
+          color: #1f3864;
+          margin-top: 15px;
+          border-bottom: 2px solid #b5cc9a;
+          padding-bottom: 4px;
+        "
+      >
+        ADR-001: Selección de Base de Datos — PostgreSQL vs MongoDB
+      </h6>
+      <p><strong>Estado:</strong> Aceptado</p>
+      <p>
+        <strong>Contexto:</strong> El Sistema de Biblioteca Digital necesita
+        persistir datos con relaciones bien definidas (libros → préstamos →
+        usuarios → multas). Los reportes requieren consultas con múltiples JOINs
+        y la integridad referencial es crítica para evitar préstamos duplicados
+        en condiciones de concurrencia.
+      </p>
+      <p>
+        <strong>Decisión:</strong> Se utilizará <strong>PostgreSQL</strong> como
+        base de datos principal.
+      </p>
+      <p><strong>Consecuencias positivas:</strong></p>
+      <ul>
+        <li>
+          Integridad referencial garantizada por foreign keys (crítico para
+          préstamos y multas).
+        </li>
+        <li>
+          Soporte nativo para transacciones ACID; evita préstamos duplicados en
+          condiciones de carrera.
+        </li>
+        <li>
+          Consultas complejas con JOINs para reportes de ocupación y
+          estadísticas.
+        </li>
+        <li>Ecosistema maduro con Prisma ORM para TypeScript.</li>
+      </ul>
+      <p><strong>Consecuencias negativas:</strong></p>
+      <ul>
+        <li>Esquema rígido: cambios en la estructura requieren migraciones.</li>
+        <li>
+          Menor flexibilidad para almacenar metadatos variables por tipo de
+          libro.
+        </li>
+        <li>
+          Escalado horizontal más complejo que NoSQL (sharding requiere
+          configuración adicional).
+        </li>
+      </ul>
+      <p><strong>Alternativas consideradas:</strong></p>
+      <table
+        style="
+          width: 100%;
+          border-collapse: collapse;
+          font-family: sans-serif;
+          margin-bottom: 14px;
+        "
+      >
+        <tbody>
+          <tr>
+            <th
+              style="
+                background: #1f3864;
+                color: #fff;
+                padding: 8px;
+                border: 1px solid #aaa;
+                text-align: left;
+              "
+            >
+              Alternativa
+            </th>
+            <th
+              style="
+                background: #1f3864;
+                color: #fff;
+                padding: 8px;
+                border: 1px solid #aaa;
+                text-align: left;
+              "
+            >
+              Razón de descarte
+            </th>
+          </tr>
+          <tr>
+            <td style="border: 1px solid #aaa; padding: 8px">
+              <strong>MongoDB</strong>
+            </td>
+            <td style="border: 1px solid #aaa; padding: 8px">
+              Las relaciones entre entidades son complejas; el modelo de
+              documentos generaría datos duplicados (usuario embebido en cada
+              préstamo). Las transacciones multi-documento son menos eficientes
+              para este caso.
+            </td>
+          </tr>
+          <tr>
+            <td style="border: 1px solid #aaa; padding: 8px">
+              <strong>MySQL</strong>
+            </td>
+            <td style="border: 1px solid #aaa; padding: 8px">
+              Funcionalidades similares, pero PostgreSQL tiene mejor soporte
+              para tipos de datos avanzados (JSON, arrays) útiles para metadatos
+              de libros.
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <!-- ADR-002 -->
+      <h6
+        style="
+          color: #1f3864;
+          margin-top: 20px;
+          border-bottom: 2px solid #b5cc9a;
+          padding-bottom: 4px;
+        "
+      >
+        ADR-002: Estrategia de Autenticación — JWT vs Sessions
+      </h6>
+      <p><strong>Estado:</strong> Aceptado</p>
+      <p>
+        <strong>Contexto:</strong> El sistema necesita autenticar usuarios con
+        tres roles (lector, bibliotecario, administrador), soportar API REST
+        consumida por web y futura app móvil, y permitir invalidación de
+        sesiones ante compromiso de cuenta. Los tiempos de expiración deben ser
+        distintos por rol (lectores: 7 días; admin: 8 horas).
+      </p>
+      <p>
+        <strong>Decisión:</strong> Se utilizará <strong>JWT</strong> con
+        estrategia de <strong>Access Token + Refresh Token</strong>. Access
+        Token de 15 min (rol en payload); Refresh Token de 7 días/8 h guardado
+        en HttpOnly cookie y BD para revocación.
+      </p>
+      <p><strong>Consecuencias positivas:</strong></p>
+      <ul>
+        <li>
+          Stateless: el servidor no consulta la BD en cada request (solo valida
+          firma del JWT).
+        </li>
+        <li>
+          Multi-plataforma: funciona igual para web, móvil y futuros clientes
+          API.
+        </li>
+        <li>
+          El rol viaja en el token; evita consultas adicionales por request.
+        </li>
+        <li>
+          Refresh tokens en BD permiten cerrar sesiones remotamente (revocación
+          controlada).
+        </li>
+      </ul>
+      <p><strong>Consecuencias negativas:</strong></p>
+      <ul>
+        <li>Gestión de dos tokens más compleja que sesiones simples.</li>
+        <li>
+          Access tokens no son revocables al instante; si se comprometen, son
+          válidos hasta expiración (15 min).
+        </li>
+        <li>
+          JWT más grande que un ID de sesión aumenta ligeramente el tamaño de
+          cada request.
+        </li>
+      </ul>
+      <p><strong>Alternativas consideradas:</strong></p>
+      <table
+        style="
+          width: 100%;
+          border-collapse: collapse;
+          font-family: sans-serif;
+          margin-bottom: 14px;
+        "
+      >
+        <tbody>
+          <tr>
+            <th
+              style="
+                background: #1f3864;
+                color: #fff;
+                padding: 8px;
+                border: 1px solid #aaa;
+                text-align: left;
+              "
+            >
+              Alternativa
+            </th>
+            <th
+              style="
+                background: #1f3864;
+                color: #fff;
+                padding: 8px;
+                border: 1px solid #aaa;
+                text-align: left;
+              "
+            >
+              Razón de descarte
+            </th>
+          </tr>
+          <tr>
+            <td style="border: 1px solid #aaa; padding: 8px">
+              <strong>Sessions (express-session + Redis)</strong>
+            </td>
+            <td style="border: 1px solid #aaa; padding: 8px">
+              Requiere Redis como infraestructura adicional; no es stateless
+              (cada request hace lookup en Redis); problemas con múltiples
+              instancias del servidor.
+            </td>
+          </tr>
+          <tr>
+            <td style="border: 1px solid #aaa; padding: 8px">
+              <strong>OAuth 2.0 externo (Google, Auth0)</strong>
+            </td>
+            <td style="border: 1px solid #aaa; padding: 8px">
+              La biblioteca puede requerir autenticación con carné
+              institucional, incompatible con OAuth social. Dependencia de
+              servicio externo para función crítica.
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <!-- ADR-003 -->
+      <h6
+        style="
+          color: #1f3864;
+          margin-top: 20px;
+          border-bottom: 2px solid #b5cc9a;
+          padding-bottom: 4px;
+        "
+      >
+        ADR-003: Almacenamiento de Archivos — Local vs AWS S3
+      </h6>
+      <p><strong>Estado:</strong> Aceptado</p>
+      <p>
+        <strong>Contexto:</strong> El sistema genera reportes en PDF (semanales
+        y mensuales) consultados ocasionalmente por el administrador. En el
+        futuro podrían añadirse portadas de libros. El proyecto está en fase MVP
+        con presupuesto limitado. Se aplicará la interfaz
+        <code>IFileStorageService</code> (DIP) para permitir migración futura.
+      </p>
+      <p>
+        <strong>Decisión:</strong> Se utilizará
+        <strong>almacenamiento local en el servidor</strong> para el MVP,
+        protegido por la interfaz <code>IFileStorageService</code> que permite
+        migrar a S3 sin cambios en el dominio.
+      </p>
+      <p><strong>Consecuencias positivas:</strong></p>
+      <ul>
+        <li>
+          Costo cero en la fase inicial; no hay costos de servicios cloud.
+        </li>
+        <li>
+          Simplicidad operacional: sin credenciales ni configuración de cloud.
+        </li>
+        <li>
+          La interfaz <code>IFileStorageService</code> protege al dominio del
+          cambio futuro (Inversión de Dependencias).
+        </li>
+        <li>Adecuado para el volumen esperado (decenas de PDFs/mes).</li>
+      </ul>
+      <p><strong>Consecuencias negativas:</strong></p>
+      <ul>
+        <li>
+          No escalable horizontalmente: si el servidor se replica, los archivos
+          no son accesibles desde todas las instancias.
+        </li>
+        <li>
+          Sin CDN: los reportes no se sirven desde ubicaciones geográficamente
+          cercanas.
+        </li>
+        <li>Riesgo de pérdida si el servidor falla sin backup configurado.</li>
+        <li>
+          Requiere migración a S3 cuando el sistema escale o se containerice.
+        </li>
+      </ul>
+      <p><strong>Alternativas consideradas:</strong></p>
+      <table
+        style="
+          width: 100%;
+          border-collapse: collapse;
+          font-family: sans-serif;
+          margin-bottom: 14px;
+        "
+      >
+        <tbody>
+          <tr>
+            <th
+              style="
+                background: #1f3864;
+                color: #fff;
+                padding: 8px;
+                border: 1px solid #aaa;
+                text-align: left;
+              "
+            >
+              Alternativa
+            </th>
+            <th
+              style="
+                background: #1f3864;
+                color: #fff;
+                padding: 8px;
+                border: 1px solid #aaa;
+                text-align: left;
+              "
+            >
+              Razón de descarte
+            </th>
+          </tr>
+          <tr>
+            <td style="border: 1px solid #aaa; padding: 8px">
+              <strong>AWS S3</strong>
+            </td>
+            <td style="border: 1px solid #aaa; padding: 8px">
+              Alta disponibilidad y durabilidad, pero costo operacional desde el
+              inicio (~$0.023/GB/mes) y complejidad de configuración (IAM,
+              bucket policies, CORS). Excesivo para el MVP.
+            </td>
+          </tr>
+          <tr>
+            <td style="border: 1px solid #aaa; padding: 8px">
+              <strong>Cloudinary</strong>
+            </td>
+            <td style="border: 1px solid #aaa; padding: 8px">
+              Plan gratuito limitado; optimizado para imágenes. No aplica para
+              PDFs de reportes administrativos.
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <!-- ADR-004 -->
+      <h6
+        style="
+          color: #1f3864;
+          margin-top: 20px;
+          border-bottom: 2px solid #b5cc9a;
+          padding-bottom: 4px;
+        "
+      >
+        ADR-004: Framework Frontend — Next.js vs Remix
+      </h6>
+      <p><strong>Estado:</strong> Aceptado</p>
+      <p>
+        <strong>Contexto:</strong> La interfaz web del sistema necesita páginas
+        públicas indexables por buscadores (catálogo, búsqueda), un panel de
+        usuario autenticado (préstamos, reservas) y un panel de administración
+        (reportes, gestión de inventario). Debe integrarse con la API REST del
+        backend.
+      </p>
+      <p>
+        <strong>Decisión:</strong> Se utilizará <strong>Next.js 14+</strong> con
+        App Router.
+      </p>
+      <p><strong>Consecuencias positivas:</strong></p>
+      <ul>
+        <li>
+          SSR/SSG nativo: páginas de catálogo renderizadas en servidor = mejor
+          SEO y carga inicial rápida.
+        </li>
+        <li>
+          API Routes integradas: frontend y backend pueden coexistir en un solo
+          repositorio (fullstack).
+        </li>
+        <li>
+          Ecosistema masivo: mayor cantidad de librerías compatibles y recursos
+          de aprendizaje en español.
+        </li>
+        <li>
+          React Server Components reducen JavaScript enviado al cliente en
+          páginas de solo lectura.
+        </li>
+      </ul>
+      <p><strong>Consecuencias negativas:</strong></p>
+      <ul>
+        <li>
+          Complejidad del App Router: la distinción entre Server Components y
+          Client Components tiene curva de aprendizaje.
+        </li>
+        <li>
+          Optimizado para Vercel; en otros proveedores requiere configuración
+          adicional.
+        </li>
+        <li>
+          Bundle size mayor que Remix en aplicaciones con mucha interactividad.
+        </li>
+      </ul>
+      <p><strong>Alternativas consideradas:</strong></p>
+      <table
+        style="
+          width: 100%;
+          border-collapse: collapse;
+          font-family: sans-serif;
+          margin-bottom: 14px;
+        "
+      >
+        <tbody>
+          <tr>
+            <th
+              style="
+                background: #1f3864;
+                color: #fff;
+                padding: 8px;
+                border: 1px solid #aaa;
+                text-align: left;
+              "
+            >
+              Alternativa
+            </th>
+            <th
+              style="
+                background: #1f3864;
+                color: #fff;
+                padding: 8px;
+                border: 1px solid #aaa;
+                text-align: left;
+              "
+            >
+              Razón de descarte
+            </th>
+          </tr>
+          <tr>
+            <td style="border: 1px solid #aaa; padding: 8px">
+              <strong>Remix</strong>
+            </td>
+            <td style="border: 1px solid #aaa; padding: 8px">
+              Excelente manejo de formularios y mutaciones, pero menor
+              ecosistema y comunidad que Next.js; menos recursos de aprendizaje
+              disponibles en español para el equipo.
+            </td>
+          </tr>
+          <tr>
+            <td style="border: 1px solid #aaa; padding: 8px">
+              <strong>SPA con React + Vite</strong>
+            </td>
+            <td style="border: 1px solid #aaa; padding: 8px">
+              Sin SSR: mala experiencia para SEO del catálogo público. Requiere
+              backend separado siempre, añadiendo complejidad de despliegue.
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- CONCEPTOS CLAVE -->
+    <div
+      style="
+        background: #eaf6fb;
+        padding: 15px;
+        border-radius: 8px;
+        margin-top: 20px;
+      "
+    >
+      <h5 style="color: #1f3864">🎓 Conceptos Clave</h5>
+      <table
+        style="width: 100%; border-collapse: collapse; font-family: sans-serif"
+      >
+        <tbody>
+          <tr>
+            <th
+              style="
+                background: #1f3864;
+                color: #fff;
+                padding: 8px;
+                border: 1px solid #aaa;
+                text-align: left;
+              "
+            >
+              Concepto
+            </th>
+            <th
+              style="
+                background: #1f3864;
+                color: #fff;
+                padding: 8px;
+                border: 1px solid #aaa;
+                text-align: left;
+              "
+            >
+              Descripción breve
+            </th>
+          </tr>
+          <tr>
+            <td style="border: 1px solid #aaa; padding: 8px">
+              <strong>ADR (Architecture Decision Record)</strong>
+            </td>
+            <td style="border: 1px solid #aaa; padding: 8px">
+              Documento breve que registra una decisión técnica importante:
+              contexto, opciones evaluadas, decisión tomada y sus consecuencias.
+            </td>
+          </tr>
+          <tr>
+            <td style="border: 1px solid #aaa; padding: 8px">
+              <strong>Trade-off analysis</strong>
+            </td>
+            <td style="border: 1px solid #aaa; padding: 8px">
+              Evaluación explícita de las ventajas y desventajas de cada
+              alternativa antes de tomar una decisión de diseño.
+            </td>
+          </tr>
+          <tr>
+            <td style="border: 1px solid #aaa; padding: 8px">
+              <strong>Atributos de calidad</strong>
+            </td>
+            <td style="border: 1px solid #aaa; padding: 8px">
+              Características no funcionales (escalabilidad, mantenibilidad,
+              disponibilidad) que guían la selección de una arquitectura.
+            </td>
+          </tr>
+          <tr>
+            <td style="border: 1px solid #aaa; padding: 8px">
+              <strong>Arquitectura monolítica</strong>
+            </td>
+            <td style="border: 1px solid #aaa; padding: 8px">
+              Estructura en un único despliegue (N-Tier); adecuada para equipos
+              pequeños, MVPs y sistemas de baja complejidad.
+            </td>
+          </tr>
+          <tr>
+            <td style="border: 1px solid #aaa; padding: 8px">
+              <strong>Microservicios</strong>
+            </td>
+            <td style="border: 1px solid #aaa; padding: 8px">
+              Sistema compuesto de servicios independientes, desplegables y
+              escalables por separado; adecuado para equipos grandes y sistemas
+              de alta criticidad.
+            </td>
+          </tr>
+          <tr>
+            <td style="border: 1px solid #aaa; padding: 8px">
+              <strong>Arquitectura hexagonal</strong>
+            </td>
+            <td style="border: 1px solid #aaa; padding: 8px">
+              Patrón Ports &amp; Adapters que aísla el núcleo de dominio de los
+              detalles externos mediante interfaces (puertos) e implementaciones
+              (adaptadores).
+            </td>
+          </tr>
+          <tr>
+            <td style="border: 1px solid #aaa; padding: 8px">
+              <strong>Principio DIP</strong>
+            </td>
+            <td style="border: 1px solid #aaa; padding: 8px">
+              Inversión de Dependencias: las capas de alto nivel no dependen de
+              capas de bajo nivel; ambas dependen de abstracciones (interfaces).
+            </td>
+          </tr>
+          <tr>
+            <td style="border: 1px solid #aaa; padding: 8px">
+              <strong>JWT (JSON Web Token)</strong>
+            </td>
+            <td style="border: 1px solid #aaa; padding: 8px">
+              Estándar de autenticación stateless que codifica información del
+              usuario en un token firmado; permite multi-plataforma y evita
+              consultas de sesión por request.
+            </td>
+          </tr>
+          <tr>
+            <td style="border: 1px solid #aaa; padding: 8px">
+              <strong>Stack tecnológico</strong>
+            </td>
+            <td style="border: 1px solid #aaa; padding: 8px">
+              Conjunto de tecnologías (lenguaje, framework, base de datos,
+              infraestructura) que se seleccionan en función de los atributos de
+              calidad requeridos por el sistema.
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,1135 @@
+<!-- Tarea A11 — Análisis y Diseño de Software -->
+<nav style="margin-bottom: 12px">
+  <a
+    href="https://istpetonline.edu.ec/course/view.php?id=160#section-2"
+    style="
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      text-decoration: none;
+      color: #1f3864;
+      font-family: Arial, sans-serif;
+      font-size: 0.9em;
+    "
+  >
+    &#8592; Volver al aula
+  </a>
+</nav>
+
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 1920 332"
+  style="width: 100%; display: block; margin-bottom: 18px"
+>
+  <image
+    href="https://istpetonline.edu.ec/pluginfile.php/1/theme_moove/slideshow/0/banner-tarea.jpg"
+    width="1920"
+    height="332"
+    preserveAspectRatio="xMidYMid slice"
+  />
+  <text
+    x="960"
+    y="148"
+    text-anchor="middle"
+    font-family="Arial,sans-serif"
+    font-size="52"
+    font-weight="bold"
+    fill="white"
+    opacity="0.97"
+  >
+    Análisis y Diseño de Software
+  </text>
+  <text
+    x="960"
+    y="214"
+    text-anchor="middle"
+    font-family="Arial,sans-serif"
+    font-size="34"
+    fill="white"
+    opacity="0.93"
+  >
+    Unidad 2 — Diseño de Software
+  </text>
+</svg>
+
+<p></p>
+
+<div
+  class="caja"
+  style="
+    font-family: Arial, sans-serif;
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 12px;
+  "
+>
+  <div
+    class="caja"
+    style="
+      border: 1px solid #c8d6e8;
+      border-radius: 8px;
+      padding: 24px 28px;
+      margin-bottom: 22px;
+      background: #fff;
+    "
+  >
+    <h4
+      style="
+        color: #1f3864;
+        font-size: 1.25em;
+        margin: 0 0 18px 0;
+        padding-bottom: 10px;
+        border-bottom: 2px solid #cfaa4f;
+      "
+    >
+      A11. Realizar un diagrama de clases y secuencia
+    </h4>
+
+    <!-- INSTRUCCIONES -->
+    <div
+      style="
+        background: #eaf6fb;
+        border-left: 4px solid #1f3864;
+        border-radius: 6px;
+        padding: 16px 20px;
+        margin-bottom: 18px;
+      "
+    >
+      <h5 style="color: #1f3864; margin: 0 0 10px 0; font-size: 1em">
+        📋 Descripción
+      </h5>
+      <p style="margin: 0 0 10px 0; font-size: 0.95em; line-height: 1.6">
+        En esta actividad modelarás el
+        <strong>Sistema de Biblioteca Digital</strong> utilizando dos tipos de
+        diagramas UML complementarios: el <strong>diagrama de clases</strong>,
+        que captura la estructura estática del dominio (entidades, atributos,
+        métodos y relaciones), y los <strong>diagramas de secuencia</strong>,
+        que describen cómo colaboran los objetos a lo largo del tiempo para
+        cumplir con los flujos de negocio más importantes.
+      </p>
+      <h5 style="color: #1f3864; margin: 12px 0 8px 0; font-size: 1em">
+        🎯 Objetivos de Aprendizaje
+      </h5>
+      <ol
+        style="
+          margin: 0;
+          padding-left: 20px;
+          font-size: 0.95em;
+          line-height: 1.7;
+        "
+      >
+        <li>
+          Construir un diagrama de clases UML completo con relaciones de
+          cardinalidad, métodos con lógica de dominio y dependencias hacia
+          interfaces.
+        </li>
+        <li>
+          Modelar flujos de interacción mediante diagramas de secuencia UML
+          incluyendo fragmentos combinados (<code>alt</code>,
+          <code>loop</code>).
+        </li>
+      </ol>
+      <h5 style="color: #1f3864; margin: 12px 0 8px 0; font-size: 1em">
+        📝 Enunciado del caso
+      </h5>
+      <p style="margin: 0 0 6px 0; font-size: 0.95em">
+        El dominio del <strong>Sistema de Biblioteca Digital</strong> incluye
+        las entidades principales: <code>Book</code>, <code>User</code>,
+        <code>Loan</code>, <code>Reservation</code>, <code>Fine</code> y
+        <code>Category</code>. Los tres flujos de interacción a modelar son:
+      </p>
+      <ul
+        style="
+          margin: 0;
+          padding-left: 20px;
+          font-size: 0.95em;
+          line-height: 1.7;
+        "
+      >
+        <li>
+          <strong>Flujo 1 — Renovar préstamo:</strong> El lector solicita
+          renovación; el sistema verifica reservas activas y si el préstamo es
+          renovable; actualiza o devuelve error.
+        </li>
+        <li>
+          <strong>Flujo 2 — Reservar libro:</strong> El lector reserva un
+          ejemplar prestado; el sistema crea la reserva y notifica cuando quede
+          disponible.
+        </li>
+        <li>
+          <strong>Flujo 3 — Generar reporte:</strong> El administrador solicita
+          reporte de actividad; el sistema recopila estadísticas, genera el
+          documento y lo envía.
+        </li>
+      </ul>
+    </div>
+
+    <!-- ENTREGA -->
+    <div
+      style="
+        background: #eaf6fb;
+        border-left: 4px solid #cfaa4f;
+        border-radius: 6px;
+        padding: 16px 20px;
+        margin-bottom: 18px;
+      "
+    >
+      <h5 style="color: #1f3864; margin: 0 0 10px 0; font-size: 1em">
+        📤 Entrega
+      </h5>
+      <table style="width: 100%; border-collapse: collapse; font-size: 0.93em">
+        <tr>
+          <td
+            style="
+              padding: 5px 10px;
+              font-weight: bold;
+              color: #1f3864;
+              width: 38%;
+            "
+          >
+            Modalidad
+          </td>
+          <td style="padding: 5px 10px">Individual o en pares</td>
+        </tr>
+        <tr style="background: #f5faff">
+          <td style="padding: 5px 10px; font-weight: bold; color: #1f3864">
+            Formato
+          </td>
+          <td style="padding: 5px 10px">
+            Documento Markdown o PDF subido al aula virtual
+          </td>
+        </tr>
+        <tr>
+          <td style="padding: 5px 10px; font-weight: bold; color: #1f3864">
+            Fecha de entrega
+          </td>
+          <td style="padding: 5px 10px">
+            Según calendario académico de la semana 4
+          </td>
+        </tr>
+        <tr style="background: #f5faff">
+          <td style="padding: 5px 10px; font-weight: bold; color: #1f3864">
+            Entregables
+          </td>
+          <td style="padding: 5px 10px">
+            <ul style="margin: 0; padding-left: 18px; line-height: 1.7">
+              <li>
+                Diagrama de clases: mínimo <strong>6 entidades</strong> con
+                atributos tipados, métodos, relaciones con cardinalidad e
+                interfaces de repositorio
+              </li>
+              <li>
+                <strong>3 diagramas de secuencia</strong> con actores,
+                fragmentos <code>alt</code> y notificaciones asíncronas
+              </li>
+            </ul>
+          </td>
+        </tr>
+      </table>
+    </div>
+
+    <!-- RÚBRICA -->
+    <h5 style="color: #1f3864; font-size: 1em; margin: 0 0 10px 0">
+      📊 Rúbrica de Evaluación
+    </h5>
+    <div style="overflow-x: auto; margin-bottom: 22px">
+      <table style="width: 100%; border-collapse: collapse; font-size: 0.88em">
+        <thead>
+          <tr style="background: #1f3864; color: white">
+            <th style="padding: 9px 10px; text-align: left; min-width: 130px">
+              Criterio
+            </th>
+            <th style="padding: 9px 10px; text-align: left; min-width: 160px">
+              Excelente (10)
+            </th>
+            <th style="padding: 9px 10px; text-align: left; min-width: 140px">
+              Muy Bueno (8)
+            </th>
+            <th style="padding: 9px 10px; text-align: left; min-width: 130px">
+              Bueno (6)
+            </th>
+            <th style="padding: 9px 10px; text-align: left; min-width: 120px">
+              Regular (4)
+            </th>
+            <th style="padding: 9px 10px; text-align: left; min-width: 110px">
+              Deficiente (2)
+            </th>
+            <th style="padding: 9px 10px; text-align: center; min-width: 50px">
+              Pts
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr style="background: #fef7e6">
+            <td
+              style="
+                padding: 8px 10px;
+                font-weight: bold;
+                color: #7a5c00;
+                background: #cfaa4f22;
+                border-left: 4px solid #cfaa4f;
+              "
+            >
+              Diagrama de Clases
+            </td>
+            <td style="padding: 8px 10px">
+              ≥ 6 entidades con atributos tipados, métodos con lógica de dominio
+              documentada, cardinalidades correctas en todas las relaciones,
+              interfaces de repositorio correctamente separadas de las
+              implementaciones.
+            </td>
+            <td style="padding: 8px 10px">
+              5–6 entidades con relaciones y cardinalidades; 1–2 métodos sin
+              lógica explicada o interfaz mezclada con implementación.
+            </td>
+            <td style="padding: 8px 10px">
+              4–5 entidades presentes pero relaciones sin cardinalidad, métodos
+              sin tipos o sin diferenciación interfaz/clase concreta.
+            </td>
+            <td style="padding: 8px 10px">
+              3 entidades o menos; relaciones representadas incorrectamente
+              (herencia en lugar de asociación).
+            </td>
+            <td style="padding: 8px 10px">
+              No hay diagrama de clases o es una lista de atributos sin
+              relaciones.
+            </td>
+            <td
+              style="padding: 8px 10px; text-align: center; font-weight: bold"
+            >
+              5
+            </td>
+          </tr>
+          <tr style="background: #f0f5fd">
+            <td
+              style="
+                padding: 8px 10px;
+                font-weight: bold;
+                color: #7a5c00;
+                background: #cfaa4f22;
+                border-left: 4px solid #cfaa4f;
+              "
+            >
+              Diagramas de Secuencia
+            </td>
+            <td style="padding: 8px 10px">
+              3 flujos con actores identificados, fragmentos
+              <code>alt</code> para flujos alternativos, mensajes de retorno
+              correctos y notificaciones asíncronas distinguidas. Los flujos
+              cubren el caso exitoso y al menos 2 alternativas de error.
+            </td>
+            <td style="padding: 8px 10px">
+              3 flujos completos pero 1 sin fragmento <code>alt</code> o con
+              mensajes de retorno omitidos.
+            </td>
+            <td style="padding: 8px 10px">
+              2 flujos presentes o los 3 sin fragmentos combinados; solo el
+              camino feliz documentado.
+            </td>
+            <td style="padding: 8px 10px">
+              1 flujo o diagramas sin estructura de secuencia reconocible.
+            </td>
+            <td style="padding: 8px 10px">
+              No presenta diagramas de secuencia.
+            </td>
+            <td
+              style="padding: 8px 10px; text-align: center; font-weight: bold"
+            >
+              5
+            </td>
+          </tr>
+          <tr style="background: #1f3864">
+            <td
+              colspan="6"
+              style="
+                padding: 8px 10px;
+                color: white;
+                font-weight: bold;
+                text-align: right;
+              "
+            >
+              Puntaje total:
+            </td>
+            <td
+              style="
+                padding: 8px 10px;
+                text-align: center;
+                font-weight: bold;
+                color: #cfaa4f;
+                font-size: 1.1em;
+              "
+            >
+              10
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- SOLUCIÓN DE REFERENCIA -->
+    <div
+      style="
+        background: #f0f4e8;
+        border: 2px solid #4a7c2f;
+        border-radius: 8px;
+        padding: 20px 24px;
+        margin-bottom: 22px;
+      "
+    >
+      <h5 style="color: #2d5a1b; margin: 0 0 14px 0; font-size: 1.05em">
+        💡 Solución de Referencia
+      </h5>
+
+      <!-- EJERCICIO 1: DIAGRAMA DE CLASES -->
+      <h6
+        style="
+          color: #1f3864;
+          font-size: 0.97em;
+          margin: 0 0 10px 0;
+          border-bottom: 1px solid #b5cc9a;
+          padding-bottom: 5px;
+        "
+      >
+        Ejercicio 1 — Diagrama de Clases Completo
+      </h6>
+
+      <p style="margin: 0 0 6px 0; font-size: 0.93em">
+        <strong>Enumeraciones</strong>
+      </p>
+      <div style="overflow-x: auto; margin-bottom: 10px">
+        <table
+          style="width: 100%; border-collapse: collapse; font-size: 0.88em"
+        >
+          <thead>
+            <tr style="background: #1f3864; color: white">
+              <th style="padding: 6px 10px">Enumeración</th>
+              <th style="padding: 6px 10px">Valores</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr style="background: #fef7e6">
+              <td
+                style="
+                  padding: 6px 10px;
+                  font-family: monospace;
+                  font-weight: bold;
+                "
+              >
+                UserType
+              </td>
+              <td style="padding: 6px 10px; font-family: monospace">
+                READER · LIBRARIAN · ADMIN
+              </td>
+            </tr>
+            <tr style="background: #f0f5fd">
+              <td
+                style="
+                  padding: 6px 10px;
+                  font-family: monospace;
+                  font-weight: bold;
+                "
+              >
+                LoanStatus
+              </td>
+              <td style="padding: 6px 10px; font-family: monospace">
+                ACTIVE · RETURNED · OVERDUE
+              </td>
+            </tr>
+            <tr style="background: #fef7e6">
+              <td
+                style="
+                  padding: 6px 10px;
+                  font-family: monospace;
+                  font-weight: bold;
+                "
+              >
+                BookStatus
+              </td>
+              <td style="padding: 6px 10px; font-family: monospace">
+                AVAILABLE · BORROWED · RESERVED · UNDER_REPAIR · DECOMMISSIONED
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p style="margin: 0 0 6px 0; font-size: 0.93em">
+        <strong>Entidades principales</strong>
+      </p>
+      <div style="overflow-x: auto; margin-bottom: 10px">
+        <table
+          style="width: 100%; border-collapse: collapse; font-size: 0.87em"
+        >
+          <thead>
+            <tr style="background: #1f3864; color: white">
+              <th style="padding: 6px 10px">Clase</th>
+              <th style="padding: 6px 10px">Atributos clave</th>
+              <th style="padding: 6px 10px">Métodos de dominio</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr style="background: #fef7e6">
+              <td
+                style="
+                  padding: 6px 10px;
+                  font-family: monospace;
+                  font-weight: bold;
+                "
+              >
+                User
+              </td>
+              <td style="padding: 6px 10px; font-size: 0.92em">
+                id, name, email, passwordHash, type:UserType, active
+              </td>
+              <td style="padding: 6px 10px; font-size: 0.92em">
+                canBorrow():boolean, getActiveLoansCount():number
+              </td>
+            </tr>
+            <tr style="background: #f0f5fd">
+              <td
+                style="
+                  padding: 6px 10px;
+                  font-family: monospace;
+                  font-weight: bold;
+                "
+              >
+                Book
+              </td>
+              <td style="padding: 6px 10px; font-size: 0.92em">
+                id, title, author, isbn, publicationYear, status:BookStatus,
+                category
+              </td>
+              <td style="padding: 6px 10px; font-size: 0.92em">
+                markAsBorrowed(), markAsReturned(), markAsReserved(),
+                isAvailable(), getDetails()
+              </td>
+            </tr>
+            <tr style="background: #fef7e6">
+              <td
+                style="
+                  padding: 6px 10px;
+                  font-family: monospace;
+                  font-weight: bold;
+                "
+              >
+                Category
+              </td>
+              <td style="padding: 6px 10px; font-size: 0.92em">
+                id, name, description
+              </td>
+              <td style="padding: 6px 10px; font-size: 0.92em">
+                getBooks():Book[]
+              </td>
+            </tr>
+            <tr style="background: #f0f5fd">
+              <td
+                style="
+                  padding: 6px 10px;
+                  font-family: monospace;
+                  font-weight: bold;
+                "
+              >
+                Loan
+              </td>
+              <td style="padding: 6px 10px; font-size: 0.92em">
+                id, borrowDate, dueDate, returnDate, status:LoanStatus,
+                renewalCount
+              </td>
+              <td style="padding: 6px 10px; font-size: 0.92em">
+                isOverdue(), calculateFine(), canRenew(), renew(), close()
+              </td>
+            </tr>
+            <tr style="background: #fef7e6">
+              <td
+                style="
+                  padding: 6px 10px;
+                  font-family: monospace;
+                  font-weight: bold;
+                "
+              >
+                Reservation
+              </td>
+              <td style="padding: 6px 10px; font-size: 0.92em">
+                id, reservationDate, queuePosition, notified
+              </td>
+              <td style="padding: 6px 10px; font-size: 0.92em">
+                notify(), cancel(), promote(newPosition)
+              </td>
+            </tr>
+            <tr style="background: #f0f5fd">
+              <td
+                style="
+                  padding: 6px 10px;
+                  font-family: monospace;
+                  font-weight: bold;
+                "
+              >
+                Fine
+              </td>
+              <td style="padding: 6px 10px; font-size: 0.92em">
+                id, amount, generatedDate, paidDate, paid
+              </td>
+              <td style="padding: 6px 10px; font-size: 0.92em">
+                pay(), isPending()
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p style="margin: 0 0 6px 0; font-size: 0.93em">
+        <strong>Relaciones y cardinalidades</strong>
+      </p>
+      <div style="overflow-x: auto; margin-bottom: 10px">
+        <table
+          style="width: 100%; border-collapse: collapse; font-size: 0.88em"
+        >
+          <thead>
+            <tr style="background: #1f3864; color: white">
+              <th style="padding: 6px 10px">Relación</th>
+              <th style="padding: 6px 10px">Tipo</th>
+              <th style="padding: 6px 10px">Cardinalidad</th>
+              <th style="padding: 6px 10px">Descripción</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr style="background: #fef7e6">
+              <td style="padding: 6px 10px; font-family: monospace">
+                User → Loan
+              </td>
+              <td style="padding: 6px 10px">Asociación</td>
+              <td style="padding: 6px 10px">1 a *</td>
+              <td style="padding: 6px 10px">
+                Un usuario puede tener muchos préstamos
+              </td>
+            </tr>
+            <tr style="background: #f0f5fd">
+              <td style="padding: 6px 10px; font-family: monospace">
+                Book → Loan
+              </td>
+              <td style="padding: 6px 10px">Asociación</td>
+              <td style="padding: 6px 10px">1 a *</td>
+              <td style="padding: 6px 10px">
+                Un libro puede haber sido prestado muchas veces
+              </td>
+            </tr>
+            <tr style="background: #fef7e6">
+              <td style="padding: 6px 10px; font-family: monospace">
+                User → Reservation
+              </td>
+              <td style="padding: 6px 10px">Asociación</td>
+              <td style="padding: 6px 10px">1 a *</td>
+              <td style="padding: 6px 10px">
+                Un usuario puede tener reservas de diferentes libros
+              </td>
+            </tr>
+            <tr style="background: #f0f5fd">
+              <td style="padding: 6px 10px; font-family: monospace">
+                Book → Reservation
+              </td>
+              <td style="padding: 6px 10px">Asociación</td>
+              <td style="padding: 6px 10px">1 a *</td>
+              <td style="padding: 6px 10px">
+                Un libro puede tener múltiples usuarios en lista de espera
+              </td>
+            </tr>
+            <tr style="background: #fef7e6">
+              <td style="padding: 6px 10px; font-family: monospace">
+                Loan → Fine
+              </td>
+              <td style="padding: 6px 10px">Asociación</td>
+              <td style="padding: 6px 10px">1 a 0..1</td>
+              <td style="padding: 6px 10px">
+                Un préstamo puede o no generar una multa
+              </td>
+            </tr>
+            <tr style="background: #f0f5fd">
+              <td style="padding: 6px 10px; font-family: monospace">
+                Book → Category
+              </td>
+              <td style="padding: 6px 10px">Asociación</td>
+              <td style="padding: 6px 10px">* a 1</td>
+              <td style="padding: 6px 10px">
+                Muchos libros pertenecen a una categoría
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p style="margin: 0 0 6px 0; font-size: 0.93em">
+        <strong>Interfaces de repositorio e implementaciones</strong>
+      </p>
+      <div style="overflow-x: auto; margin-bottom: 12px">
+        <table
+          style="width: 100%; border-collapse: collapse; font-size: 0.88em"
+        >
+          <thead>
+            <tr style="background: #1f3864; color: white">
+              <th style="padding: 6px 10px">Interfaz</th>
+              <th style="padding: 6px 10px">Métodos</th>
+              <th style="padding: 6px 10px">Implementación concreta</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr style="background: #fef7e6">
+              <td
+                style="
+                  padding: 6px 10px;
+                  font-family: monospace;
+                  font-weight: bold;
+                "
+              >
+                IBookRepository
+              </td>
+              <td style="padding: 6px 10px; font-size: 0.91em">
+                findById, findByISBN, search, findAvailable, save, update,
+                delete
+              </td>
+              <td style="padding: 6px 10px; font-family: monospace">
+                PrismaBookRepository
+              </td>
+            </tr>
+            <tr style="background: #f0f5fd">
+              <td
+                style="
+                  padding: 6px 10px;
+                  font-family: monospace;
+                  font-weight: bold;
+                "
+              >
+                IUserRepository
+              </td>
+              <td style="padding: 6px 10px; font-size: 0.91em">
+                findById, findByEmail, save, update
+              </td>
+              <td style="padding: 6px 10px; font-family: monospace">
+                PrismaUserRepository
+              </td>
+            </tr>
+            <tr style="background: #fef7e6">
+              <td
+                style="
+                  padding: 6px 10px;
+                  font-family: monospace;
+                  font-weight: bold;
+                "
+              >
+                ILoanRepository
+              </td>
+              <td style="padding: 6px 10px; font-size: 0.91em">
+                findById, findActiveByUser, findOverdue, save, update
+              </td>
+              <td style="padding: 6px 10px; font-family: monospace">
+                PrismaLoanRepository
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p style="margin: 0 0 6px 0; font-size: 0.93em">
+        <strong>Métodos clave con lógica de dominio</strong>
+      </p>
+      <pre
+        style="
+          background: #1e1e1e;
+          color: #d4d4d4;
+          padding: 12px 14px;
+          border-radius: 5px;
+          font-family: monospace;
+          font-size: 0.84em;
+          overflow-x: auto;
+          white-space: pre;
+          margin: 0 0 6px 0;
+        "
+      >
+// Book.markAsBorrowed() — verifica disponibilidad antes de prestar
+markAsBorrowed(): void {
+  if (this.status !== BookStatus.AVAILABLE) {
+    throw new DomainError(`Book "${this.title}" is not available`);
+  }
+  this.status = BookStatus.BORROWED;
+}</pre
+      >
+      <pre
+        style="
+          background: #1e1e1e;
+          color: #d4d4d4;
+          padding: 12px 14px;
+          border-radius: 5px;
+          font-family: monospace;
+          font-size: 0.84em;
+          overflow-x: auto;
+          white-space: pre;
+          margin: 0 0 6px 0;
+        "
+      >
+// Loan.isOverdue() — verifica si el préstamo está vencido
+isOverdue(): boolean {
+  if (this.status === LoanStatus.RETURNED) return false;
+  return new Date() > this.dueDate;
+}
+
+// Loan.calculateFine() — calcula multa ($0.50 por día de retraso)
+calculateFine(): number {
+  if (!this.isOverdue()) return 0;
+  const today = this.returnDate ?? new Date();
+  const daysLate = Math.ceil(
+    (today.getTime() - this.dueDate.getTime()) / (1000 * 60 * 60 * 24)
+  );
+  return daysLate * DAILY_FINE_RATE; // $0.50/día
+}
+
+// Loan.canRenew() — máximo 2 renovaciones, no vencido
+canRenew(): boolean {
+  return (
+    this.status === LoanStatus.ACTIVE &&
+    !this.isOverdue() &&
+    this.renewalCount < MAX_RENEWALS // MAX_RENEWALS = 2
+  );
+}
+
+// User.canBorrow() — máx 3 simultáneos, sin multas pendientes
+canBorrow(): boolean {
+  const activeLoans = this.getActiveLoansCount();
+  const hasPendingFines = this.fines.some(f => !f.paid);
+  return (
+    this.active &&
+    activeLoans &lt; MAX_SIMULTANEOUS_LOANS &amp;&amp; // MAX = 3
+    !hasPendingFines
+  );
+}</pre
+      >
+
+      <!-- EJERCICIO 2: DIAGRAMAS DE SECUENCIA -->
+      <h6
+        style="
+          color: #1f3864;
+          font-size: 0.97em;
+          margin: 16px 0 10px 0;
+          border-bottom: 1px solid #b5cc9a;
+          padding-bottom: 5px;
+        "
+      >
+        Ejercicio 2 — Diagramas de Secuencia
+      </h6>
+
+      <!-- Diagrama 1 -->
+      <p style="margin: 0 0 6px 0; font-size: 0.95em">
+        <strong>Diagrama 1 — Renovar Préstamo</strong>
+      </p>
+      <p style="margin: 0 0 6px 0; font-size: 0.92em">
+        Participantes: User · API Controller · LoanService · LoanRepository ·
+        BookRepository · ReservationRepository · NotificationService
+      </p>
+      <pre
+        style="
+          background: #1e1e1e;
+          color: #d4d4d4;
+          padding: 12px 14px;
+          border-radius: 5px;
+          font-family: monospace;
+          font-size: 0.82em;
+          overflow-x: auto;
+          white-space: pre;
+          margin: 0 0 10px 0;
+        "
+      >
+sequenceDiagram
+    actor User
+    participant API as API Controller
+    participant Service as LoanService
+    participant LoanRepo as LoanRepository
+    participant ReservRepo as ReservationRepository
+
+    User->>API: PATCH /loans/{loanId}/renew
+    API->>Service: renewLoan(loanId, userId)
+    Service->>LoanRepo: findById(loanId)
+    LoanRepo-->>Service: loan
+
+    alt loan no existe o no pertenece al usuario
+        Service-->>API: throw NotFoundError
+        API-->>User: 404 Not Found
+    else loan existe
+        Service->>ReservRepo: findByBook(loan.bookId)
+        ReservRepo-->>Service: reservations[]
+
+        alt loan.isOverdue()
+            API-->>User: 400 "No se puede renovar un préstamo vencido"
+        else loan.renewalCount >= MAX_RENEWALS (2)
+            API-->>User: 400 "Límite de renovaciones alcanzado (máx. 2)"
+        else reservations.length > 0
+            API-->>User: 400 "Otro usuario está esperando este libro"
+        else renovación permitida
+            Service->>Service: loan.renew() [dueDate += 14 días, renewalCount++]
+            Service->>LoanRepo: update(loanId, loan)
+            Service->>Email: sendRenewalConfirmation(user, updatedLoan)
+            API-->>User: 200 OK {loan con nueva dueDate}
+        end
+    end</pre
+      >
+
+      <!-- Diagrama 2 -->
+      <p style="margin: 0 0 6px 0; font-size: 0.95em">
+        <strong>Diagrama 2 — Reservar Libro No Disponible</strong>
+      </p>
+      <p style="margin: 0 0 6px 0; font-size: 0.92em">
+        Participantes: User · API Controller · ReservationService ·
+        BookRepository · ReservationRepository · LoanRepository
+      </p>
+      <pre
+        style="
+          background: #1e1e1e;
+          color: #d4d4d4;
+          padding: 12px 14px;
+          border-radius: 5px;
+          font-family: monospace;
+          font-size: 0.82em;
+          overflow-x: auto;
+          white-space: pre;
+          margin: 0 0 10px 0;
+        "
+      >
+sequenceDiagram
+    actor User
+    participant API as API Controller
+    participant Service as ReservationService
+    participant BookRepo as BookRepository
+    participant ReservRepo as ReservationRepository
+    participant LoanRepo as LoanRepository
+
+    User->>API: POST /reservations {bookId}
+    API->>Service: reserveBook(userId, bookId)
+    Service->>BookRepo: findById(bookId)
+    BookRepo-->>Service: book
+
+    alt book no existe
+        API-->>User: 404 Not Found
+    else book.isAvailable()
+        API-->>User: 400 "El libro está disponible, puedes solicitarlo directamente"
+    else book está prestado
+        Service->>ReservRepo: findByUserAndBook(userId, bookId)
+        ReservRepo-->>Service: existingReservation
+
+        alt ya tiene reserva activa
+            API-->>User: 409 Conflict "Ya tienes una reserva activa"
+        else puede reservar
+            Service->>ReservRepo: findByBook(bookId)
+            ReservRepo-->>Service: reservations[]
+            Note over Service: queuePosition = reservations.length + 1
+            Service->>ReservRepo: save(newReservation)
+            ReservRepo-->>Service: savedReservation
+            API-->>User: 201 Created {reservation, queuePosition, estimatedDate}
+        end
+    end</pre
+      >
+      <p style="margin: 0 0 6px 0; font-size: 0.92em">
+        Respuesta exitosa incluye: <code>reservationId</code>,
+        <code>bookTitle</code>, <code>queuePosition</code>,
+        <code>estimatedAvailableDate</code> y mensaje de confirmación.
+      </p>
+
+      <!-- Diagrama 3 -->
+      <p style="margin: 10px 0 6px 0; font-size: 0.95em">
+        <strong>Diagrama 3 — Generar Reporte de Libros Más Prestados</strong>
+      </p>
+      <p style="margin: 0 0 6px 0; font-size: 0.92em">
+        Participantes: Admin · API Controller · AuthMiddleware · ReportService ·
+        LoanRepository · BookRepository · FileStorageService
+      </p>
+      <pre
+        style="
+          background: #1e1e1e;
+          color: #d4d4d4;
+          padding: 12px 14px;
+          border-radius: 5px;
+          font-family: monospace;
+          font-size: 0.82em;
+          overflow-x: auto;
+          white-space: pre;
+          margin: 0 0 10px 0;
+        "
+      >
+sequenceDiagram
+    actor Admin
+    participant API as API Controller
+    participant Middleware as AuthMiddleware
+    participant Service as ReportService
+    participant LoanRepo as LoanRepository
+    participant BookRepo as BookRepository
+    participant FileStorage as FileStorageService
+
+    Admin->>API: GET /reports/top-books?from=2026-01-01&amp;to=2026-03-31&amp;format=pdf
+    API->>Middleware: validateToken(token)
+
+    alt token inválido o rol != ADMIN
+        Middleware-->>API: throw UnauthorizedError
+        API-->>Admin: 403 Forbidden
+    else token válido y rol = ADMIN
+        API->>Service: generateTopBooksReport(from, to, format)
+        Service->>LoanRepo: findByDateRange(from, to)
+        LoanRepo-->>Service: loans[]
+        Service->>Service: aggregateByBook(loans)
+        Note over Service: Agrupa por bookId, cuenta ocurrencias
+
+        loop Para cada top book
+            Service->>BookRepo: findById(bookId)
+            BookRepo-->>Service: book
+        end
+
+        Service->>Service: buildReportData(topBooks)
+        Note over Service: Ordena por préstamos DESC, limita top 20
+
+        alt format == "pdf"
+            Service->>Service: generatePDF(reportData)
+            Service->>FileStorage: save(pdfBuffer, filename)
+            FileStorage-->>Service: fileUrl
+            API-->>Admin: 200 OK {downloadUrl: fileUrl}
+        else format == "json" or "csv"
+            API-->>Admin: 200 OK {data: topBooks[], period, totalLoans}
+        end
+    end</pre
+      >
+
+      <p style="margin: 0 0 6px 0; font-size: 0.92em">
+        <strong>Estructura del reporte PDF generado:</strong>
+      </p>
+      <pre
+        style="
+          background: #1e1e1e;
+          color: #d4d4d4;
+          padding: 10px 14px;
+          border-radius: 5px;
+          font-family: monospace;
+          font-size: 0.82em;
+          overflow-x: auto;
+          white-space: pre;
+          margin: 0 0 6px 0;
+        "
+      >
+Reporte: Libros Más Prestados
+Período: 01/01/2026 - 31/03/2026
+
+┌────┬──────────────────────────────────┬───────────────────┬──────────┐
+│ #  │ Título                           │ Autor             │ Préstamos│
+├────┼──────────────────────────────────┼───────────────────┼──────────┤
+│  1 │ Clean Architecture               │ Robert C. Martin  │    47    │
+│  2 │ El Principito                    │ Saint-Exupéry     │    38    │
+│  3 │ Design Patterns (Gang of Four)   │ Gamma et al.      │    31    │
+└────┴──────────────────────────────────┴───────────────────┴──────────┘
+Total de préstamos en el período: 312</pre
+      >
+    </div>
+    <!-- fin solución -->
+
+    <!-- CONCEPTOS CLAVE -->
+    <h5 style="color: #1f3864; font-size: 1em; margin: 22px 0 10px 0">
+      🎓 Conceptos Clave
+    </h5>
+    <div style="overflow-x: auto">
+      <table style="width: 100%; border-collapse: collapse; font-size: 0.88em">
+        <thead>
+          <tr style="background: #1f3864; color: white">
+            <th style="padding: 8px 12px; text-align: left; min-width: 180px">
+              Concepto
+            </th>
+            <th style="padding: 8px 12px; text-align: left">
+              Descripción breve
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr style="background: #fef7e6">
+            <td style="padding: 7px 12px; font-weight: bold">
+              Diagrama de Clases UML
+            </td>
+            <td style="padding: 7px 12px">
+              Representación estática del dominio: entidades, interfaces,
+              enumeraciones y sus relaciones
+            </td>
+          </tr>
+          <tr style="background: #f0f5fd">
+            <td style="padding: 7px 12px; font-weight: bold">Cardinalidad</td>
+            <td style="padding: 7px 12px">
+              Multiplicidad de una relación (1, 0..1, 1..*, *) que indica
+              cuántas instancias participan
+            </td>
+          </tr>
+          <tr style="background: #fef7e6">
+            <td style="padding: 7px 12px; font-weight: bold">
+              Encapsulamiento
+            </td>
+            <td style="padding: 7px 12px">
+              Principio que oculta el estado interno de un objeto y expone solo
+              operaciones a través de métodos públicos
+            </td>
+          </tr>
+          <tr style="background: #f0f5fd">
+            <td style="padding: 7px 12px; font-weight: bold">
+              Lógica de dominio
+            </td>
+            <td style="padding: 7px 12px">
+              Reglas de negocio implementadas como métodos dentro de las
+              entidades (ej. Loan.isOverdue())
+            </td>
+          </tr>
+          <tr style="background: #fef7e6">
+            <td style="padding: 7px 12px; font-weight: bold">
+              Interfaz de repositorio
+            </td>
+            <td style="padding: 7px 12px">
+              Abstracción que define las operaciones de persistencia sin
+              depender de una tecnología de base de datos concreta
+            </td>
+          </tr>
+          <tr style="background: #f0f5fd">
+            <td style="padding: 7px 12px; font-weight: bold">Lifeline</td>
+            <td style="padding: 7px 12px">
+              Línea de vida en un diagrama de secuencia que representa un
+              participante (objeto o actor) a lo largo del tiempo
+            </td>
+          </tr>
+          <tr style="background: #fef7e6">
+            <td style="padding: 7px 12px; font-weight: bold">
+              Mensaje síncrono
+            </td>
+            <td style="padding: 7px 12px">
+              Llamada que bloquea al emisor hasta recibir respuesta (flecha
+              sólida con punta cerrada)
+            </td>
+          </tr>
+          <tr style="background: #f0f5fd">
+            <td style="padding: 7px 12px; font-weight: bold">
+              Mensaje asíncrono
+            </td>
+            <td style="padding: 7px 12px">
+              Llamada que no bloquea al emisor; se usa para notificaciones y
+              eventos (flecha con punta abierta)
+            </td>
+          </tr>
+          <tr style="background: #fef7e6">
+            <td style="padding: 7px 12px; font-weight: bold">
+              Fragmento combinado <code>alt</code>
+            </td>
+            <td style="padding: 7px 12px">
+              Bloque de secuencia con condiciones mutuamente excluyentes,
+              equivalente a un if/else
+            </td>
+          </tr>
+          <tr style="background: #f0f5fd">
+            <td style="padding: 7px 12px; font-weight: bold">
+              Fragmento combinado <code>loop</code>
+            </td>
+            <td style="padding: 7px 12px">
+              Bloque de secuencia que se repite mientras se cumpla una
+              condición, equivalente a un while
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <!-- fin caja interna -->
+</div>
+<!-- fin caja principal -->

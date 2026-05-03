@@ -1,0 +1,2098 @@
+<nav aria-label="Page navigation example">
+  <ul class="pagination">
+    <li class="page-item">
+      <a
+        class="page-link"
+        href="https://istpetonline.edu.ec/course/view.php?id=160#section-1"
+        ><i class="fa fa-chevron-circle-left" aria-hidden="true"></i
+        >&nbsp;Regresar</a
+      >
+    </li>
+  </ul>
+</nav>
+<svg
+  id="Capa_1"
+  xmlns="http://www.w3.org/2000/svg"
+  xmlns:xlink="http://www.w3.org/1999/xlink"
+  viewBox="0 0 1920 332"
+>
+  <image
+    width="1920"
+    height="332"
+    xlink:href="https://istpetonline.edu.ec/draftfile.php/54951/user/draft/654213724/banner-tarea.jpg"
+  ></image>
+  <text
+    transform="translate(235.44 208.47)"
+    style="
+      fill: #fff;
+      font-family: OpenSans-Bold, &quot;Open Sans&quot;;
+      font-size: 35px;
+      font-weight: 700;
+    "
+  >
+    <tspan x="0" y="0">Análisis y Diseño de Software&nbsp;</tspan>
+  </text>
+</svg>
+<p></p>
+<div class="caja" role="alert">
+  <div
+    class="caja"
+    role="alert"
+    style="font-family: sans-serif; margin: 0; background: #f9f9f9; padding: 0"
+  >
+    <h4 style="color: #1f3864">
+      A5. Simulación de Entrevista y Redacción de Historias de Usuario
+    </h4>
+
+    <!-- DESCRIPCIÓN -->
+    <div
+      class="instrucciones"
+      style="
+        background: #eaf6fb;
+        padding: 15px;
+        border-radius: 8px;
+        margin-bottom: 20px;
+      "
+    >
+      <h5 style="color: #1f3864">📋 Descripción</h5>
+      <p style="margin-top: 0">
+        Esta actividad tiene dos partes integradas. Primero simulas una
+        <strong>entrevista semi-estructurada</strong> con el bibliotecario del
+        Sistema de Biblioteca Digital para descubrir requisitos. Luego
+        transformas los requisitos descubiertos en
+        <strong>historias de usuario</strong> con criterios de aceptación
+        Gherkin verificables.
+      </p>
+
+      <h5 style="color: #1f3864">🎯 Objetivos de Aprendizaje</h5>
+      <ol style="margin-top: 0">
+        <li>
+          Aplicar técnicas de entrevista semi-estructurada usando los 5 tipos de
+          preguntas.
+        </li>
+        <li>
+          Transformar respuestas conversacionales en requisitos funcionales
+          formales.
+        </li>
+        <li>
+          Redactar historias de usuario en formato
+          <code>Como / Quiero / Para</code>.
+        </li>
+        <li>Evaluar la calidad de una HU aplicando el criterio INVEST.</li>
+        <li>
+          Formular criterios de aceptación verificables en formato Gherkin.
+        </li>
+      </ol>
+    </div>
+
+    <!-- REQUERIMIENTOS -->
+    <div
+      style="
+        background: #eaf6fb;
+        padding: 15px;
+        border-radius: 8px;
+        margin-bottom: 20px;
+      "
+    >
+      <h5 style="color: #1f3864">📝 Requerimientos</h5>
+
+      <p><strong>Parte A — Simulación de Entrevista</strong></p>
+      <table
+        style="
+          width: 100%;
+          border-collapse: collapse;
+          font-family: sans-serif;
+          margin-bottom: 15px;
+        "
+      >
+        <tbody>
+          <tr>
+            <th
+              style="
+                border: 1px solid #aaa;
+                padding: 8px;
+                background-color: #1f3864;
+                color: white;
+              "
+            >
+              Entregable
+            </th>
+            <th
+              style="
+                border: 1px solid #aaa;
+                padding: 8px;
+                background-color: #1f3864;
+                color: white;
+              "
+            >
+              Mínimo requerido
+            </th>
+          </tr>
+          <tr>
+            <td style="border: 1px solid #aaa; padding: 8px">
+              Banco de preguntas categorizadas
+            </td>
+            <td style="border: 1px solid #aaa; padding: 8px">
+              10 preguntas de los 5 tipos (contexto, problema, solución,
+              prioridad, validación)
+            </td>
+          </tr>
+          <tr>
+            <td style="border: 1px solid #aaa; padding: 8px">
+              Lista de requisitos descubiertos
+            </td>
+            <td style="border: 1px solid #aaa; padding: 8px">
+              8 RF con ID y prioridad
+            </td>
+          </tr>
+          <tr>
+            <td style="border: 1px solid #aaa; padding: 8px">
+              Reflexión sobre la técnica
+            </td>
+            <td style="border: 1px solid #aaa; padding: 8px">
+              Párrafo con qué funcionó y qué mejorar
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p><strong>Parte B — Historias de Usuario</strong></p>
+      <table
+        style="width: 100%; border-collapse: collapse; font-family: sans-serif"
+      >
+        <tbody>
+          <tr>
+            <th
+              style="
+                border: 1px solid #aaa;
+                padding: 8px;
+                background-color: #1f3864;
+                color: white;
+              "
+            >
+              Entregable
+            </th>
+            <th
+              style="
+                border: 1px solid #aaa;
+                padding: 8px;
+                background-color: #1f3864;
+                color: white;
+              "
+            >
+              Mínimo requerido
+            </th>
+          </tr>
+          <tr>
+            <td style="border: 1px solid #aaa; padding: 8px">
+              Historias de usuario
+            </td>
+            <td style="border: 1px solid #aaa; padding: 8px">
+              5 HU en formato <code>Como / Quiero / Para</code> con estimación
+              en puntos
+            </td>
+          </tr>
+          <tr>
+            <td style="border: 1px solid #aaa; padding: 8px">
+              Evaluación INVEST
+            </td>
+            <td style="border: 1px solid #aaa; padding: 8px">
+              Tabla INVEST con justificación por criterio (no solo Sí/No)
+            </td>
+          </tr>
+          <tr>
+            <td style="border: 1px solid #aaa; padding: 8px">
+              Criterios de aceptación
+            </td>
+            <td style="border: 1px solid #aaa; padding: 8px">
+              3 criterios Gherkin por HU (camino feliz + error + caso límite)
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- ENTREGA -->
+    <div
+      style="
+        background: #eaf6fb;
+        padding: 15px;
+        border-radius: 8px;
+        margin-bottom: 20px;
+      "
+    >
+      <strong>Entrega:</strong> Sube el documento con el banco de preguntas, la
+      lista de requisitos, las historias de usuario y los criterios Gherkin
+      antes de la fecha límite.
+    </div>
+
+    <!-- RÚBRICA -->
+    <h5 style="color: #1f3864">📊 Rúbrica de evaluación</h5>
+    <table
+      class="rubrica"
+      style="
+        width: 100%;
+        border-collapse: collapse;
+        font-family: sans-serif;
+        margin-top: 20px;
+      "
+    >
+      <tbody>
+        <tr>
+          <th
+            style="
+              border: 1px solid black;
+              padding: 8px;
+              background-color: #1f3864;
+              color: white;
+              text-align: center;
+            "
+          >
+            Criterio
+          </th>
+          <th
+            style="
+              border: 1px solid black;
+              padding: 8px;
+              background-color: #1f3864;
+              color: white;
+              text-align: center;
+            "
+          >
+            Excelente<br />10 pts
+          </th>
+          <th
+            style="
+              border: 1px solid black;
+              padding: 8px;
+              background-color: #1f3864;
+              color: white;
+              text-align: center;
+            "
+          >
+            Muy Bueno<br />8 pts
+          </th>
+          <th
+            style="
+              border: 1px solid black;
+              padding: 8px;
+              background-color: #1f3864;
+              color: white;
+              text-align: center;
+            "
+          >
+            Bueno<br />6 pts
+          </th>
+          <th
+            style="
+              border: 1px solid black;
+              padding: 8px;
+              background-color: #1f3864;
+              color: white;
+              text-align: center;
+            "
+          >
+            Regular<br />4 pts
+          </th>
+          <th
+            style="
+              border: 1px solid black;
+              padding: 8px;
+              background-color: #1f3864;
+              color: white;
+              text-align: center;
+            "
+          >
+            Deficiente<br />2 pts
+          </th>
+        </tr>
+        <tr>
+          <td
+            class="criterio"
+            style="
+              text-align: left;
+              background-color: #cfaa4f;
+              font-weight: bold;
+              border: 1px solid black;
+              padding: 8px;
+            "
+          >
+            Calidad de la entrevista<br />2 pts
+          </td>
+          <td
+            style="
+              border: 1px solid black;
+              padding: 8px;
+              background-color: #fef7e6;
+            "
+          >
+            10 preguntas distribuidas equilibradamente entre los 5 tipos;
+            incluye preguntas de validación.<br /><br />2.0 pts
+          </td>
+          <td
+            style="
+              border: 1px solid black;
+              padding: 8px;
+              background-color: #fef7e6;
+            "
+          >
+            8–9 preguntas con buen balance de tipos.<br /><br />1.6 pts
+          </td>
+          <td
+            style="
+              border: 1px solid black;
+              padding: 8px;
+              background-color: #fef7e6;
+            "
+          >
+            6–7 preguntas, faltan tipos como validación o prioridad.<br /><br />1.2
+            pts
+          </td>
+          <td
+            style="
+              border: 1px solid black;
+              padding: 8px;
+              background-color: #fef7e6;
+            "
+          >
+            &lt; 6 preguntas o todos del mismo tipo.<br /><br />0.8 pts
+          </td>
+          <td
+            style="
+              border: 1px solid black;
+              padding: 8px;
+              background-color: #fef7e6;
+            "
+          >
+            No hay banco de preguntas categorizado.<br /><br />0.4 pts
+          </td>
+        </tr>
+        <tr>
+          <td
+            class="criterio"
+            style="
+              text-align: left;
+              background-color: #cfaa4f;
+              font-weight: bold;
+              border: 1px solid black;
+              padding: 8px;
+            "
+          >
+            Requisitos descubiertos<br />2 pts
+          </td>
+          <td
+            style="
+              border: 1px solid black;
+              padding: 8px;
+              background-color: #f0f5fd;
+            "
+          >
+            ≥ 8 RF con ID único, verbo en infinitivo y prioridad fundamentada;
+            incluye requisitos implícitos.<br /><br />2.0 pts
+          </td>
+          <td
+            style="
+              border: 1px solid black;
+              padding: 8px;
+              background-color: #f0f5fd;
+            "
+          >
+            7 RF bien formados con prioridades razonables.<br /><br />1.6 pts
+          </td>
+          <td
+            style="
+              border: 1px solid black;
+              padding: 8px;
+              background-color: #f0f5fd;
+            "
+          >
+            5–6 RF, algunos vagos o sin prioridad.<br /><br />1.2 pts
+          </td>
+          <td
+            style="
+              border: 1px solid black;
+              padding: 8px;
+              background-color: #f0f5fd;
+            "
+          >
+            &lt; 5 RF o mal formados.<br /><br />0.8 pts
+          </td>
+          <td
+            style="
+              border: 1px solid black;
+              padding: 8px;
+              background-color: #f0f5fd;
+            "
+          >
+            No hay lista de RF documentados.<br /><br />0.4 pts
+          </td>
+        </tr>
+        <tr>
+          <td
+            class="criterio"
+            style="
+              text-align: left;
+              background-color: #cfaa4f;
+              font-weight: bold;
+              border: 1px solid black;
+              padding: 8px;
+            "
+          >
+            Historias de usuario<br />3 pts
+          </td>
+          <td
+            style="
+              border: 1px solid black;
+              padding: 8px;
+              background-color: #fef7e6;
+            "
+          >
+            5 HU con rol específico, acción concreta y beneficio de negocio (no
+            consecuencia técnica). Estimaciones reflejan complejidad
+            relativa.<br /><br />3.0 pts
+          </td>
+          <td
+            style="
+              border: 1px solid black;
+              padding: 8px;
+              background-color: #fef7e6;
+            "
+          >
+            4 HU bien redactadas; 1 con "Para" técnico o estimación
+            arbitraria.<br /><br />2.4 pts
+          </td>
+          <td
+            style="
+              border: 1px solid black;
+              padding: 8px;
+              background-color: #fef7e6;
+            "
+          >
+            3 HU aceptables; el "Para" es técnico en la mayoría.<br /><br />1.8
+            pts
+          </td>
+          <td
+            style="
+              border: 1px solid black;
+              padding: 8px;
+              background-color: #fef7e6;
+            "
+          >
+            ≤ 2 HU o no usan el formato
+            <code>Como/Quiero/Para</code>.<br /><br />1.2 pts
+          </td>
+          <td
+            style="
+              border: 1px solid black;
+              padding: 8px;
+              background-color: #fef7e6;
+            "
+          >
+            No hay historias de usuario.<br /><br />0.6 pts
+          </td>
+        </tr>
+        <tr>
+          <td
+            class="criterio"
+            style="
+              text-align: left;
+              background-color: #cfaa4f;
+              font-weight: bold;
+              border: 1px solid black;
+              padding: 8px;
+            "
+          >
+            INVEST + Gherkin<br />3 pts
+          </td>
+          <td
+            style="
+              border: 1px solid black;
+              padding: 8px;
+              background-color: #f0f5fd;
+            "
+          >
+            Tabla INVEST con justificación argumental por criterio. 3 criterios
+            Gherkin por HU con datos concretos (no genéricos).<br /><br />3.0
+            pts
+          </td>
+          <td
+            style="
+              border: 1px solid black;
+              padding: 8px;
+              background-color: #f0f5fd;
+            "
+          >
+            Justificaciones de INVEST breves pero correctas. 3 criterios Gherkin
+            presentes.<br /><br />2.4 pts
+          </td>
+          <td
+            style="
+              border: 1px solid black;
+              padding: 8px;
+              background-color: #f0f5fd;
+            "
+          >
+            INVEST solo con Sí/No. Gherkin con datos genéricos.<br /><br />1.8
+            pts
+          </td>
+          <td
+            style="
+              border: 1px solid black;
+              padding: 8px;
+              background-color: #f0f5fd;
+            "
+          >
+            INVEST incompleto. Solo 1–2 criterios Gherkin por HU.<br /><br />1.2
+            pts
+          </td>
+          <td
+            style="
+              border: 1px solid black;
+              padding: 8px;
+              background-color: #f0f5fd;
+            "
+          >
+            No hay evaluación INVEST ni criterios Gherkin.<br /><br />0.6 pts
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- SOLUCIÓN DE REFERENCIA -->
+    <div
+      style="
+        background: #f0f4e8;
+        border: 2px solid #4a7c2f;
+        padding: 15px;
+        border-radius: 8px;
+        margin-top: 30px;
+      "
+    >
+      <h5 style="color: #1f3864">💡 Solución de Referencia</h5>
+
+      <!-- PARTE A -->
+      <h6 style="color: #1f3864; margin-top: 15px; font-size: 1em">
+        Parte A — Simulación de Entrevista
+      </h6>
+
+      <p><strong>Banco de Preguntas</strong></p>
+      <table
+        style="width: 100%; border-collapse: collapse; font-family: sans-serif"
+      >
+        <tbody>
+          <tr>
+            <th
+              style="
+                border: 1px solid #aaa;
+                padding: 8px;
+                background-color: #1f3864;
+                color: white;
+                text-align: center;
+              "
+            >
+              #
+            </th>
+            <th
+              style="
+                border: 1px solid #aaa;
+                padding: 8px;
+                background-color: #1f3864;
+                color: white;
+              "
+            >
+              Tipo
+            </th>
+            <th
+              style="
+                border: 1px solid #aaa;
+                padding: 8px;
+                background-color: #1f3864;
+                color: white;
+              "
+            >
+              Pregunta formulada
+            </th>
+          </tr>
+          <tr>
+            <td
+              style="border: 1px solid #aaa; padding: 8px; text-align: center"
+            >
+              1
+            </td>
+            <td style="border: 1px solid #aaa; padding: 8px">
+              <span
+                style="
+                  background: #d4edff;
+                  padding: 2px 6px;
+                  border-radius: 4px;
+                "
+                >Contexto</span
+              >
+            </td>
+            <td style="border: 1px solid #aaa; padding: 8px">
+              ¿Puede describir su rutina diaria como bibliotecario?
+            </td>
+          </tr>
+          <tr>
+            <td
+              style="border: 1px solid #aaa; padding: 8px; text-align: center"
+            >
+              2
+            </td>
+            <td style="border: 1px solid #aaa; padding: 8px">
+              <span
+                style="
+                  background: #ffd4d4;
+                  padding: 2px 6px;
+                  border-radius: 4px;
+                "
+                >Problema</span
+              >
+            </td>
+            <td style="border: 1px solid #aaa; padding: 8px">
+              ¿Cuáles son los mayores inconvenientes con el sistema actual?
+            </td>
+          </tr>
+          <tr>
+            <td
+              style="border: 1px solid #aaa; padding: 8px; text-align: center"
+            >
+              3
+            </td>
+            <td style="border: 1px solid #aaa; padding: 8px">
+              <span
+                style="
+                  background: #ffd4d4;
+                  padding: 2px 6px;
+                  border-radius: 4px;
+                "
+                >Problema</span
+              >
+            </td>
+            <td style="border: 1px solid #aaa; padding: 8px">
+              ¿En qué tareas invierte más tiempo del que debería?
+            </td>
+          </tr>
+          <tr>
+            <td
+              style="border: 1px solid #aaa; padding: 8px; text-align: center"
+            >
+              4
+            </td>
+            <td style="border: 1px solid #aaa; padding: 8px">
+              <span
+                style="
+                  background: #d4f0d4;
+                  padding: 2px 6px;
+                  border-radius: 4px;
+                "
+                >Solución</span
+              >
+            </td>
+            <td style="border: 1px solid #aaa; padding: 8px">
+              ¿Cómo le gustaría gestionar los préstamos idealmente?
+            </td>
+          </tr>
+          <tr>
+            <td
+              style="border: 1px solid #aaa; padding: 8px; text-align: center"
+            >
+              5
+            </td>
+            <td style="border: 1px solid #aaa; padding: 8px">
+              <span
+                style="
+                  background: #fff3c8;
+                  padding: 2px 6px;
+                  border-radius: 4px;
+                "
+                >Prioridad</span
+              >
+            </td>
+            <td style="border: 1px solid #aaa; padding: 8px">
+              Si pudiera mejorar una sola cosa del sistema actual, ¿cuál sería?
+            </td>
+          </tr>
+          <tr>
+            <td
+              style="border: 1px solid #aaa; padding: 8px; text-align: center"
+            >
+              6
+            </td>
+            <td style="border: 1px solid #aaa; padding: 8px">
+              <span
+                style="
+                  background: #d4edff;
+                  padding: 2px 6px;
+                  border-radius: 4px;
+                "
+                >Contexto</span
+              >
+            </td>
+            <td style="border: 1px solid #aaa; padding: 8px">
+              ¿Con qué frecuencia los usuarios devuelven libros fuera de plazo?
+            </td>
+          </tr>
+          <tr>
+            <td
+              style="border: 1px solid #aaa; padding: 8px; text-align: center"
+            >
+              7
+            </td>
+            <td style="border: 1px solid #aaa; padding: 8px">
+              <span
+                style="
+                  background: #d4f0d4;
+                  padding: 2px 6px;
+                  border-radius: 4px;
+                "
+                >Solución</span
+              >
+            </td>
+            <td style="border: 1px solid #aaa; padding: 8px">
+              ¿Qué tipo de reportes necesita y con qué periodicidad?
+            </td>
+          </tr>
+          <tr>
+            <td
+              style="border: 1px solid #aaa; padding: 8px; text-align: center"
+            >
+              8
+            </td>
+            <td style="border: 1px solid #aaa; padding: 8px">
+              <span
+                style="
+                  background: #e8d4ff;
+                  padding: 2px 6px;
+                  border-radius: 4px;
+                "
+                >Validación</span
+              >
+            </td>
+            <td style="border: 1px solid #aaa; padding: 8px">
+              ¿Entendí correctamente que quiere que el sistema notifique al
+              usuario 3 días antes del vencimiento?
+            </td>
+          </tr>
+          <tr>
+            <td
+              style="border: 1px solid #aaa; padding: 8px; text-align: center"
+            >
+              9
+            </td>
+            <td style="border: 1px solid #aaa; padding: 8px">
+              <span
+                style="
+                  background: #ffd4d4;
+                  padding: 2px 6px;
+                  border-radius: 4px;
+                "
+                >Problema</span
+              >
+            </td>
+            <td style="border: 1px solid #aaa; padding: 8px">
+              ¿Qué pasa cuando un libro ya está prestado y otro usuario lo
+              solicita?
+            </td>
+          </tr>
+          <tr>
+            <td
+              style="border: 1px solid #aaa; padding: 8px; text-align: center"
+            >
+              10
+            </td>
+            <td style="border: 1px solid #aaa; padding: 8px">
+              <span
+                style="
+                  background: #d4edff;
+                  padding: 2px 6px;
+                  border-radius: 4px;
+                "
+                >Contexto</span
+              >
+            </td>
+            <td style="border: 1px solid #aaa; padding: 8px">
+              ¿Cuántos usuarios simultáneos acceden al sistema en hora pico?
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p style="margin-top: 15px"><strong>Requisitos Descubiertos</strong></p>
+      <table
+        style="width: 100%; border-collapse: collapse; font-family: sans-serif"
+      >
+        <tbody>
+          <tr>
+            <th
+              style="
+                border: 1px solid #aaa;
+                padding: 8px;
+                background-color: #1f3864;
+                color: white;
+              "
+            >
+              ID
+            </th>
+            <th
+              style="
+                border: 1px solid #aaa;
+                padding: 8px;
+                background-color: #1f3864;
+                color: white;
+              "
+            >
+              Requisito
+            </th>
+            <th
+              style="
+                border: 1px solid #aaa;
+                padding: 8px;
+                background-color: #1f3864;
+                color: white;
+                text-align: center;
+              "
+            >
+              Prioridad
+            </th>
+          </tr>
+          <tr>
+            <td style="border: 1px solid #aaa; padding: 8px">
+              <strong>RF-001</strong>
+            </td>
+            <td style="border: 1px solid #aaa; padding: 8px">
+              El sistema debe permitir registrar préstamos de libros a usuarios
+              registrados.
+            </td>
+            <td
+              style="border: 1px solid #aaa; padding: 8px; text-align: center"
+            >
+              <span
+                style="
+                  background: #c8f0c8;
+                  padding: 2px 8px;
+                  border-radius: 4px;
+                  font-weight: bold;
+                "
+                >Alta</span
+              >
+            </td>
+          </tr>
+          <tr>
+            <td style="border: 1px solid #aaa; padding: 8px">
+              <strong>RF-002</strong>
+            </td>
+            <td style="border: 1px solid #aaa; padding: 8px">
+              El sistema debe registrar la devolución de un libro y actualizar
+              su disponibilidad automáticamente.
+            </td>
+            <td
+              style="border: 1px solid #aaa; padding: 8px; text-align: center"
+            >
+              <span
+                style="
+                  background: #c8f0c8;
+                  padding: 2px 8px;
+                  border-radius: 4px;
+                  font-weight: bold;
+                "
+                >Alta</span
+              >
+            </td>
+          </tr>
+          <tr>
+            <td style="border: 1px solid #aaa; padding: 8px">
+              <strong>RF-003</strong>
+            </td>
+            <td style="border: 1px solid #aaa; padding: 8px">
+              El sistema debe generar un reporte semanal de los libros más
+              prestados.
+            </td>
+            <td
+              style="border: 1px solid #aaa; padding: 8px; text-align: center"
+            >
+              <span
+                style="
+                  background: #c8f0c8;
+                  padding: 2px 8px;
+                  border-radius: 4px;
+                  font-weight: bold;
+                "
+                >Alta</span
+              >
+            </td>
+          </tr>
+          <tr>
+            <td style="border: 1px solid #aaa; padding: 8px">
+              <strong>RF-004</strong>
+            </td>
+            <td style="border: 1px solid #aaa; padding: 8px">
+              El sistema debe enviar notificaciones automáticas a los usuarios
+              con devoluciones pendientes (3 días antes del vencimiento y el día
+              del vencimiento).
+            </td>
+            <td
+              style="border: 1px solid #aaa; padding: 8px; text-align: center"
+            >
+              <span
+                style="
+                  background: #c8f0c8;
+                  padding: 2px 8px;
+                  border-radius: 4px;
+                  font-weight: bold;
+                "
+                >Alta</span
+              >
+            </td>
+          </tr>
+          <tr>
+            <td style="border: 1px solid #aaa; padding: 8px">
+              <strong>RF-005</strong>
+            </td>
+            <td style="border: 1px solid #aaa; padding: 8px">
+              El sistema debe permitir al bibliotecario buscar usuarios por
+              nombre, email o número de carné.
+            </td>
+            <td
+              style="border: 1px solid #aaa; padding: 8px; text-align: center"
+            >
+              <span
+                style="
+                  background: #c8f0c8;
+                  padding: 2px 8px;
+                  border-radius: 4px;
+                  font-weight: bold;
+                "
+                >Alta</span
+              >
+            </td>
+          </tr>
+          <tr>
+            <td style="border: 1px solid #aaa; padding: 8px">
+              <strong>RF-006</strong>
+            </td>
+            <td style="border: 1px solid #aaa; padding: 8px">
+              El sistema debe permitir al usuario reservar un libro que
+              actualmente se encuentra prestado.
+            </td>
+            <td
+              style="border: 1px solid #aaa; padding: 8px; text-align: center"
+            >
+              <span
+                style="
+                  background: #fff3c8;
+                  padding: 2px 8px;
+                  border-radius: 4px;
+                  font-weight: bold;
+                "
+                >Media</span
+              >
+            </td>
+          </tr>
+          <tr>
+            <td style="border: 1px solid #aaa; padding: 8px">
+              <strong>RF-007</strong>
+            </td>
+            <td style="border: 1px solid #aaa; padding: 8px">
+              El sistema debe notificar al usuario cuando el libro reservado
+              esté disponible.
+            </td>
+            <td
+              style="border: 1px solid #aaa; padding: 8px; text-align: center"
+            >
+              <span
+                style="
+                  background: #fff3c8;
+                  padding: 2px 8px;
+                  border-radius: 4px;
+                  font-weight: bold;
+                "
+                >Media</span
+              >
+            </td>
+          </tr>
+          <tr>
+            <td style="border: 1px solid #aaa; padding: 8px">
+              <strong>RF-008</strong>
+            </td>
+            <td style="border: 1px solid #aaa; padding: 8px">
+              El sistema debe registrar multas por devoluciones tardías según la
+              política de la biblioteca.
+            </td>
+            <td
+              style="border: 1px solid #aaa; padding: 8px; text-align: center"
+            >
+              <span
+                style="
+                  background: #fff3c8;
+                  padding: 2px 8px;
+                  border-radius: 4px;
+                  font-weight: bold;
+                "
+                >Media</span
+              >
+            </td>
+          </tr>
+          <tr>
+            <td style="border: 1px solid #aaa; padding: 8px">
+              <strong>RF-009</strong>
+            </td>
+            <td style="border: 1px solid #aaa; padding: 8px">
+              El sistema debe generar reportes de libros más prestados por
+              categoría, mes y año.
+            </td>
+            <td
+              style="border: 1px solid #aaa; padding: 8px; text-align: center"
+            >
+              <span
+                style="
+                  background: #fff3c8;
+                  padding: 2px 8px;
+                  border-radius: 4px;
+                  font-weight: bold;
+                "
+                >Media</span
+              >
+            </td>
+          </tr>
+          <tr>
+            <td style="border: 1px solid #aaa; padding: 8px">
+              <strong>RF-010</strong>
+            </td>
+            <td style="border: 1px solid #aaa; padding: 8px">
+              El sistema debe permitir renovar un préstamo en línea siempre que
+              no haya reservas pendientes del libro.
+            </td>
+            <td
+              style="border: 1px solid #aaa; padding: 8px; text-align: center"
+            >
+              <span
+                style="
+                  background: #fff3c8;
+                  padding: 2px 8px;
+                  border-radius: 4px;
+                  font-weight: bold;
+                "
+                >Media</span
+              >
+            </td>
+          </tr>
+          <tr>
+            <td style="border: 1px solid #aaa; padding: 8px">
+              <strong>RF-011</strong>
+            </td>
+            <td style="border: 1px solid #aaa; padding: 8px">
+              El sistema debe mostrar el historial de préstamos de un usuario.
+            </td>
+            <td
+              style="border: 1px solid #aaa; padding: 8px; text-align: center"
+            >
+              <span
+                style="
+                  background: #e8e8e8;
+                  padding: 2px 8px;
+                  border-radius: 4px;
+                  font-weight: bold;
+                "
+                >Baja</span
+              >
+            </td>
+          </tr>
+          <tr>
+            <td style="border: 1px solid #aaa; padding: 8px">
+              <strong>RF-012</strong>
+            </td>
+            <td style="border: 1px solid #aaa; padding: 8px">
+              El sistema debe permitir al administrador agregar, editar y dar de
+              baja libros del catálogo.
+            </td>
+            <td
+              style="border: 1px solid #aaa; padding: 8px; text-align: center"
+            >
+              <span
+                style="
+                  background: #c8f0c8;
+                  padding: 2px 8px;
+                  border-radius: 4px;
+                  font-weight: bold;
+                "
+                >Alta</span
+              >
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p style="margin-top: 15px">
+        <strong>Reflexión sobre la Técnica</strong>
+      </p>
+      <p><em>¿Qué funcionó bien?</em></p>
+      <ul>
+        <li>
+          Las <strong>preguntas de contexto</strong> permitieron entender el
+          flujo real de trabajo antes de profundizar en necesidades específicas.
+        </li>
+        <li>
+          Las <strong>preguntas de problema</strong> revelaron puntos de dolor
+          no evidentes, como la falta de alertas automáticas.
+        </li>
+        <li>
+          Las <strong>preguntas de validación</strong> fueron clave para evitar
+          malentendidos; confirmar "¿3 días antes?" previno un requisito
+          incorrecto.
+        </li>
+        <li>
+          <strong>Escuchar activamente (80/20)</strong> permitió descubrir la
+          necesidad de reportes y multas, que no estaban en el brief inicial.
+        </li>
+      </ul>
+      <p><em>¿Qué se podría mejorar?</em></p>
+      <ul>
+        <li>
+          Usar una grabación (con permiso) para no perder detalles durante la
+          transcripción.
+        </li>
+        <li>Preparar un prototipo en papel para la siguiente sesión.</li>
+        <li>
+          Incluir a un usuario final (lector) en una segunda entrevista para
+          contrastar perspectivas.
+        </li>
+      </ul>
+
+      <!-- PARTE B -->
+      <h6 style="color: #1f3864; margin-top: 25px; font-size: 1em">
+        Parte B — Historias de Usuario
+      </h6>
+
+      <!-- HU Helper styles inline -->
+      <style>
+        .hu-card {
+          background: #fff;
+          border: 1px solid #c8d8e8;
+          border-radius: 8px;
+          padding: 15px;
+          margin-bottom: 20px;
+        }
+        .hu-quote {
+          background: #f0f5fd;
+          border-left: 4px solid #1f3864;
+          padding: 10px 15px;
+          margin: 8px 0;
+          font-style: italic;
+          border-radius: 4px;
+        }
+        .gherkin-block {
+          background: #1e1e1e;
+          color: #d4d4d4;
+          padding: 12px 15px;
+          border-radius: 6px;
+          font-family: "Courier New", monospace;
+          font-size: 0.88em;
+          margin: 8px 0;
+          white-space: pre-wrap;
+        }
+        .gherkin-block .kw {
+          color: #569cd6;
+          font-weight: bold;
+        }
+        .gherkin-block .comment {
+          color: #6a9955;
+        }
+      </style>
+
+      <!-- HU-001 -->
+      <div class="hu-card">
+        <p style="margin: 0 0 6px 0">
+          <strong>HU-001: Búsqueda de Libros</strong> &nbsp;|&nbsp;
+          <span
+            style="
+              background: #c8f0c8;
+              padding: 2px 8px;
+              border-radius: 4px;
+              font-weight: bold;
+            "
+            >Alta</span
+          >
+          &nbsp;|&nbsp; <strong>Estimación:</strong> 3 puntos
+        </p>
+        <div class="hu-quote">
+          Como usuario de la biblioteca,<br />
+          quiero buscar libros por título, autor o categoría,<br />
+          para encontrar rápidamente el material que necesito.
+        </div>
+
+        <p style="margin: 10px 0 4px 0"><strong>Evaluación INVEST</strong></p>
+        <table
+          style="width: 100%; border-collapse: collapse; font-size: 0.92em"
+        >
+          <tbody>
+            <tr>
+              <th
+                style="
+                  border: 1px solid #aaa;
+                  padding: 6px;
+                  background-color: #1f3864;
+                  color: white;
+                "
+              >
+                Criterio
+              </th>
+              <th
+                style="
+                  border: 1px solid #aaa;
+                  padding: 6px;
+                  background-color: #1f3864;
+                  color: white;
+                  text-align: center;
+                "
+              >
+                Cumple
+              </th>
+              <th
+                style="
+                  border: 1px solid #aaa;
+                  padding: 6px;
+                  background-color: #1f3864;
+                  color: white;
+                "
+              >
+                Justificación
+              </th>
+            </tr>
+            <tr>
+              <td style="border: 1px solid #aaa; padding: 6px">Independent</td>
+              <td
+                style="border: 1px solid #aaa; padding: 6px; text-align: center"
+              >
+                ✅
+              </td>
+              <td style="border: 1px solid #aaa; padding: 6px">
+                No depende de otras historias para ser implementada.
+              </td>
+            </tr>
+            <tr>
+              <td style="border: 1px solid #aaa; padding: 6px">Negotiable</td>
+              <td
+                style="border: 1px solid #aaa; padding: 6px; text-align: center"
+              >
+                ✅
+              </td>
+              <td style="border: 1px solid #aaa; padding: 6px">
+                Los filtros de búsqueda pueden ajustarse con el equipo.
+              </td>
+            </tr>
+            <tr>
+              <td style="border: 1px solid #aaa; padding: 6px">Valuable</td>
+              <td
+                style="border: 1px solid #aaa; padding: 6px; text-align: center"
+              >
+                ✅
+              </td>
+              <td style="border: 1px solid #aaa; padding: 6px">
+                Es la función principal que los usuarios utilizarán.
+              </td>
+            </tr>
+            <tr>
+              <td style="border: 1px solid #aaa; padding: 6px">Estimable</td>
+              <td
+                style="border: 1px solid #aaa; padding: 6px; text-align: center"
+              >
+                ✅
+              </td>
+              <td style="border: 1px solid #aaa; padding: 6px">
+                Funcionalidad estándar, estimable con claridad.
+              </td>
+            </tr>
+            <tr>
+              <td style="border: 1px solid #aaa; padding: 6px">Small</td>
+              <td
+                style="border: 1px solid #aaa; padding: 6px; text-align: center"
+              >
+                ✅
+              </td>
+              <td style="border: 1px solid #aaa; padding: 6px">
+                Alcance acotado a búsqueda y listado de resultados.
+              </td>
+            </tr>
+            <tr>
+              <td style="border: 1px solid #aaa; padding: 6px">Testable</td>
+              <td
+                style="border: 1px solid #aaa; padding: 6px; text-align: center"
+              >
+                ✅
+              </td>
+              <td style="border: 1px solid #aaa; padding: 6px">
+                Se puede verificar con casos de prueba de búsqueda.
+              </td>
+            </tr>
+          </tbody>
+        </table>
+
+        <p style="margin: 10px 0 4px 0">
+          <strong>Criterios de Aceptación</strong>
+        </p>
+        <div class="gherkin-block">
+          <span class="comment"># CA-001: Búsqueda exitosa por título</span>
+          <span class="kw">Dado que</span> soy un usuario autenticado en la
+          plataforma <span class="kw">Cuando</span> ingreso "El Principito" en
+          el campo de búsqueda y presiono "Buscar"
+          <span class="kw">Entonces</span> el sistema muestra una lista con
+          todos los libros que contengan ese texto en el título
+          <span class="kw">Y</span> cada resultado muestra título, autor,
+          categoría y disponibilidad
+        </div>
+        <div class="gherkin-block">
+          <span class="comment"># CA-002: Búsqueda por autor</span>
+          <span class="kw">Dado que</span> estoy en el buscador
+          <span class="kw">Cuando</span> ingreso el nombre "García Márquez" como
+          criterio de autor <span class="kw">Entonces</span> el sistema muestra
+          todos los libros registrados de ese autor
+        </div>
+        <div class="gherkin-block">
+          <span class="comment"># CA-003: Sin resultados</span>
+          <span class="kw">Dado que</span> realizo una búsqueda
+          <span class="kw">Cuando</span> no existe ningún libro que coincida con
+          el criterio ingresado <span class="kw">Entonces</span> el sistema
+          muestra el mensaje "No se encontraron resultados para tu búsqueda"
+        </div>
+      </div>
+
+      <!-- HU-002 -->
+      <div class="hu-card">
+        <p style="margin: 0 0 6px 0">
+          <strong>HU-002: Préstamo de Libro</strong> &nbsp;|&nbsp;
+          <span
+            style="
+              background: #c8f0c8;
+              padding: 2px 8px;
+              border-radius: 4px;
+              font-weight: bold;
+            "
+            >Alta</span
+          >
+          &nbsp;|&nbsp; <strong>Estimación:</strong> 5 puntos
+        </p>
+        <div class="hu-quote">
+          Como usuario registrado de la biblioteca,<br />
+          quiero solicitar el préstamo de un libro disponible,<br />
+          para poder leerlo durante el período permitido.
+        </div>
+
+        <p style="margin: 10px 0 4px 0"><strong>Evaluación INVEST</strong></p>
+        <table
+          style="width: 100%; border-collapse: collapse; font-size: 0.92em"
+        >
+          <tbody>
+            <tr>
+              <th
+                style="
+                  border: 1px solid #aaa;
+                  padding: 6px;
+                  background-color: #1f3864;
+                  color: white;
+                "
+              >
+                Criterio
+              </th>
+              <th
+                style="
+                  border: 1px solid #aaa;
+                  padding: 6px;
+                  background-color: #1f3864;
+                  color: white;
+                  text-align: center;
+                "
+              >
+                Cumple
+              </th>
+              <th
+                style="
+                  border: 1px solid #aaa;
+                  padding: 6px;
+                  background-color: #1f3864;
+                  color: white;
+                "
+              >
+                Justificación
+              </th>
+            </tr>
+            <tr>
+              <td style="border: 1px solid #aaa; padding: 6px">Independent</td>
+              <td
+                style="border: 1px solid #aaa; padding: 6px; text-align: center"
+              >
+                ✅
+              </td>
+              <td style="border: 1px solid #aaa; padding: 6px">
+                Depende de HU-001 solo funcionalmente, no técnicamente.
+              </td>
+            </tr>
+            <tr>
+              <td style="border: 1px solid #aaa; padding: 6px">Negotiable</td>
+              <td
+                style="border: 1px solid #aaa; padding: 6px; text-align: center"
+              >
+                ✅
+              </td>
+              <td style="border: 1px solid #aaa; padding: 6px">
+                La duración del préstamo es negociable con la biblioteca.
+              </td>
+            </tr>
+            <tr>
+              <td style="border: 1px solid #aaa; padding: 6px">Valuable</td>
+              <td
+                style="border: 1px solid #aaa; padding: 6px; text-align: center"
+              >
+                ✅
+              </td>
+              <td style="border: 1px solid #aaa; padding: 6px">
+                Es el proceso central del negocio.
+              </td>
+            </tr>
+            <tr>
+              <td style="border: 1px solid #aaa; padding: 6px">Estimable</td>
+              <td
+                style="border: 1px solid #aaa; padding: 6px; text-align: center"
+              >
+                ✅
+              </td>
+              <td style="border: 1px solid #aaa; padding: 6px">
+                Flujo bien definido, estimable.
+              </td>
+            </tr>
+            <tr>
+              <td style="border: 1px solid #aaa; padding: 6px">Small</td>
+              <td
+                style="border: 1px solid #aaa; padding: 6px; text-align: center"
+              >
+                ✅
+              </td>
+              <td style="border: 1px solid #aaa; padding: 6px">
+                Cubre únicamente la acción de solicitar el préstamo.
+              </td>
+            </tr>
+            <tr>
+              <td style="border: 1px solid #aaa; padding: 6px">Testable</td>
+              <td
+                style="border: 1px solid #aaa; padding: 6px; text-align: center"
+              >
+                ✅
+              </td>
+              <td style="border: 1px solid #aaa; padding: 6px">
+                Verificable con casos de prueba de disponibilidad y estado.
+              </td>
+            </tr>
+          </tbody>
+        </table>
+
+        <p style="margin: 10px 0 4px 0">
+          <strong>Criterios de Aceptación</strong>
+        </p>
+        <div class="gherkin-block">
+          <span class="comment"># CA-001: Préstamo exitoso</span>
+          <span class="kw">Dado que</span> soy un usuario autenticado sin
+          préstamos vencidos <span class="kw">Y</span> el libro "Cien años de
+          soledad" está disponible <span class="kw">Cuando</span> hago clic en
+          "Solicitar préstamo" <span class="kw">Entonces</span> el sistema
+          registra el préstamo con fecha de inicio y fecha de vencimiento (14
+          días) <span class="kw">Y</span> el estado del libro cambia a
+          "Prestado" <span class="kw">Y</span> recibo un email de confirmación
+          con los detalles del préstamo
+        </div>
+        <div class="gherkin-block">
+          <span class="comment"># CA-002: Libro no disponible</span>
+          <span class="kw">Dado que</span> el libro seleccionado ya está
+          prestado <span class="kw">Cuando</span> intento solicitar el préstamo
+          <span class="kw">Entonces</span> el sistema muestra "Este libro no
+          está disponible actualmente" <span class="kw">Y</span> me ofrece la
+          opción de reservarlo
+        </div>
+        <div class="gherkin-block">
+          <span class="comment"># CA-003: Usuario con préstamos vencidos</span>
+          <span class="kw">Dado que</span> tengo un préstamo con fecha de
+          vencimiento superada <span class="kw">Cuando</span> intento solicitar
+          un nuevo préstamo <span class="kw">Entonces</span> el sistema muestra
+          "Tienes préstamos vencidos. Debes devolver los libros antes de
+          solicitar nuevos."
+        </div>
+      </div>
+
+      <!-- HU-003 -->
+      <div class="hu-card">
+        <p style="margin: 0 0 6px 0">
+          <strong>HU-003: Devolución de Libro</strong> &nbsp;|&nbsp;
+          <span
+            style="
+              background: #c8f0c8;
+              padding: 2px 8px;
+              border-radius: 4px;
+              font-weight: bold;
+            "
+            >Alta</span
+          >
+          &nbsp;|&nbsp; <strong>Estimación:</strong> 3 puntos
+        </p>
+        <div class="hu-quote">
+          Como usuario con un préstamo activo,<br />
+          quiero registrar la devolución de un libro,<br />
+          para liberar mi cuenta y permitir que otros usuarios lo soliciten.
+        </div>
+
+        <p style="margin: 10px 0 4px 0"><strong>Evaluación INVEST</strong></p>
+        <table
+          style="width: 100%; border-collapse: collapse; font-size: 0.92em"
+        >
+          <tbody>
+            <tr>
+              <th
+                style="
+                  border: 1px solid #aaa;
+                  padding: 6px;
+                  background-color: #1f3864;
+                  color: white;
+                "
+              >
+                Criterio
+              </th>
+              <th
+                style="
+                  border: 1px solid #aaa;
+                  padding: 6px;
+                  background-color: #1f3864;
+                  color: white;
+                  text-align: center;
+                "
+              >
+                Cumple
+              </th>
+              <th
+                style="
+                  border: 1px solid #aaa;
+                  padding: 6px;
+                  background-color: #1f3864;
+                  color: white;
+                "
+              >
+                Justificación
+              </th>
+            </tr>
+            <tr>
+              <td style="border: 1px solid #aaa; padding: 6px">Independent</td>
+              <td
+                style="border: 1px solid #aaa; padding: 6px; text-align: center"
+              >
+                ✅
+              </td>
+              <td style="border: 1px solid #aaa; padding: 6px">
+                Independiente, solo requiere que exista un préstamo activo.
+              </td>
+            </tr>
+            <tr>
+              <td style="border: 1px solid #aaa; padding: 6px">Negotiable</td>
+              <td
+                style="border: 1px solid #aaa; padding: 6px; text-align: center"
+              >
+                ✅
+              </td>
+              <td style="border: 1px solid #aaa; padding: 6px">
+                El proceso de registro físico es negociable.
+              </td>
+            </tr>
+            <tr>
+              <td style="border: 1px solid #aaa; padding: 6px">Valuable</td>
+              <td
+                style="border: 1px solid #aaa; padding: 6px; text-align: center"
+              >
+                ✅
+              </td>
+              <td style="border: 1px solid #aaa; padding: 6px">
+                Libera el inventario para otros usuarios.
+              </td>
+            </tr>
+            <tr>
+              <td style="border: 1px solid #aaa; padding: 6px">Estimable</td>
+              <td
+                style="border: 1px solid #aaa; padding: 6px; text-align: center"
+              >
+                ✅
+              </td>
+              <td style="border: 1px solid #aaa; padding: 6px">
+                Flujo sencillo y bien definido.
+              </td>
+            </tr>
+            <tr>
+              <td style="border: 1px solid #aaa; padding: 6px">Small</td>
+              <td
+                style="border: 1px solid #aaa; padding: 6px; text-align: center"
+              >
+                ✅
+              </td>
+              <td style="border: 1px solid #aaa; padding: 6px">
+                Acción concreta: registrar devolución.
+              </td>
+            </tr>
+            <tr>
+              <td style="border: 1px solid #aaa; padding: 6px">Testable</td>
+              <td
+                style="border: 1px solid #aaa; padding: 6px; text-align: center"
+              >
+                ✅
+              </td>
+              <td style="border: 1px solid #aaa; padding: 6px">
+                Verificable por cambio de estado del libro y cuenta.
+              </td>
+            </tr>
+          </tbody>
+        </table>
+
+        <p style="margin: 10px 0 4px 0">
+          <strong>Criterios de Aceptación</strong>
+        </p>
+        <div class="gherkin-block">
+          <span class="comment"># CA-001: Devolución en plazo</span>
+          <span class="kw">Dado que</span> tengo un libro prestado dentro del
+          período permitido <span class="kw">Cuando</span> el bibliotecario
+          registra la devolución en el sistema
+          <span class="kw">Entonces</span> el estado del libro cambia a
+          "Disponible" <span class="kw">Y</span> el préstamo se marca como
+          "Devuelto" en mi historial
+        </div>
+        <div class="gherkin-block">
+          <span class="comment"># CA-002: Devolución tardía con multa</span>
+          <span class="kw">Dado que</span> devuelvo un libro después de la fecha
+          de vencimiento <span class="kw">Cuando</span> el bibliotecario
+          registra la devolución <span class="kw">Entonces</span> el sistema
+          calcula la multa según los días de retraso (tarifa configurada)
+          <span class="kw">Y</span> notifica al usuario por email con el monto
+          de la multa pendiente
+        </div>
+        <div class="gherkin-block">
+          <span class="comment"
+            ># CA-003: Notificación a usuario en lista de espera</span
+          >
+          <span class="kw">Dado que</span> existe un usuario que reservó el
+          libro devuelto <span class="kw">Cuando</span> se registra la
+          devolución <span class="kw">Entonces</span> el sistema envía
+          automáticamente una notificación al primer usuario en la lista de
+          espera
+        </div>
+      </div>
+
+      <!-- HU-004 -->
+      <div class="hu-card">
+        <p style="margin: 0 0 6px 0">
+          <strong>HU-004: Reserva de Libro No Disponible</strong> &nbsp;|&nbsp;
+          <span
+            style="
+              background: #fff3c8;
+              padding: 2px 8px;
+              border-radius: 4px;
+              font-weight: bold;
+            "
+            >Media</span
+          >
+          &nbsp;|&nbsp; <strong>Estimación:</strong> 3 puntos
+        </p>
+        <div class="hu-quote">
+          Como usuario de la biblioteca,<br />
+          quiero reservar un libro que actualmente está prestado,<br />
+          para ser notificado cuando esté disponible y poder pedirlo primero.
+        </div>
+
+        <p style="margin: 10px 0 4px 0"><strong>Evaluación INVEST</strong></p>
+        <table
+          style="width: 100%; border-collapse: collapse; font-size: 0.92em"
+        >
+          <tbody>
+            <tr>
+              <th
+                style="
+                  border: 1px solid #aaa;
+                  padding: 6px;
+                  background-color: #1f3864;
+                  color: white;
+                "
+              >
+                Criterio
+              </th>
+              <th
+                style="
+                  border: 1px solid #aaa;
+                  padding: 6px;
+                  background-color: #1f3864;
+                  color: white;
+                  text-align: center;
+                "
+              >
+                Cumple
+              </th>
+              <th
+                style="
+                  border: 1px solid #aaa;
+                  padding: 6px;
+                  background-color: #1f3864;
+                  color: white;
+                "
+              >
+                Justificación
+              </th>
+            </tr>
+            <tr>
+              <td style="border: 1px solid #aaa; padding: 6px">Independent</td>
+              <td
+                style="border: 1px solid #aaa; padding: 6px; text-align: center"
+              >
+                ✅
+              </td>
+              <td style="border: 1px solid #aaa; padding: 6px">
+                Independiente; depende funcionalmente de HU-002 pero no
+                técnicamente.
+              </td>
+            </tr>
+            <tr>
+              <td style="border: 1px solid #aaa; padding: 6px">Negotiable</td>
+              <td
+                style="border: 1px solid #aaa; padding: 6px; text-align: center"
+              >
+                ✅
+              </td>
+              <td style="border: 1px solid #aaa; padding: 6px">
+                El tiempo máximo de reserva activa es negociable.
+              </td>
+            </tr>
+            <tr>
+              <td style="border: 1px solid #aaa; padding: 6px">Valuable</td>
+              <td
+                style="border: 1px solid #aaa; padding: 6px; text-align: center"
+              >
+                ✅
+              </td>
+              <td style="border: 1px solid #aaa; padding: 6px">
+                Mejora la experiencia del usuario y la gestión del inventario.
+              </td>
+            </tr>
+            <tr>
+              <td style="border: 1px solid #aaa; padding: 6px">Estimable</td>
+              <td
+                style="border: 1px solid #aaa; padding: 6px; text-align: center"
+              >
+                ✅
+              </td>
+              <td style="border: 1px solid #aaa; padding: 6px">
+                Funcionalidad de lista de espera, estimable.
+              </td>
+            </tr>
+            <tr>
+              <td style="border: 1px solid #aaa; padding: 6px">Small</td>
+              <td
+                style="border: 1px solid #aaa; padding: 6px; text-align: center"
+              >
+                ✅
+              </td>
+              <td style="border: 1px solid #aaa; padding: 6px">
+                Cubre solo el acto de reservar, no el préstamo en sí.
+              </td>
+            </tr>
+            <tr>
+              <td style="border: 1px solid #aaa; padding: 6px">Testable</td>
+              <td
+                style="border: 1px solid #aaa; padding: 6px; text-align: center"
+              >
+                ✅
+              </td>
+              <td style="border: 1px solid #aaa; padding: 6px">
+                Verificable con pruebas de cola de reservas y notificaciones.
+              </td>
+            </tr>
+          </tbody>
+        </table>
+
+        <p style="margin: 10px 0 4px 0">
+          <strong>Criterios de Aceptación</strong>
+        </p>
+        <div class="gherkin-block">
+          <span class="comment"># CA-001: Reserva registrada exitosamente</span>
+          <span class="kw">Dado que</span> el libro "Don Quijote" está
+          actualmente prestado <span class="kw">Cuando</span> hago clic en
+          "Reservar" <span class="kw">Entonces</span> el sistema registra mi
+          reserva con posición en la lista de espera
+          <span class="kw">Y</span> veo el mensaje "Tu reserva fue registrada.
+          Eres el #2 en la lista de espera."
+        </div>
+        <div class="gherkin-block">
+          <span class="comment"># CA-002: Notificación de disponibilidad</span>
+          <span class="kw">Dado que</span> tengo una reserva activa para un
+          libro <span class="kw">Cuando</span> ese libro es devuelto
+          <span class="kw">Entonces</span> recibo un email indicando que el
+          libro está disponible <span class="kw">Y</span> tengo 48 horas para
+          solicitar el préstamo antes de que pase al siguiente en la lista
+        </div>
+        <div class="gherkin-block">
+          <span class="comment"># CA-003: Cancelación de reserva</span>
+          <span class="kw">Dado que</span> tengo una reserva activa
+          <span class="kw">Cuando</span> accedo a "Mis reservas" y selecciono
+          "Cancelar reserva" <span class="kw">Entonces</span> la reserva se
+          elimina y el siguiente usuario en la lista asciende de posición
+        </div>
+      </div>
+
+      <!-- HU-005 -->
+      <div class="hu-card">
+        <p style="margin: 0 0 6px 0">
+          <strong>HU-005: Renovación de Préstamo</strong> &nbsp;|&nbsp;
+          <span
+            style="
+              background: #fff3c8;
+              padding: 2px 8px;
+              border-radius: 4px;
+              font-weight: bold;
+            "
+            >Media</span
+          >
+          &nbsp;|&nbsp; <strong>Estimación:</strong> 2 puntos
+        </p>
+        <div class="hu-quote">
+          Como usuario con un préstamo activo,<br />
+          quiero renovar la fecha de devolución de un libro,<br />
+          para tener más tiempo de lectura sin tener que devolverlo físicamente.
+        </div>
+
+        <p style="margin: 10px 0 4px 0"><strong>Evaluación INVEST</strong></p>
+        <table
+          style="width: 100%; border-collapse: collapse; font-size: 0.92em"
+        >
+          <tbody>
+            <tr>
+              <th
+                style="
+                  border: 1px solid #aaa;
+                  padding: 6px;
+                  background-color: #1f3864;
+                  color: white;
+                "
+              >
+                Criterio
+              </th>
+              <th
+                style="
+                  border: 1px solid #aaa;
+                  padding: 6px;
+                  background-color: #1f3864;
+                  color: white;
+                  text-align: center;
+                "
+              >
+                Cumple
+              </th>
+              <th
+                style="
+                  border: 1px solid #aaa;
+                  padding: 6px;
+                  background-color: #1f3864;
+                  color: white;
+                "
+              >
+                Justificación
+              </th>
+            </tr>
+            <tr>
+              <td style="border: 1px solid #aaa; padding: 6px">Independent</td>
+              <td
+                style="border: 1px solid #aaa; padding: 6px; text-align: center"
+              >
+                ✅
+              </td>
+              <td style="border: 1px solid #aaa; padding: 6px">
+                Independiente; solo requiere un préstamo activo.
+              </td>
+            </tr>
+            <tr>
+              <td style="border: 1px solid #aaa; padding: 6px">Negotiable</td>
+              <td
+                style="border: 1px solid #aaa; padding: 6px; text-align: center"
+              >
+                ✅
+              </td>
+              <td style="border: 1px solid #aaa; padding: 6px">
+                El número máximo de renovaciones es negociable.
+              </td>
+            </tr>
+            <tr>
+              <td style="border: 1px solid #aaa; padding: 6px">Valuable</td>
+              <td
+                style="border: 1px solid #aaa; padding: 6px; text-align: center"
+              >
+                ✅
+              </td>
+              <td style="border: 1px solid #aaa; padding: 6px">
+                Reduce visitas innecesarias y mejora la experiencia.
+              </td>
+            </tr>
+            <tr>
+              <td style="border: 1px solid #aaa; padding: 6px">Estimable</td>
+              <td
+                style="border: 1px solid #aaa; padding: 6px; text-align: center"
+              >
+                ✅
+              </td>
+              <td style="border: 1px solid #aaa; padding: 6px">
+                Lógica simple de extensión de fecha.
+              </td>
+            </tr>
+            <tr>
+              <td style="border: 1px solid #aaa; padding: 6px">Small</td>
+              <td
+                style="border: 1px solid #aaa; padding: 6px; text-align: center"
+              >
+                ✅
+              </td>
+              <td style="border: 1px solid #aaa; padding: 6px">
+                Acción puntual: extender fecha de vencimiento.
+              </td>
+            </tr>
+            <tr>
+              <td style="border: 1px solid #aaa; padding: 6px">Testable</td>
+              <td
+                style="border: 1px solid #aaa; padding: 6px; text-align: center"
+              >
+                ✅
+              </td>
+              <td style="border: 1px solid #aaa; padding: 6px">
+                Verificable por cambio de fecha en el préstamo.
+              </td>
+            </tr>
+          </tbody>
+        </table>
+
+        <p style="margin: 10px 0 4px 0">
+          <strong>Criterios de Aceptación</strong>
+        </p>
+        <div class="gherkin-block">
+          <span class="comment"># CA-001: Renovación exitosa</span>
+          <span class="kw">Dado que</span> tengo un préstamo activo sin reservas
+          pendientes del libro <span class="kw">Y</span> no he alcanzado el
+          límite de renovaciones (máximo 2) <span class="kw">Cuando</span> hago
+          clic en "Renovar préstamo" <span class="kw">Entonces</span> la fecha
+          de vencimiento se extiende 14 días desde la fecha actual
+          <span class="kw">Y</span> recibo un email confirmando la nueva fecha
+          de devolución
+        </div>
+        <div class="gherkin-block">
+          <span class="comment"
+            ># CA-002: No se puede renovar si hay reservas</span
+          >
+          <span class="kw">Dado que</span> otro usuario ha reservado el libro
+          que tengo prestado <span class="kw">Cuando</span> intento renovar el
+          préstamo <span class="kw">Entonces</span> el sistema muestra "No es
+          posible renovar. Hay usuarios esperando este libro."
+        </div>
+        <div class="gherkin-block">
+          <span class="comment"
+            ># CA-003: Límite de renovaciones alcanzado</span
+          >
+          <span class="kw">Dado que</span> ya realicé 2 renovaciones del mismo
+          préstamo <span class="kw">Cuando</span> intento renovar por tercera
+          vez <span class="kw">Entonces</span> el sistema muestra "Has alcanzado
+          el límite de renovaciones permitidas para este libro."
+        </div>
+      </div>
+    </div>
+
+    <!-- CONCEPTOS CLAVE -->
+    <div
+      style="
+        background: #eaf6fb;
+        padding: 15px;
+        border-radius: 8px;
+        margin-top: 20px;
+      "
+    >
+      <h5 style="color: #1f3864">🎓 Conceptos Clave</h5>
+      <table
+        style="width: 100%; border-collapse: collapse; font-family: sans-serif"
+      >
+        <tbody>
+          <tr>
+            <th
+              style="
+                border: 1px solid #aaa;
+                padding: 8px;
+                background-color: #1f3864;
+                color: white;
+              "
+            >
+              Concepto
+            </th>
+            <th
+              style="
+                border: 1px solid #aaa;
+                padding: 8px;
+                background-color: #1f3864;
+                color: white;
+              "
+            >
+              Descripción breve
+            </th>
+          </tr>
+          <tr>
+            <td style="border: 1px solid #aaa; padding: 8px">
+              <strong>Entrevista semi-estructurada</strong>
+            </td>
+            <td style="border: 1px solid #aaa; padding: 8px">
+              Combina preguntas preparadas con libertad para profundizar. Los 5
+              tipos: contexto, problema, solución, prioridad, validación.
+            </td>
+          </tr>
+          <tr>
+            <td style="border: 1px solid #aaa; padding: 8px">
+              <strong>Regla 80/20</strong>
+            </td>
+            <td style="border: 1px solid #aaa; padding: 8px">
+              El entrevistado habla el 80% del tiempo; el analista guía con el
+              20%.
+            </td>
+          </tr>
+          <tr>
+            <td style="border: 1px solid #aaa; padding: 8px">
+              <strong>Historia de Usuario</strong>
+            </td>
+            <td style="border: 1px solid #aaa; padding: 8px">
+              <code
+                >Como [rol] / Quiero [acción] / Para [beneficio de
+                negocio]</code
+              >. El "Para" describe valor, no consecuencia técnica.
+            </td>
+          </tr>
+          <tr>
+            <td style="border: 1px solid #aaa; padding: 8px">
+              <strong>INVEST</strong>
+            </td>
+            <td style="border: 1px solid #aaa; padding: 8px">
+              Independent · Negotiable · Valuable · Estimable · Small · Testable
+            </td>
+          </tr>
+          <tr>
+            <td style="border: 1px solid #aaa; padding: 8px">
+              <strong>Gherkin</strong>
+            </td>
+            <td style="border: 1px solid #aaa; padding: 8px">
+              <code
+                >Dado que [contexto] / Cuando [acción] / Entonces [resultado
+                observable]</code
+              >
+            </td>
+          </tr>
+          <tr>
+            <td style="border: 1px solid #aaa; padding: 8px">
+              <strong>Puntos de historia</strong>
+            </td>
+            <td style="border: 1px solid #aaa; padding: 8px">
+              Medida relativa de esfuerzo (no horas). Escala Fibonacci: 1, 2, 3,
+              5, 8, 13.
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

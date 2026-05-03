@@ -1,0 +1,318 @@
+<!-- Tarea A12 — Análisis y Diseño de Software -->
+<nav style="margin-bottom:12px;">
+  <a href="https://istpetonline.edu.ec/course/view.php?id=160#section-2"
+     style="display:inline-flex;align-items:center;gap:6px;text-decoration:none;color:#1f3864;font-family:Arial,sans-serif;font-size:0.9em;">
+    &#8592; Volver al aula
+  </a>
+</nav>
+
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 332" style="width:100%;display:block;margin-bottom:18px;">
+  <image href="https://istpetonline.edu.ec/pluginfile.php/1/theme_moove/slideshow/0/banner-tarea.jpg"
+         width="1920" height="332" preserveAspectRatio="xMidYMid slice"/>
+  <text x="960" y="148" text-anchor="middle" font-family="Arial,sans-serif" font-size="52"
+        font-weight="bold" fill="white" opacity="0.97">Análisis y Diseño de Software</text>
+  <text x="960" y="214" text-anchor="middle" font-family="Arial,sans-serif" font-size="34"
+        fill="white" opacity="0.93">Unidad 2 — Diseño de Software</text>
+</svg>
+
+<p></p>
+
+<div class="caja" style="font-family:Arial,sans-serif;max-width:960px;margin:0 auto;padding:0 12px;">
+
+  <div class="caja" style="border:1px solid #c8d6e8;border-radius:8px;padding:24px 28px;margin-bottom:22px;background:#fff;">
+
+    <h4 style="color:#1f3864;font-size:1.25em;margin:0 0 18px 0;padding-bottom:10px;border-bottom:2px solid #cfaa4f;">
+      A12. Realizar casos de uso expandidos
+    </h4>
+
+    <!-- INSTRUCCIONES -->
+    <div style="background:#eaf6fb;border-left:4px solid #1f3864;border-radius:6px;padding:16px 20px;margin-bottom:18px;">
+      <h5 style="color:#1f3864;margin:0 0 10px 0;font-size:1em;">📋 Descripción</h5>
+      <p style="margin:0 0 10px 0;font-size:0.95em;line-height:1.6;">
+        En esta actividad especificarás los <strong>casos de uso expandidos</strong> del <strong>Sistema de Biblioteca Digital</strong> siguiendo el estándar <strong>IEEE 29148:2018</strong>. Partirás de un diagrama general de casos de uso que identifique a todos los actores y las principales funcionalidades, y luego desarrollarás tres especificaciones detalladas con flujo principal, flujos alternativos numerados, precondiciones, postcondiciones y las relaciones <code>&lt;&lt;include&gt;&gt;</code> y <code>&lt;&lt;extend&gt;&gt;</code> justificadas.
+      </p>
+      <h5 style="color:#1f3864;margin:12px 0 8px 0;font-size:1em;">🎯 Objetivo de Aprendizaje</h5>
+      <ol style="margin:0;padding-left:20px;font-size:0.95em;line-height:1.7;">
+        <li>Redactar casos de uso expandidos con flujos principales, flujos alternativos y condiciones de extensión/inclusión según IEEE 29148:2018.</li>
+      </ol>
+      <h5 style="color:#1f3864;margin:12px 0 8px 0;font-size:1em;">📝 Enunciado del caso</h5>
+      <p style="margin:0 0 6px 0;font-size:0.95em;">El <strong>Sistema de Biblioteca Digital</strong> tiene los siguientes actores:</p>
+      <ul style="margin:0 0 8px 0;padding-left:20px;font-size:0.95em;line-height:1.7;">
+        <li><strong>Lector</strong> (actor primario): busca libros, realiza préstamos, los renueva y hace reservas.</li>
+        <li><strong>Bibliotecario</strong> (actor primario): registra devoluciones, gestiona el inventario y administra multas.</li>
+        <li><strong>Administrador</strong> (actor primario): configura el sistema y genera reportes de actividad.</li>
+        <li><strong>Sistema de Email</strong> (actor secundario): envía notificaciones automáticas de vencimientos y disponibilidad.</li>
+      </ul>
+      <p style="margin:0 0 6px 0;font-size:0.95em;">Los tres casos de uso a especificar en detalle son:</p>
+      <ul style="margin:0;padding-left:20px;font-size:0.95em;line-height:1.7;">
+        <li><strong>CU-010 — Gestionar Usuarios:</strong> Actor accede a la gestión de usuarios, busca, edita, suspende o reactiva cuentas.</li>
+        <li><strong>CU-011 — Notificar Disponibilidad:</strong> El sistema detecta la devolución de un libro con reservas activas y notifica al primer usuario en cola.</li>
+        <li><strong>CU-012 — Enviar Recordatorio de Devolución:</strong> Job nocturno detecta préstamos próximos a vencer y envía recordatorios automáticos.</li>
+      </ul>
+      <p style="margin:6px 0 0 0;font-size:0.92em;color:#555;">Usa el formato de especificación de caso de uso de <strong>IEEE 29148:2018</strong>: tabla con ID, Nombre, Actor principal, Precondición(es), Postcondición(es), Flujo principal numerado y Flujos alternativos referenciados.</p>
+    </div>
+
+    <!-- ENTREGA -->
+    <div style="background:#eaf6fb;border-left:4px solid #cfaa4f;border-radius:6px;padding:16px 20px;margin-bottom:18px;">
+      <h5 style="color:#1f3864;margin:0 0 10px 0;font-size:1em;">📤 Entrega</h5>
+      <table style="width:100%;border-collapse:collapse;font-size:0.93em;">
+        <tr><td style="padding:5px 10px;font-weight:bold;color:#1f3864;width:38%;">Modalidad</td><td style="padding:5px 10px;">Individual o en pares</td></tr>
+        <tr style="background:#f5faff;"><td style="padding:5px 10px;font-weight:bold;color:#1f3864;">Formato</td><td style="padding:5px 10px;">Documento Markdown o PDF subido al aula virtual</td></tr>
+        <tr><td style="padding:5px 10px;font-weight:bold;color:#1f3864;">Fecha de entrega</td><td style="padding:5px 10px;">Según calendario académico de la semana 4</td></tr>
+        <tr style="background:#f5faff;"><td style="padding:5px 10px;font-weight:bold;color:#1f3864;">Entregables</td><td style="padding:5px 10px;">
+          <ul style="margin:0;padding-left:18px;line-height:1.7;">
+            <li>Diagrama UML con todos los actores clasificados (primarios/secundarios) y al menos <strong>8 casos de uso</strong> con relaciones <code>&lt;&lt;include&gt;&gt;</code>, <code>&lt;&lt;extend&gt;&gt;</code> y <code>&lt;&lt;generalize&gt;&gt;</code></li>
+            <li><strong>3 casos de uso</strong> completamente especificados en formato IEEE 29148:2018</li>
+          </ul>
+        </td></tr>
+      </table>
+    </div>
+
+    <!-- RÚBRICA -->
+    <h5 style="color:#1f3864;font-size:1em;margin:0 0 10px 0;">📊 Rúbrica de Evaluación</h5>
+    <div style="overflow-x:auto;margin-bottom:22px;">
+      <table style="width:100%;border-collapse:collapse;font-size:0.88em;">
+        <thead>
+          <tr style="background:#1f3864;color:white;">
+            <th style="padding:9px 10px;text-align:left;min-width:150px;">Criterio</th>
+            <th style="padding:9px 10px;text-align:left;min-width:160px;">Excelente (10)</th>
+            <th style="padding:9px 10px;text-align:left;min-width:140px;">Muy Bueno (8)</th>
+            <th style="padding:9px 10px;text-align:left;min-width:130px;">Bueno (6)</th>
+            <th style="padding:9px 10px;text-align:left;min-width:120px;">Regular (4)</th>
+            <th style="padding:9px 10px;text-align:left;min-width:110px;">Deficiente (2)</th>
+            <th style="padding:9px 10px;text-align:center;min-width:50px;">Pts</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr style="background:#fef7e6;">
+            <td style="padding:8px 10px;font-weight:bold;color:#7a5c00;background:#cfaa4f22;border-left:4px solid #cfaa4f;">Diagrama General de Casos de Uso</td>
+            <td style="padding:8px 10px;">Actores correctamente clasificados (primarios/secundarios), ≥ 8 casos de uso, relaciones <code>&lt;&lt;include&gt;&gt;</code>, <code>&lt;&lt;extend&gt;&gt;</code> y <code>&lt;&lt;generalize&gt;&gt;</code> correctamente aplicadas con condición de activación explícita para cada <code>&lt;&lt;extend&gt;&gt;</code>.</td>
+            <td style="padding:8px 10px;">Actores clasificados y ≥ 6 casos de uso; 1–2 relaciones incorrectas o sin condición de activación en <code>&lt;&lt;extend&gt;&gt;</code>.</td>
+            <td style="padding:8px 10px;">≥ 5 casos de uso pero relaciones no diferenciadas o actores sin clasificación.</td>
+            <td style="padding:8px 10px;">&lt; 5 casos de uso o actores sin definir; relaciones ausentes.</td>
+            <td style="padding:8px 10px;">No presenta diagrama o es una lista de funcionalidades sin notación UML.</td>
+            <td style="padding:8px 10px;text-align:center;font-weight:bold;">3</td>
+          </tr>
+          <tr style="background:#f0f5fd;">
+            <td style="padding:8px 10px;font-weight:bold;color:#7a5c00;background:#cfaa4f22;border-left:4px solid #cfaa4f;">Especificaciones Expandidas (IEEE 29148)</td>
+            <td style="padding:8px 10px;">3 especificaciones con flujo principal paso a paso numerado, ≥ 2 flujos alternativos por caso, precondiciones y postcondiciones concretas, y referencias correctas a <code>&lt;&lt;include&gt;&gt;</code>/<code>&lt;&lt;extend&gt;&gt;</code> justificadas.</td>
+            <td style="padding:8px 10px;">3 especificaciones con flujo principal y al menos 1 flujo alternativo; faltan precondiciones o postcondiciones en 1–2 casos.</td>
+            <td style="padding:8px 10px;">2 especificaciones completas o las 3 con flujo principal solamente, sin flujos alternativos ni condiciones.</td>
+            <td style="padding:8px 10px;">1 especificación o formato libre sin estructura de caso de uso (no sigue IEEE 29148).</td>
+            <td style="padding:8px 10px;">No presenta casos de uso expandidos o son descripciones narrativas sin tabla estructurada.</td>
+            <td style="padding:8px 10px;text-align:center;font-weight:bold;">7</td>
+          </tr>
+          <tr style="background:#1f3864;">
+            <td colspan="6" style="padding:8px 10px;color:white;font-weight:bold;text-align:right;">Puntaje total:</td>
+            <td style="padding:8px 10px;text-align:center;font-weight:bold;color:#cfaa4f;font-size:1.1em;">10</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- SOLUCIÓN DE REFERENCIA -->
+    <div style="background:#f0f4e8;border:2px solid #4a7c2f;border-radius:8px;padding:20px 24px;margin-bottom:22px;">
+      <h5 style="color:#2d5a1b;margin:0 0 14px 0;font-size:1.05em;">💡 Solución de Referencia</h5>
+
+      <!-- DIAGRAMA DE CASOS DE USO -->
+      <h6 style="color:#1f3864;font-size:0.97em;margin:0 0 10px 0;border-bottom:1px solid #b5cc9a;padding-bottom:5px;">Ejercicio 3 — Diagrama General de Casos de Uso</h6>
+      <p style="margin:0 0 8px 0;font-size:0.93em;">El diagrama incluye <strong>4 actores</strong> (Lector, Bibliotecario, Administrador, Sistema) con sus casos de uso y las relaciones <code>&lt;&lt;include&gt;&gt;</code>, <code>&lt;&lt;extend&gt;&gt;</code> y <code>&lt;&lt;generalize&gt;&gt;</code>.</p>
+
+      <pre style="background:#1e1e1e;color:#d4d4d4;padding:12px 14px;border-radius:5px;font-family:monospace;font-size:0.79em;overflow-x:auto;white-space:pre;margin:0 0 14px 0;">┌─────────────────────────────────────────────────────────────────────────┐
+│                    Sistema de Biblioteca Digital                         │
+│                                                                         │
+│  ── LECTOR (actor primario) ───────────────────────────────────────     │
+│                                                                         │
+│  [👤 Lector] ──> [Buscar Libro] ──<<include>>──> [Filtrar categoría]   │
+│               ──> [Prestar Libro] ──<<include>>──> [Verificar Disp.]   │
+│                       │──<<extend>>[límite]──> [Mostrar Alerta]        │
+│               ──> [Devolver Libro] ──<<extend>>[retraso]──>            │
+│                                           [Registrar Multa]            │
+│               ──> [Renovar Préstamo] ──<<include>>──>                  │
+│                                  [Verificar Reglas de Renovación]      │
+│               ──> [Reservar Libro] ──<<include>>──> [Verificar Disp.] │
+│               ──> [Pagar Multa Pendiente]                              │
+│               ──> [Ver Mis Préstamos]                                  │
+│                                                                         │
+│  ── BIBLIOTECARIO (actor primario) ────────────────────────────────     │
+│                                                                         │
+│  [👤 Bibliotecario] ──> [Gestionar Inventario]                         │
+│                     ──> [Registrar Devolución] ──<<include>>──>        │
+│                                         [Buscar Libro por ID]          │
+│                     ──> [Gestionar Usuarios] ──<<extend>>[suspender]──>│
+│                                         [Suspender Usuario]            │
+│                                                                         │
+│  ── ADMINISTRADOR (actor primario) ────────────────────────────────     │
+│                                                                         │
+│  [👤 Administrador] ──> [Generar Reportes]                             │
+│                     ──> [Gestionar Categorías]                         │
+│                     ──> [Configurar Sistema]                           │
+│                                                                         │
+│  ── SISTEMA / ACTOR AUTOMATIZADO ──────────────────────────────────     │
+│                                                                         │
+│  [⚙ Sistema] ──> [Enviar Recordatorio] ──<<include>>──>               │
+│                              [Detectar Vencimientos]                   │
+│              ──> [Notificar Disponibilidad]                            │
+│              ──> [Marcar Préstamos como Vencidos]                      │
+│                                                                         │
+│  [👤 Bibliotecario] ──<<generalize>>──> [👤 Lector]                   │
+│                                                                         │
+└─────────────────────────────────────────────────────────────────────────┘</pre>
+
+      <!-- TABLA RELACIONES -->
+      <p style="margin:0 0 6px 0;font-size:0.95em;"><strong>Tabla de Relaciones Include / Extend / Generalize</strong></p>
+      <div style="overflow-x:auto;margin-bottom:18px;">
+        <table style="width:100%;border-collapse:collapse;font-size:0.87em;">
+          <thead>
+            <tr style="background:#1f3864;color:white;">
+              <th style="padding:7px 10px;">Caso de Uso Base</th>
+              <th style="padding:7px 10px;">Relación</th>
+              <th style="padding:7px 10px;">Caso de Uso Relacionado</th>
+              <th style="padding:7px 10px;">Condición</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr style="background:#fef7e6;"><td style="padding:6px 10px;">Prestar Libro</td><td style="padding:6px 10px;font-family:monospace;">&lt;&lt;include&gt;&gt;</td><td style="padding:6px 10px;">Verificar Disponibilidad</td><td style="padding:6px 10px;">Siempre (es paso obligatorio)</td></tr>
+            <tr style="background:#f0f5fd;"><td style="padding:6px 10px;">Buscar Libro</td><td style="padding:6px 10px;font-family:monospace;">&lt;&lt;include&gt;&gt;</td><td style="padding:6px 10px;">Filtrar por categoría/autor</td><td style="padding:6px 10px;">Siempre (parte del flujo de búsqueda)</td></tr>
+            <tr style="background:#fef7e6;"><td style="padding:6px 10px;">Renovar Préstamo</td><td style="padding:6px 10px;font-family:monospace;">&lt;&lt;include&gt;&gt;</td><td style="padding:6px 10px;">Verificar Reglas de Renovación</td><td style="padding:6px 10px;">Siempre</td></tr>
+            <tr style="background:#f0f5fd;"><td style="padding:6px 10px;">Reservar Libro</td><td style="padding:6px 10px;font-family:monospace;">&lt;&lt;include&gt;&gt;</td><td style="padding:6px 10px;">Verificar Disponibilidad</td><td style="padding:6px 10px;">Siempre</td></tr>
+            <tr style="background:#fef7e6;"><td style="padding:6px 10px;">Registrar Devolución</td><td style="padding:6px 10px;font-family:monospace;">&lt;&lt;include&gt;&gt;</td><td style="padding:6px 10px;">Buscar Libro por ID</td><td style="padding:6px 10px;">Siempre</td></tr>
+            <tr style="background:#f0f5fd;"><td style="padding:6px 10px;">Enviar Recordatorio</td><td style="padding:6px 10px;font-family:monospace;">&lt;&lt;include&gt;&gt;</td><td style="padding:6px 10px;">Detectar Vencimientos</td><td style="padding:6px 10px;">Siempre (la detección precede al envío)</td></tr>
+            <tr style="background:#fef7e6;"><td style="padding:6px 10px;">Devolver Libro</td><td style="padding:6px 10px;font-family:monospace;">&lt;&lt;extend&gt;&gt;</td><td style="padding:6px 10px;">Registrar Multa</td><td style="padding:6px 10px;">Solo si hay retraso en la devolución</td></tr>
+            <tr style="background:#f0f5fd;"><td style="padding:6px 10px;">Prestar Libro</td><td style="padding:6px 10px;font-family:monospace;">&lt;&lt;extend&gt;&gt;</td><td style="padding:6px 10px;">Mostrar Alerta de Límite</td><td style="padding:6px 10px;">Solo si el usuario alcanzó el límite de préstamos</td></tr>
+            <tr style="background:#fef7e6;"><td style="padding:6px 10px;">Gestionar Usuarios</td><td style="padding:6px 10px;font-family:monospace;">&lt;&lt;extend&gt;&gt;</td><td style="padding:6px 10px;">Suspender Usuario</td><td style="padding:6px 10px;">Solo si se selecciona esa acción</td></tr>
+            <tr style="background:#f0f5fd;"><td style="padding:6px 10px;">Bibliotecario</td><td style="padding:6px 10px;font-family:monospace;">&lt;&lt;generalize&gt;&gt;</td><td style="padding:6px 10px;">Lector</td><td style="padding:6px 10px;">Bibliotecario puede hacer todo lo que hace un Lector</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- ESPECIFICACIONES EXPANDIDAS -->
+      <h6 style="color:#1f3864;font-size:0.97em;margin:0 0 10px 0;border-bottom:1px solid #b5cc9a;padding-bottom:5px;">Especificaciones de Casos de Uso Expandidos (IEEE 29148:2018)</h6>
+
+      <!-- CU-010 -->
+      <div style="border:1px solid #c8d6e8;border-radius:6px;margin-bottom:16px;overflow:hidden;">
+        <div style="background:#1f3864;color:white;padding:9px 14px;font-weight:bold;font-size:0.95em;">CU-010 — Gestionar Usuarios</div>
+        <div style="padding:12px 14px;">
+          <table style="width:100%;border-collapse:collapse;font-size:0.88em;">
+            <tr style="background:#fef7e6;"><td style="padding:6px 10px;font-weight:bold;color:#1f3864;width:28%;">ID</td><td style="padding:6px 10px;">CU-010</td></tr>
+            <tr style="background:#f0f5fd;"><td style="padding:6px 10px;font-weight:bold;color:#1f3864;">Actor Principal</td><td style="padding:6px 10px;">Administrador, Bibliotecario</td></tr>
+            <tr style="background:#fef7e6;"><td style="padding:6px 10px;font-weight:bold;color:#1f3864;">Precondiciones</td><td style="padding:6px 10px;">Autenticado con rol Bibliotecario o Administrador</td></tr>
+            <tr style="background:#f0f5fd;"><td style="padding:6px 10px;font-weight:bold;color:#1f3864;">Postcondiciones</td><td style="padding:6px 10px;">Usuario modificado, suspendido o creado en el sistema</td></tr>
+          </table>
+          <p style="margin:10px 0 6px 0;font-size:0.92em;font-weight:bold;color:#1f3864;">Flujo Principal:</p>
+          <ol style="margin:0;padding-left:20px;font-size:0.92em;line-height:1.8;">
+            <li>Actor accede a "Gestión de Usuarios".</li>
+            <li>Sistema muestra lista paginada de usuarios con filtros.</li>
+            <li>Actor busca usuario por nombre, email o carné.</li>
+            <li>Sistema muestra ficha del usuario con préstamos activos y multas.</li>
+            <li>Actor selecciona acción: editar datos / suspender / reactivar.</li>
+            <li>Sistema aplica el cambio y registra en log de auditoría.</li>
+          </ol>
+          <p style="margin:10px 0 6px 0;font-size:0.92em;font-weight:bold;color:#1f3864;">Flujo Alternativo — Suspender usuario (paso 5a):</p>
+          <ol style="margin:0;padding-left:20px;font-size:0.92em;line-height:1.8;" start="1">
+            <li value="1">5a.1 — Actor selecciona "Suspender cuenta".</li>
+            <li>5a.2 — Sistema solicita motivo de suspensión.</li>
+            <li>5a.3 — Actor confirma la acción.</li>
+            <li>5a.4 — Sistema suspende cuenta: <code>user.active = false</code>.</li>
+            <li>5a.5 — Sistema cancela todas las reservas activas del usuario.</li>
+          </ol>
+          <p style="margin:8px 0 0 0;font-size:0.9em;color:#555;">Relaciones: <code>&lt;&lt;extend&gt;&gt;</code> Suspender Usuario (condición: actor selecciona esa acción).</p>
+        </div>
+      </div>
+
+      <!-- CU-011 -->
+      <div style="border:1px solid #c8d6e8;border-radius:6px;margin-bottom:16px;overflow:hidden;">
+        <div style="background:#1f3864;color:white;padding:9px 14px;font-weight:bold;font-size:0.95em;">CU-011 — Notificar Disponibilidad</div>
+        <div style="padding:12px 14px;">
+          <table style="width:100%;border-collapse:collapse;font-size:0.88em;">
+            <tr style="background:#fef7e6;"><td style="padding:6px 10px;font-weight:bold;color:#1f3864;width:28%;">ID</td><td style="padding:6px 10px;">CU-011</td></tr>
+            <tr style="background:#f0f5fd;"><td style="padding:6px 10px;font-weight:bold;color:#1f3864;">Actor Principal</td><td style="padding:6px 10px;">Sistema (job automático activado en devolución)</td></tr>
+            <tr style="background:#fef7e6;"><td style="padding:6px 10px;font-weight:bold;color:#1f3864;">Trigger</td><td style="padding:6px 10px;">Evento de devolución de libro con reservas activas</td></tr>
+            <tr style="background:#f0f5fd;"><td style="padding:6px 10px;font-weight:bold;color:#1f3864;">Precondiciones</td><td style="padding:6px 10px;">Existe al menos una reserva activa para el libro devuelto</td></tr>
+            <tr style="background:#fef7e6;"><td style="padding:6px 10px;font-weight:bold;color:#1f3864;">Postcondiciones</td><td style="padding:6px 10px;">Usuario #1 en la cola notificado; contador de 48 h iniciado</td></tr>
+          </table>
+          <p style="margin:10px 0 6px 0;font-size:0.92em;font-weight:bold;color:#1f3864;">Flujo Principal:</p>
+          <ol style="margin:0;padding-left:20px;font-size:0.92em;line-height:1.8;">
+            <li>Sistema detecta evento <code>book.returned</code>.</li>
+            <li>Sistema consulta cola de reservas del libro.</li>
+            <li>Sistema toma primer usuario en cola (posición = 1).</li>
+            <li>Sistema envía email de notificación con link para confirmar préstamo.</li>
+            <li>Sistema registra timestamp de notificación.</li>
+            <li>Sistema agenda job de verificación en 48 horas.</li>
+          </ol>
+          <p style="margin:10px 0 6px 0;font-size:0.92em;font-weight:bold;color:#1f3864;">Flujo Alternativo — Usuario no confirma en 48 h (paso 6a):</p>
+          <ol style="margin:0;padding-left:20px;font-size:0.92em;line-height:1.8;">
+            <li>6a.1 — Job de verificación detecta que el usuario no confirmó.</li>
+            <li>6a.2 — Sistema libera el libro para el siguiente en la cola.</li>
+            <li>6a.3 — Sistema repite el proceso con el usuario en posición 2.</li>
+          </ol>
+          <p style="margin:8px 0 0 0;font-size:0.9em;color:#555;">Relaciones: <code>&lt;&lt;include&gt;&gt;</code> Verificar Disponibilidad (siempre). Actor secundario: Sistema de Email.</p>
+        </div>
+      </div>
+
+      <!-- CU-012 -->
+      <div style="border:1px solid #c8d6e8;border-radius:6px;margin-bottom:6px;overflow:hidden;">
+        <div style="background:#1f3864;color:white;padding:9px 14px;font-weight:bold;font-size:0.95em;">CU-012 — Enviar Recordatorio de Devolución</div>
+        <div style="padding:12px 14px;">
+          <table style="width:100%;border-collapse:collapse;font-size:0.88em;">
+            <tr style="background:#fef7e6;"><td style="padding:6px 10px;font-weight:bold;color:#1f3864;width:28%;">ID</td><td style="padding:6px 10px;">CU-012</td></tr>
+            <tr style="background:#f0f5fd;"><td style="padding:6px 10px;font-weight:bold;color:#1f3864;">Actor Principal</td><td style="padding:6px 10px;">Sistema (job nocturno, ejecuta diariamente a las 08:00)</td></tr>
+            <tr style="background:#fef7e6;"><td style="padding:6px 10px;font-weight:bold;color:#1f3864;">Precondiciones</td><td style="padding:6px 10px;">Existen préstamos con vencimiento en 3 días o en 1 día</td></tr>
+            <tr style="background:#f0f5fd;"><td style="padding:6px 10px;font-weight:bold;color:#1f3864;">Postcondiciones</td><td style="padding:6px 10px;">Email de recordatorio enviado a cada usuario afectado; log de notificaciones actualizado</td></tr>
+          </table>
+          <p style="margin:10px 0 6px 0;font-size:0.92em;font-weight:bold;color:#1f3864;">Flujo Principal:</p>
+          <ol style="margin:0;padding-left:20px;font-size:0.92em;line-height:1.8;">
+            <li>Job nocturno se ejecuta a las 08:00.</li>
+            <li>Sistema consulta préstamos con <code>dueDate = today + 3</code> días.</li>
+            <li>Sistema envía email de recordatorio a cada usuario con detalles del préstamo y opción de renovación.</li>
+            <li>Sistema repite para préstamos con <code>dueDate = today + 1</code> día (recordatorio urgente).</li>
+            <li>Sistema registra cada envío en log de notificaciones.</li>
+          </ol>
+          <p style="margin:10px 0 6px 0;font-size:0.92em;font-weight:bold;color:#1f3864;">Flujo Alternativo — Sin préstamos próximos a vencer (paso 2a):</p>
+          <ol style="margin:0;padding-left:20px;font-size:0.92em;line-height:1.8;">
+            <li>2a.1 — La consulta devuelve lista vacía.</li>
+            <li>2a.2 — Sistema registra en log: "Sin recordatorios pendientes para hoy".</li>
+            <li>2a.3 — Job finaliza sin enviar emails.</li>
+          </ol>
+          <p style="margin:10px 0 6px 0;font-size:0.92em;font-weight:bold;color:#1f3864;">Flujo Alternativo — Fallo al enviar email (paso 3b):</p>
+          <ol style="margin:0;padding-left:20px;font-size:0.92em;line-height:1.8;">
+            <li>3b.1 — El servicio de email devuelve error.</li>
+            <li>3b.2 — Sistema registra el error y programa reintento en 1 hora.</li>
+            <li>3b.3 — Sistema continúa con el siguiente usuario de la lista.</li>
+          </ol>
+          <p style="margin:8px 0 0 0;font-size:0.9em;color:#555;">Relaciones: <code>&lt;&lt;include&gt;&gt;</code> Detectar Vencimientos (siempre). Actor secundario: Sistema de Email.</p>
+        </div>
+      </div>
+
+    </div><!-- fin solución -->
+
+    <!-- CONCEPTOS CLAVE -->
+    <h5 style="color:#1f3864;font-size:1em;margin:22px 0 10px 0;">🎓 Conceptos Clave</h5>
+    <div style="overflow-x:auto;">
+      <table style="width:100%;border-collapse:collapse;font-size:0.88em;">
+        <thead>
+          <tr style="background:#1f3864;color:white;">
+            <th style="padding:8px 12px;text-align:left;min-width:180px;">Concepto</th>
+            <th style="padding:8px 12px;text-align:left;">Descripción breve</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr style="background:#fef7e6;"><td style="padding:7px 12px;font-weight:bold;">Caso de uso</td><td style="padding:7px 12px;">Secuencia de interacciones entre un actor y el sistema para lograr un objetivo de negocio observable</td></tr>
+          <tr style="background:#f0f5fd;"><td style="padding:7px 12px;font-weight:bold;">Caso de uso expandido</td><td style="padding:7px 12px;">Especificación detallada con flujo principal, flujos alternativos, pre/postcondiciones y relaciones</td></tr>
+          <tr style="background:#fef7e6;"><td style="padding:7px 12px;font-weight:bold;">Actor primario</td><td style="padding:7px 12px;">Inicia la interacción con el sistema para lograr su objetivo (ej. Lector, Bibliotecario)</td></tr>
+          <tr style="background:#f0f5fd;"><td style="padding:7px 12px;font-weight:bold;">Actor secundario</td><td style="padding:7px 12px;">Apoya al sistema para cumplir el caso de uso; no inicia la interacción (ej. Sistema de Email)</td></tr>
+          <tr style="background:#fef7e6;"><td style="padding:7px 12px;font-weight:bold;">Precondición</td><td style="padding:7px 12px;">Estado que debe ser verdadero antes de que el caso de uso comience a ejecutarse</td></tr>
+          <tr style="background:#f0f5fd;"><td style="padding:7px 12px;font-weight:bold;">Postcondición</td><td style="padding:7px 12px;">Estado garantizado al finalizar exitosamente el caso de uso</td></tr>
+          <tr style="background:#fef7e6;"><td style="padding:7px 12px;font-weight:bold;">Flujo principal</td><td style="padding:7px 12px;">Secuencia de pasos numerados del escenario más común (camino feliz)</td></tr>
+          <tr style="background:#f0f5fd;"><td style="padding:7px 12px;font-weight:bold;">Flujo alternativo</td><td style="padding:7px 12px;">Variación del flujo principal que ocurre cuando una condición específica se cumple o algo falla</td></tr>
+          <tr style="background:#fef7e6;"><td style="padding:7px 12px;font-weight:bold;font-family:monospace;">&lt;&lt;include&gt;&gt;</td><td style="padding:7px 12px;">Relación que indica que un caso de uso siempre incorpora el comportamiento de otro (obligatorio)</td></tr>
+          <tr style="background:#f0f5fd;"><td style="padding:7px 12px;font-weight:bold;font-family:monospace;">&lt;&lt;extend&gt;&gt;</td><td style="padding:7px 12px;">Relación que indica que un caso de uso puede incorporar comportamiento adicional bajo una condición específica (opcional)</td></tr>
+          <tr style="background:#fef7e6;"><td style="padding:7px 12px;font-weight:bold;font-family:monospace;">&lt;&lt;generalize&gt;&gt;</td><td style="padding:7px 12px;">Relación de herencia entre actores o entre casos de uso; el hijo hereda el comportamiento del padre</td></tr>
+          <tr style="background:#f0f5fd;"><td style="padding:7px 12px;font-weight:bold;">IEEE 29148:2018</td><td style="padding:7px 12px;">Estándar internacional de ingeniería de requisitos que define el formato y contenido mínimo de las especificaciones de casos de uso</td></tr>
+          <tr style="background:#fef7e6;"><td style="padding:7px 12px;font-weight:bold;">Trazabilidad de requisitos</td><td style="padding:7px 12px;">Capacidad de vincular cada caso de uso con el requisito funcional que satisface</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+  </div><!-- fin caja interna -->
+</div><!-- fin caja principal -->

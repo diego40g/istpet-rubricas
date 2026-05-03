@@ -1,0 +1,1635 @@
+<!-- Tarea A8 — Análisis y Diseño de Software -->
+<nav style="margin-bottom: 12px">
+  <a
+    href="https://istpetonline.edu.ec/course/view.php?id=160#section-2"
+    style="
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      text-decoration: none;
+      color: #1f3864;
+      font-family: Arial, sans-serif;
+      font-size: 0.9em;
+    "
+  >
+    &#8592; Volver al aula
+  </a>
+</nav>
+
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 1920 332"
+  style="width: 100%; display: block; margin-bottom: 18px"
+>
+  <image
+    href="https://istpetonline.edu.ec/pluginfile.php/1/theme_moove/slideshow/0/banner-tarea.jpg"
+    width="1920"
+    height="332"
+    preserveAspectRatio="xMidYMid slice"
+  />
+  <text
+    x="960"
+    y="148"
+    text-anchor="middle"
+    font-family="Arial,sans-serif"
+    font-size="52"
+    font-weight="bold"
+    fill="white"
+    opacity="0.97"
+  >
+    Análisis y Diseño de Software
+  </text>
+  <text
+    x="960"
+    y="214"
+    text-anchor="middle"
+    font-family="Arial,sans-serif"
+    font-size="34"
+    fill="white"
+    opacity="0.93"
+  >
+    Unidad 2 — Diseño de Software
+  </text>
+</svg>
+
+<p></p>
+
+<div
+  class="caja"
+  style="
+    font-family: Arial, sans-serif;
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 12px;
+  "
+>
+  <div
+    class="caja"
+    style="
+      border: 1px solid #c8d6e8;
+      border-radius: 8px;
+      padding: 24px 28px;
+      margin-bottom: 22px;
+      background: #fff;
+    "
+  >
+    <h4
+      style="
+        color: #1f3864;
+        font-size: 1.25em;
+        margin: 0 0 18px 0;
+        padding-bottom: 10px;
+        border-bottom: 2px solid #cfaa4f;
+      "
+    >
+      A8. Sobre el análisis y diseño de arquitectura de software
+    </h4>
+
+    <!-- INSTRUCCIONES -->
+    <div
+      style="
+        background: #eaf6fb;
+        border-left: 4px solid #1f3864;
+        border-radius: 6px;
+        padding: 16px 20px;
+        margin-bottom: 18px;
+      "
+    >
+      <h5 style="color: #1f3864; margin: 0 0 10px 0; font-size: 1em">
+        📋 Descripción
+      </h5>
+      <p style="margin: 0 0 10px 0; font-size: 0.95em; line-height: 1.6">
+        En esta actividad aplicarás criterios técnicos para seleccionar y
+        justificar arquitecturas de software ante distintos contextos de
+        negocio, diseñarás la estructura interna de un sistema usando la
+        <strong>arquitectura hexagonal</strong> y documentarás las decisiones de
+        diseño más relevantes mediante
+        <strong>Architecture Decision Records (ADRs)</strong>.
+      </p>
+      <p style="margin: 0 0 10px 0; font-size: 0.95em; line-height: 1.6">
+        El caso de estudio es el <strong>Sistema de Biblioteca Digital</strong>,
+        que permite a lectores buscar libros, realizar préstamos y hacer
+        reservas; a bibliotecarios registrar devoluciones y gestionar el
+        inventario; y al administrador configurar el sistema y generar reportes
+        de actividad.
+      </p>
+      <h5 style="color: #1f3864; margin: 12px 0 8px 0; font-size: 1em">
+        🎯 Objetivos de Aprendizaje
+      </h5>
+      <ol
+        style="
+          margin: 0;
+          padding-left: 20px;
+          font-size: 0.95em;
+          line-height: 1.7;
+        "
+      >
+        <li>
+          Seleccionar y justificar una arquitectura de software apropiada según
+          los atributos de calidad del sistema.
+        </li>
+        <li>
+          Diseñar la estructura hexagonal de un sistema identificando puertos
+          primarios, secundarios y sus adaptadores correspondientes.
+        </li>
+        <li>
+          Documentar decisiones arquitectónicas mediante ADRs siguiendo el
+          formato estándar (contexto, decisión, consecuencias, alternativas).
+        </li>
+      </ol>
+      <h5 style="color: #1f3864; margin: 12px 0 8px 0; font-size: 1em">
+        📝 Enunciado del caso
+      </h5>
+      <p style="margin: 0 0 6px 0; font-size: 0.95em">
+        El <strong>Sistema de Biblioteca Digital</strong> debe ser diseñado
+        considerando cuatro contextos distintos:
+      </p>
+      <ul
+        style="
+          margin: 0;
+          padding-left: 20px;
+          font-size: 0.95em;
+          line-height: 1.7;
+        "
+      >
+        <li>
+          <strong>Escenario A — Startup MVP:</strong> Equipo de 3
+          desarrolladores, primer lanzamiento, ~1 000 usuarios esperados,
+          presupuesto reducido.
+        </li>
+        <li>
+          <strong>Escenario B — Sistema bancario crítico:</strong> Alta
+          disponibilidad 99.9 %, equipos independientes por módulo, regulaciones
+          de auditoría.
+        </li>
+        <li>
+          <strong>Escenario C — Sistema interno de RRHH:</strong> Empresa
+          mediana, cambios de negocio frecuentes, integraciones con sistemas
+          legados (ERP, nómina).
+        </li>
+        <li>
+          <strong>Escenario D — E-commerce con picos estacionales:</strong>
+          Carga variable (x10 en temporadas altas), bajo costo en reposo,
+          escalado automático requerido.
+        </li>
+      </ul>
+      <p style="margin: 8px 0 0 0; font-size: 0.92em; color: #555">
+        Para el diseño hexagonal y los ADRs utiliza el contexto completo del
+        sistema (todos los actores y flujos).
+      </p>
+    </div>
+
+    <!-- ENTREGA -->
+    <div
+      style="
+        background: #eaf6fb;
+        border-left: 4px solid #cfaa4f;
+        border-radius: 6px;
+        padding: 16px 20px;
+        margin-bottom: 18px;
+      "
+    >
+      <h5 style="color: #1f3864; margin: 0 0 10px 0; font-size: 1em">
+        📤 Entrega
+      </h5>
+      <table style="width: 100%; border-collapse: collapse; font-size: 0.93em">
+        <tr>
+          <td
+            style="
+              padding: 5px 10px;
+              font-weight: bold;
+              color: #1f3864;
+              width: 38%;
+            "
+          >
+            Modalidad
+          </td>
+          <td style="padding: 5px 10px">Individual o en pares</td>
+        </tr>
+        <tr style="background: #f5faff">
+          <td style="padding: 5px 10px; font-weight: bold; color: #1f3864">
+            Formato
+          </td>
+          <td style="padding: 5px 10px">
+            Documento Markdown o PDF subido al aula virtual
+          </td>
+        </tr>
+        <tr>
+          <td style="padding: 5px 10px; font-weight: bold; color: #1f3864">
+            Fecha de entrega
+          </td>
+          <td style="padding: 5px 10px">
+            Según calendario académico de la semana 3
+          </td>
+        </tr>
+        <tr style="background: #f5faff">
+          <td style="padding: 5px 10px; font-weight: bold; color: #1f3864">
+            Entregables
+          </td>
+          <td style="padding: 5px 10px">
+            <ul style="margin: 0; padding-left: 18px; line-height: 1.7">
+              <li>
+                Análisis de <strong>4 escenarios</strong> con arquitectura
+                seleccionada y tabla de justificación
+              </li>
+              <li>
+                Diagrama del hexágono con puertos y adaptadores + estructura de
+                carpetas
+              </li>
+              <li>
+                <strong>4 ADRs completos</strong> (Estado, Contexto, Decisión,
+                Consecuencias, Alternativas)
+              </li>
+            </ul>
+          </td>
+        </tr>
+      </table>
+    </div>
+
+    <!-- RÚBRICA -->
+    <h5 style="color: #1f3864; font-size: 1em; margin: 0 0 10px 0">
+      📊 Rúbrica de Evaluación
+    </h5>
+    <div style="overflow-x: auto; margin-bottom: 22px">
+      <table style="width: 100%; border-collapse: collapse; font-size: 0.88em">
+        <thead>
+          <tr style="background: #1f3864; color: white">
+            <th style="padding: 9px 10px; text-align: left; min-width: 130px">
+              Criterio
+            </th>
+            <th style="padding: 9px 10px; text-align: left; min-width: 160px">
+              Excelente (10)
+            </th>
+            <th style="padding: 9px 10px; text-align: left; min-width: 140px">
+              Muy Bueno (8)
+            </th>
+            <th style="padding: 9px 10px; text-align: left; min-width: 130px">
+              Bueno (6)
+            </th>
+            <th style="padding: 9px 10px; text-align: left; min-width: 120px">
+              Regular (4)
+            </th>
+            <th style="padding: 9px 10px; text-align: left; min-width: 110px">
+              Deficiente (2)
+            </th>
+            <th style="padding: 9px 10px; text-align: center; min-width: 50px">
+              Pts
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr style="background: #fef7e6">
+            <td
+              style="
+                padding: 8px 10px;
+                font-weight: bold;
+                color: #7a5c00;
+                background: #cfaa4f22;
+                border-left: 4px solid #cfaa4f;
+              "
+            >
+              Análisis de Arquitectura
+            </td>
+            <td style="padding: 8px 10px">
+              Selecciona la arquitectura más adecuada para los 4 escenarios con
+              justificación detallada por factor (equipo, escala, presupuesto,
+              criticidad). Identifica riesgos y plan de evolución.
+            </td>
+            <td style="padding: 8px 10px">
+              Selecciona correctamente para 3 escenarios con justificación
+              clara. 1 escenario con justificación débil.
+            </td>
+            <td style="padding: 8px 10px">
+              Selecciona para 2–3 escenarios pero la justificación carece de
+              factores técnicos concretos.
+            </td>
+            <td style="padding: 8px 10px">
+              Solo analiza 1–2 escenarios o las selecciones son incorrectas para
+              el contexto.
+            </td>
+            <td style="padding: 8px 10px">
+              No realiza análisis comparativo; no hay justificación.
+            </td>
+            <td
+              style="padding: 8px 10px; text-align: center; font-weight: bold"
+            >
+              3
+            </td>
+          </tr>
+          <tr style="background: #f0f5fd">
+            <td
+              style="
+                padding: 8px 10px;
+                font-weight: bold;
+                color: #7a5c00;
+                background: #cfaa4f22;
+                border-left: 4px solid #cfaa4f;
+              "
+            >
+              Arquitectura Hexagonal
+            </td>
+            <td style="padding: 8px 10px">
+              Identifica correctamente todos los puertos primarios y
+              secundarios, nombra adaptadores con tecnología específica y
+              presenta estructura de carpetas con separación domain /
+              application / infrastructure / presentation.
+            </td>
+            <td style="padding: 8px 10px">
+              Identifica la mayoría de puertos y adaptadores; la estructura de
+              carpetas tiene 1–2 inconsistencias.
+            </td>
+            <td style="padding: 8px 10px">
+              Identifica algunos puertos pero confunde la dirección (primario vs
+              secundario) o mezcla capas en la estructura.
+            </td>
+            <td style="padding: 8px 10px">
+              Menciona el hexágono pero no diferencia puertos de adaptadores ni
+              estructura las capas.
+            </td>
+            <td style="padding: 8px 10px">
+              No aplica arquitectura hexagonal; no identifica puertos ni
+              adaptadores.
+            </td>
+            <td
+              style="padding: 8px 10px; text-align: center; font-weight: bold"
+            >
+              3
+            </td>
+          </tr>
+          <tr style="background: #fef7e6">
+            <td
+              style="
+                padding: 8px 10px;
+                font-weight: bold;
+                color: #7a5c00;
+                background: #cfaa4f22;
+                border-left: 4px solid #cfaa4f;
+              "
+            >
+              ADRs
+            </td>
+            <td style="padding: 8px 10px">
+              4 ADRs con todos los campos completos: contexto técnico
+              justificado, decisión clara y específica, consecuencias positivas
+              y negativas balanceadas, ≥ 2 alternativas evaluadas con criterios.
+            </td>
+            <td style="padding: 8px 10px">
+              4 ADRs con campos completos pero 1–2 con consecuencias negativas
+              omitidas o alternativas sin criterios de evaluación.
+            </td>
+            <td style="padding: 8px 10px">
+              3–4 ADRs presentes pero estructura incompleta: falta contexto
+              técnico o alternativas.
+            </td>
+            <td style="padding: 8px 10px">
+              1–2 ADRs con estructura parcial; solo enuncian la decisión sin
+              justificación.
+            </td>
+            <td style="padding: 8px 10px">
+              No presenta ADRs o son descripciones libres sin formato
+              reconocible.
+            </td>
+            <td
+              style="padding: 8px 10px; text-align: center; font-weight: bold"
+            >
+              4
+            </td>
+          </tr>
+          <tr style="background: #1f3864">
+            <td
+              colspan="6"
+              style="
+                padding: 8px 10px;
+                color: white;
+                font-weight: bold;
+                text-align: right;
+              "
+            >
+              Puntaje total:
+            </td>
+            <td
+              style="
+                padding: 8px 10px;
+                text-align: center;
+                font-weight: bold;
+                color: #cfaa4f;
+                font-size: 1.1em;
+              "
+            >
+              10
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- SOLUCIÓN DE REFERENCIA -->
+    <div
+      style="
+        background: #f0f4e8;
+        border: 2px solid #4a7c2f;
+        border-radius: 8px;
+        padding: 20px 24px;
+        margin-bottom: 22px;
+      "
+    >
+      <h5 style="color: #2d5a1b; margin: 0 0 14px 0; font-size: 1.05em">
+        💡 Solución de Referencia
+      </h5>
+
+      <!-- EJERCICIO 1 -->
+      <h6
+        style="
+          color: #1f3864;
+          font-size: 0.97em;
+          margin: 0 0 10px 0;
+          border-bottom: 1px solid #b5cc9a;
+          padding-bottom: 5px;
+        "
+      >
+        Ejercicio 1 — Análisis de Arquitectura
+      </h6>
+
+      <!-- Escenario A -->
+      <p style="margin: 0 0 6px 0; font-size: 0.95em">
+        <strong>Escenario A — Startup MVP (3 devs, 1 000 usuarios)</strong>
+      </p>
+      <p style="margin: 0 0 6px 0; font-size: 0.93em">
+        ✅
+        <strong>Arquitectura seleccionada: Monolítica en Capas (N-Tier)</strong>
+      </p>
+      <div style="overflow-x: auto; margin-bottom: 10px">
+        <table
+          style="width: 100%; border-collapse: collapse; font-size: 0.88em"
+        >
+          <thead>
+            <tr style="background: #1f3864; color: white">
+              <th style="padding: 6px 10px; text-align: left">Factor</th>
+              <th style="padding: 6px 10px; text-align: left">Análisis</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr style="background: #fef7e6">
+              <td style="padding: 6px 10px; font-weight: bold">
+                Tamaño del equipo
+              </td>
+              <td style="padding: 6px 10px">
+                3 desarrolladores no pueden mantener una infraestructura
+                compleja
+              </td>
+            </tr>
+            <tr style="background: #f0f5fd">
+              <td style="padding: 6px 10px; font-weight: bold">
+                Fase del producto
+              </td>
+              <td style="padding: 6px 10px">
+                MVP requiere velocidad de desarrollo por encima de escalabilidad
+              </td>
+            </tr>
+            <tr style="background: #fef7e6">
+              <td style="padding: 6px 10px; font-weight: bold">
+                Carga esperada
+              </td>
+              <td style="padding: 6px 10px">
+                1 000 usuarios es manejable con un monolito bien optimizado
+              </td>
+            </tr>
+            <tr style="background: #f0f5fd">
+              <td style="padding: 6px 10px; font-weight: bold">Presupuesto</td>
+              <td style="padding: 6px 10px">
+                Menor infraestructura = menor costo operacional
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p style="margin: 0 0 4px 0; font-size: 0.92em">
+        Monolito modular con capas:
+        <em>Presentation → Application → Domain → Infrastructure</em>.
+        Framework: <strong>Next.js</strong> o <strong>NestJS + React</strong>.
+      </p>
+      <pre
+        style="
+          background: #1e1e1e;
+          color: #d4d4d4;
+          padding: 10px 14px;
+          border-radius: 5px;
+          font-family: monospace;
+          font-size: 0.85em;
+          overflow-x: auto;
+          white-space: pre;
+          margin: 6px 0 14px 0;
+        "
+      >
+app/
+├── api/            # Capa de presentación (rutas HTTP)
+├── services/       # Capa de aplicación (casos de uso)
+├── domain/         # Capa de dominio (entidades y reglas)
+└── infrastructure/ # Capa de infraestructura (DB, emails)</pre
+      >
+
+      <!-- Escenario B -->
+      <p style="margin: 0 0 6px 0; font-size: 0.95em">
+        <strong
+          >Escenario B — Sistema bancario crítico (50 devs, millones de
+          transacciones)</strong
+        >
+      </p>
+      <p style="margin: 0 0 6px 0; font-size: 0.93em">
+        ✅
+        <strong
+          >Arquitectura seleccionada: Microservicios + Clean Architecture por
+          servicio</strong
+        >
+      </p>
+      <div style="overflow-x: auto; margin-bottom: 10px">
+        <table
+          style="width: 100%; border-collapse: collapse; font-size: 0.88em"
+        >
+          <thead>
+            <tr style="background: #1f3864; color: white">
+              <th style="padding: 6px 10px; text-align: left">Factor</th>
+              <th style="padding: 6px 10px; text-align: left">Análisis</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr style="background: #fef7e6">
+              <td style="padding: 6px 10px; font-weight: bold">
+                Tamaño del equipo
+              </td>
+              <td style="padding: 6px 10px">
+                50 desarrolladores necesitan autonomía por dominios (equipos de
+                5–8)
+              </td>
+            </tr>
+            <tr style="background: #f0f5fd">
+              <td style="padding: 6px 10px; font-weight: bold">Criticidad</td>
+              <td style="padding: 6px 10px">
+                Sistema bancario requiere resiliencia, aislamiento de fallos
+              </td>
+            </tr>
+            <tr style="background: #fef7e6">
+              <td style="padding: 6px 10px; font-weight: bold">Escala</td>
+              <td style="padding: 6px 10px">
+                Millones de transacciones requieren escalado independiente por
+                servicio
+              </td>
+            </tr>
+            <tr style="background: #f0f5fd">
+              <td style="padding: 6px 10px; font-weight: bold">Cumplimiento</td>
+              <td style="padding: 6px 10px">
+                Servicios aislados facilitan auditorías (PCI-DSS)
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <pre
+        style="
+          background: #1e1e1e;
+          color: #d4d4d4;
+          padding: 10px 14px;
+          border-radius: 5px;
+          font-family: monospace;
+          font-size: 0.85em;
+          overflow-x: auto;
+          white-space: pre;
+          margin: 6px 0 14px 0;
+        "
+      >
+API Gateway
+├── accounts-service      # Cuentas bancarias
+├── transactions-service  # Transacciones (escalado horizontal)
+├── auth-service          # Autenticación y autorización
+├── notifications-service # Emails, SMS, push
+├── reports-service       # Generación de reportes
+└── audit-service         # Registro de auditoría (crítico)</pre
+      >
+      <p style="margin: 0 0 14px 0; font-size: 0.92em">
+        Comunicación asíncrona con <strong>Apache Kafka</strong>. Cada servicio
+        implementa Clean Architecture internamente.
+      </p>
+
+      <!-- Escenario C -->
+      <p style="margin: 0 0 6px 0; font-size: 0.95em">
+        <strong
+          >Escenario C — Sistema interno de RRHH (200 empleados, bajo
+          presupuesto)</strong
+        >
+      </p>
+      <p style="margin: 0 0 6px 0; font-size: 0.93em">
+        ✅ <strong>Arquitectura seleccionada: Monolítica Modular</strong>
+      </p>
+      <div style="overflow-x: auto; margin-bottom: 10px">
+        <table
+          style="width: 100%; border-collapse: collapse; font-size: 0.88em"
+        >
+          <thead>
+            <tr style="background: #1f3864; color: white">
+              <th style="padding: 6px 10px; text-align: left">Factor</th>
+              <th style="padding: 6px 10px; text-align: left">Análisis</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr style="background: #fef7e6">
+              <td style="padding: 6px 10px; font-weight: bold">Usuarios</td>
+              <td style="padding: 6px 10px">
+                200 empleados internos = carga muy baja y predecible
+              </td>
+            </tr>
+            <tr style="background: #f0f5fd">
+              <td style="padding: 6px 10px; font-weight: bold">Presupuesto</td>
+              <td style="padding: 6px 10px">
+                Bajo presupuesto excluye infraestructura de microservicios
+              </td>
+            </tr>
+            <tr style="background: #fef7e6">
+              <td style="padding: 6px 10px; font-weight: bold">Complejidad</td>
+              <td style="padding: 6px 10px">
+                RRHH no justifica la complejidad de servicios distribuidos
+              </td>
+            </tr>
+            <tr style="background: #f0f5fd">
+              <td style="padding: 6px 10px; font-weight: bold">
+                Disponibilidad
+              </td>
+              <td style="padding: 6px 10px">
+                Sistema interno tolera mantenimientos programados
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <pre
+        style="
+          background: #1e1e1e;
+          color: #d4d4d4;
+          padding: 10px 14px;
+          border-radius: 5px;
+          font-family: monospace;
+          font-size: 0.85em;
+          overflow-x: auto;
+          white-space: pre;
+          margin: 6px 0 14px 0;
+        "
+      >
+hrms-app/
+├── modules/
+│   ├── employees/   # Gestión de empleados
+│   ├── payroll/     # Nómina
+│   ├── leave/       # Gestión de permisos y vacaciones
+│   └── reports/     # Reportes de RRHH
+├── shared/          # Utilidades comunes
+└── config/</pre
+      >
+      <p style="margin: 0 0 14px 0; font-size: 0.92em">
+        Desplegado en PaaS económico: Railway, Render o Heroku.
+      </p>
+
+      <!-- Escenario D -->
+      <p style="margin: 0 0 6px 0; font-size: 0.95em">
+        <strong
+          >Escenario D — E-commerce con picos estacionales (tráfico
+          10–50×)</strong
+        >
+      </p>
+      <p style="margin: 0 0 6px 0; font-size: 0.93em">
+        ✅
+        <strong
+          >Arquitectura seleccionada: Hexagonal + Escalado Horizontal
+          Selectivo</strong
+        >
+      </p>
+      <div style="overflow-x: auto; margin-bottom: 10px">
+        <table
+          style="width: 100%; border-collapse: collapse; font-size: 0.88em"
+        >
+          <thead>
+            <tr style="background: #1f3864; color: white">
+              <th style="padding: 6px 10px; text-align: left">Factor</th>
+              <th style="padding: 6px 10px; text-align: left">Análisis</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr style="background: #fef7e6">
+              <td style="padding: 6px 10px; font-weight: bold">
+                Picos de tráfico
+              </td>
+              <td style="padding: 6px 10px">
+                Black Friday, Navidad → tráfico 10–50× el normal
+              </td>
+            </tr>
+            <tr style="background: #f0f5fd">
+              <td style="padding: 6px 10px; font-weight: bold">
+                Operaciones críticas
+              </td>
+              <td style="padding: 6px 10px">
+                Checkout y pagos deben ser siempre disponibles
+              </td>
+            </tr>
+            <tr style="background: #fef7e6">
+              <td style="padding: 6px 10px; font-weight: bold">Consistencia</td>
+              <td style="padding: 6px 10px">
+                Inventario y pagos requieren consistencia fuerte
+              </td>
+            </tr>
+            <tr style="background: #f0f5fd">
+              <td style="padding: 6px 10px; font-weight: bold">Costo</td>
+              <td style="padding: 6px 10px">
+                No justifica microservicios completos; sí justifica escalado del
+                área crítica
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p style="margin: 0 0 6px 0; font-size: 0.92em">
+        Arquitectura híbrida: monolito hexagonal + servicios independientes
+        escalables (<code>checkout-service</code>,
+        <code>payments-service</code>). Complementado con CDN + Redis +
+        Auto-scaling + Circuit breaker.
+      </p>
+
+      <!-- Tabla resumen -->
+      <p style="margin: 10px 0 6px 0; font-size: 0.95em">
+        <strong>Tabla comparativa resumen</strong>
+      </p>
+      <div style="overflow-x: auto; margin-bottom: 18px">
+        <table
+          style="width: 100%; border-collapse: collapse; font-size: 0.88em"
+        >
+          <thead>
+            <tr style="background: #1f3864; color: white">
+              <th style="padding: 6px 10px">Escenario</th>
+              <th style="padding: 6px 10px">Arquitectura elegida</th>
+              <th style="padding: 6px 10px">Justificación clave</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr style="background: #fef7e6">
+              <td style="padding: 6px 10px">A — Startup MVP</td>
+              <td style="padding: 6px 10px">Monolítica N-Tier</td>
+              <td style="padding: 6px 10px">
+                Velocidad, presupuesto reducido, equipo pequeño
+              </td>
+            </tr>
+            <tr style="background: #f0f5fd">
+              <td style="padding: 6px 10px">B — Bancario crítico</td>
+              <td style="padding: 6px 10px">Microservicios + Clean Arch.</td>
+              <td style="padding: 6px 10px">
+                Autonomía de equipos, resiliencia, escalado independiente
+              </td>
+            </tr>
+            <tr style="background: #fef7e6">
+              <td style="padding: 6px 10px">C — RRHH interno</td>
+              <td style="padding: 6px 10px">Monolítica Modular</td>
+              <td style="padding: 6px 10px">
+                Bajo presupuesto, carga predecible, simplicidad
+              </td>
+            </tr>
+            <tr style="background: #f0f5fd">
+              <td style="padding: 6px 10px">D — E-commerce picos</td>
+              <td style="padding: 6px 10px">Hexagonal + Escalado selectivo</td>
+              <td style="padding: 6px 10px">
+                Picos 10–50×, consistencia fuerte, costo optimizado
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- EJERCICIO 2 -->
+      <h6
+        style="
+          color: #1f3864;
+          font-size: 0.97em;
+          margin: 0 0 10px 0;
+          border-bottom: 1px solid #b5cc9a;
+          padding-bottom: 5px;
+        "
+      >
+        Ejercicio 2 — Diseño de Arquitectura Hexagonal
+      </h6>
+      <p style="margin: 0 0 8px 0; font-size: 0.93em">
+        El núcleo de dominio queda aislado de los detalles externos mediante
+        puertos (interfaces) y adaptadores (implementaciones).
+      </p>
+      <pre
+        style="
+          background: #1e1e1e;
+          color: #d4d4d4;
+          padding: 12px 14px;
+          border-radius: 5px;
+          font-family: monospace;
+          font-size: 0.82em;
+          overflow-x: auto;
+          white-space: pre;
+          margin: 0 0 14px 0;
+        "
+      >
+                   REST API / CLI / WebUI
+                          │
+               ┌──────────▼──────────┐
+               │   Primary Adapters   │  (entran al sistema)
+               │  RestLoanController  │
+               │  RestBookController  │
+               └──────────┬──────────┘
+                          │
+         ┌────────────────▼──────────────────┐
+         │         PRIMARY PORTS             │
+         │  ILoanController  IBookController │
+         │  IUserController  IReportController│
+         └────────────────┬──────────────────┘
+                          │
+         ╔════════════════▼══════════════════╗
+         ║        DOMAIN / CORE              ║
+         ║   Book  Loan  User  Reservation   ║
+         ║   Fine  Category  Services        ║
+         ╚════════════════╤══════════════════╝
+                          │
+         ┌────────────────▼──────────────────┐
+         │        SECONDARY PORTS            │
+         │ IBookRepository  IUserRepository  │
+         │ ILoanRepository  INotification... │
+         │ IReservationRepository            │
+         └────────────────┬──────────────────┘
+                          │
+               ┌──────────▼──────────┐
+               │  Secondary Adapters  │  (salen del sistema)
+               │  PrismaBookRepo      │
+               │  SendGridNotification│
+               └─────────────────────┘</pre
+      >
+
+      <p style="margin: 0 0 6px 0; font-size: 0.95em">
+        <strong>Puertos Primarios (entrada al dominio)</strong>
+      </p>
+      <div style="overflow-x: auto; margin-bottom: 10px">
+        <table
+          style="width: 100%; border-collapse: collapse; font-size: 0.88em"
+        >
+          <thead>
+            <tr style="background: #1f3864; color: white">
+              <th style="padding: 6px 10px">Puerto</th>
+              <th style="padding: 6px 10px">Responsabilidad</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr style="background: #fef7e6">
+              <td
+                style="
+                  padding: 6px 10px;
+                  font-weight: bold;
+                  font-family: monospace;
+                "
+              >
+                ILoanController
+              </td>
+              <td style="padding: 6px 10px">
+                borrowBook, returnBook, renewLoan, getUserLoans
+              </td>
+            </tr>
+            <tr style="background: #f0f5fd">
+              <td
+                style="
+                  padding: 6px 10px;
+                  font-weight: bold;
+                  font-family: monospace;
+                "
+              >
+                IBookController
+              </td>
+              <td style="padding: 6px 10px">
+                searchBooks, getBookById, updateBookStatus
+              </td>
+            </tr>
+            <tr style="background: #fef7e6">
+              <td
+                style="
+                  padding: 6px 10px;
+                  font-weight: bold;
+                  font-family: monospace;
+                "
+              >
+                IUserController
+              </td>
+              <td style="padding: 6px 10px">
+                register, login, getProfile, updateProfile
+              </td>
+            </tr>
+            <tr style="background: #f0f5fd">
+              <td
+                style="
+                  padding: 6px 10px;
+                  font-weight: bold;
+                  font-family: monospace;
+                "
+              >
+                IReservationController
+              </td>
+              <td style="padding: 6px 10px">
+                reserveBook, cancelReservation, getQueue
+              </td>
+            </tr>
+            <tr style="background: #fef7e6">
+              <td
+                style="
+                  padding: 6px 10px;
+                  font-weight: bold;
+                  font-family: monospace;
+                "
+              >
+                IReportController
+              </td>
+              <td style="padding: 6px 10px">
+                generateTopBooksReport, generateActivityReport
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p style="margin: 0 0 6px 0; font-size: 0.95em">
+        <strong>Puertos Secundarios (salida del dominio)</strong>
+      </p>
+      <div style="overflow-x: auto; margin-bottom: 10px">
+        <table
+          style="width: 100%; border-collapse: collapse; font-size: 0.88em"
+        >
+          <thead>
+            <tr style="background: #1f3864; color: white">
+              <th style="padding: 6px 10px">Puerto</th>
+              <th style="padding: 6px 10px">Responsabilidad</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr style="background: #fef7e6">
+              <td
+                style="
+                  padding: 6px 10px;
+                  font-weight: bold;
+                  font-family: monospace;
+                "
+              >
+                IBookRepository
+              </td>
+              <td style="padding: 6px 10px">
+                findById, search, save, update, delete, findByCategory,
+                findAvailable
+              </td>
+            </tr>
+            <tr style="background: #f0f5fd">
+              <td
+                style="
+                  padding: 6px 10px;
+                  font-weight: bold;
+                  font-family: monospace;
+                "
+              >
+                IUserRepository
+              </td>
+              <td style="padding: 6px 10px">
+                findById, findByEmail, save, update
+              </td>
+            </tr>
+            <tr style="background: #fef7e6">
+              <td
+                style="
+                  padding: 6px 10px;
+                  font-weight: bold;
+                  font-family: monospace;
+                "
+              >
+                ILoanRepository
+              </td>
+              <td style="padding: 6px 10px">
+                findById, findByUser, findOverdue, save
+              </td>
+            </tr>
+            <tr style="background: #f0f5fd">
+              <td
+                style="
+                  padding: 6px 10px;
+                  font-weight: bold;
+                  font-family: monospace;
+                "
+              >
+                IReservationRepository
+              </td>
+              <td style="padding: 6px 10px">
+                findByBook, findByUser, save, cancel
+              </td>
+            </tr>
+            <tr style="background: #fef7e6">
+              <td
+                style="
+                  padding: 6px 10px;
+                  font-weight: bold;
+                  font-family: monospace;
+                "
+              >
+                INotificationService
+              </td>
+              <td style="padding: 6px 10px">
+                sendEmail, sendRenewalConfirmation, sendAvailabilityAlert,
+                sendOverdueReminder
+              </td>
+            </tr>
+            <tr style="background: #f0f5fd">
+              <td
+                style="
+                  padding: 6px 10px;
+                  font-weight: bold;
+                  font-family: monospace;
+                "
+              >
+                IFileStorageService
+              </td>
+              <td style="padding: 6px 10px">
+                save(buffer, filename): fileUrl, delete(fileUrl)
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p style="margin: 0 0 6px 0; font-size: 0.92em">
+        <strong>Adaptadores primarios:</strong> RestLoanController,
+        RestBookController, RestUserController, CLIAdminAdapter, WebUIAdapter
+      </p>
+      <p style="margin: 0 0 10px 0; font-size: 0.92em">
+        <strong>Adaptadores secundarios:</strong> PrismaBookRepository,
+        PrismaUserRepository, PrismaLoanRepository, SendGridNotificationService,
+        S3FileStorageService
+      </p>
+
+      <p style="margin: 0 0 6px 0; font-size: 0.95em">
+        <strong>Estructura de carpetas</strong>
+      </p>
+      <pre
+        style="
+          background: #1e1e1e;
+          color: #d4d4d4;
+          padding: 10px 14px;
+          border-radius: 5px;
+          font-family: monospace;
+          font-size: 0.82em;
+          overflow-x: auto;
+          white-space: pre;
+          margin: 0 0 18px 0;
+        "
+      >
+src/
+├── domain/
+│   ├── entities/        # Book, User, Loan, Reservation, Fine, Category
+│   ├── ports/
+│   │   ├── primary/     # IBookController, ILoanController…
+│   │   └── secondary/   # IBookRepository, INotificationService…
+│   └── services/        # LoanService, FineCalculatorService
+├── application/
+│   ├── use-cases/       # BorrowBookUseCase, RenewLoanUseCase…
+│   └── dtos/            # LoanDTO, BookDTO, UserDTO
+├── infrastructure/
+│   ├── database/        # Prisma schema, migrations
+│   ├── repositories/    # PrismaBookRepository, PrismaUserRepository…
+│   └── services/        # SendGridNotificationService, S3FileStorageService
+├── presentation/
+│   ├── http/            # Express/NestJS controllers, routes, middleware
+│   └── cli/             # CLI admin commands
+└── shared/
+    ├── errors/          # DomainError, NotFoundError, ValidationError
+    └── types/           # Enums, value objects</pre
+      >
+
+      <!-- EJERCICIO 3 — ADRs -->
+      <h6
+        style="
+          color: #1f3864;
+          font-size: 0.97em;
+          margin: 0 0 10px 0;
+          border-bottom: 1px solid #b5cc9a;
+          padding-bottom: 5px;
+        "
+      >
+        Ejercicio 3 — Architecture Decision Records (ADRs)
+      </h6>
+
+      <!-- ADR-001 -->
+      <div
+        style="
+          border: 1px solid #c8d6e8;
+          border-radius: 6px;
+          margin-bottom: 14px;
+          overflow: hidden;
+        "
+      >
+        <div
+          style="
+            background: #1f3864;
+            color: white;
+            padding: 8px 14px;
+            font-weight: bold;
+            font-size: 0.93em;
+          "
+        >
+          ADR-001 — Base de datos: PostgreSQL vs MongoDB
+        </div>
+        <div style="padding: 12px 14px">
+          <table
+            style="width: 100%; border-collapse: collapse; font-size: 0.88em"
+          >
+            <tr style="background: #fef7e6">
+              <td
+                style="
+                  padding: 5px 10px;
+                  font-weight: bold;
+                  width: 30%;
+                  color: #1f3864;
+                "
+              >
+                Estado
+              </td>
+              <td style="padding: 5px 10px">
+                <span
+                  style="
+                    background: #c8f0c8;
+                    padding: 2px 8px;
+                    border-radius: 4px;
+                    font-weight: bold;
+                  "
+                  >Aceptado</span
+                >
+              </td>
+            </tr>
+            <tr style="background: #f0f5fd">
+              <td style="padding: 5px 10px; font-weight: bold; color: #1f3864">
+                Contexto
+              </td>
+              <td style="padding: 5px 10px">
+                El sistema maneja datos relacionales
+                (Libro↔Préstamo↔Usuario↔Multa) con JOINs complejos para
+                reportes. Los datos son estructurados y las relaciones son parte
+                del dominio.
+              </td>
+            </tr>
+            <tr style="background: #fef7e6">
+              <td style="padding: 5px 10px; font-weight: bold; color: #1f3864">
+                Decisión
+              </td>
+              <td style="padding: 5px 10px">
+                <strong>PostgreSQL</strong> con Prisma ORM
+              </td>
+            </tr>
+            <tr style="background: #f0f5fd">
+              <td style="padding: 5px 10px; font-weight: bold; color: #1f3864">
+                Consecuencias ✅
+              </td>
+              <td style="padding: 5px 10px">
+                ACID nativo, foreign keys, ecosistema maduro con Prisma, soporte
+                JSON para datos flexibles
+              </td>
+            </tr>
+            <tr style="background: #fef7e6">
+              <td style="padding: 5px 10px; font-weight: bold; color: #1f3864">
+                Consecuencias ⚠️
+              </td>
+              <td style="padding: 5px 10px">
+                Schema rígido requiere migraciones, escalado horizontal complejo
+              </td>
+            </tr>
+            <tr style="background: #f0f5fd">
+              <td style="padding: 5px 10px; font-weight: bold; color: #1f3864">
+                Alternativas
+              </td>
+              <td style="padding: 5px 10px">
+                <strong>MongoDB</strong> (schema flexible pero datos
+                duplicados); <strong>MySQL</strong> (similar pero menos soporte
+                JSON)
+              </td>
+            </tr>
+          </table>
+        </div>
+      </div>
+
+      <!-- ADR-002 -->
+      <div
+        style="
+          border: 1px solid #c8d6e8;
+          border-radius: 6px;
+          margin-bottom: 14px;
+          overflow: hidden;
+        "
+      >
+        <div
+          style="
+            background: #1f3864;
+            color: white;
+            padding: 8px 14px;
+            font-weight: bold;
+            font-size: 0.93em;
+          "
+        >
+          ADR-002 — Autenticación: JWT vs Sesiones
+        </div>
+        <div style="padding: 12px 14px">
+          <table
+            style="width: 100%; border-collapse: collapse; font-size: 0.88em"
+          >
+            <tr style="background: #fef7e6">
+              <td
+                style="
+                  padding: 5px 10px;
+                  font-weight: bold;
+                  width: 30%;
+                  color: #1f3864;
+                "
+              >
+                Estado
+              </td>
+              <td style="padding: 5px 10px">
+                <span
+                  style="
+                    background: #c8f0c8;
+                    padding: 2px 8px;
+                    border-radius: 4px;
+                    font-weight: bold;
+                  "
+                  >Aceptado</span
+                >
+              </td>
+            </tr>
+            <tr style="background: #f0f5fd">
+              <td style="padding: 5px 10px; font-weight: bold; color: #1f3864">
+                Contexto
+              </td>
+              <td style="padding: 5px 10px">
+                3 roles (Lector, Bibliotecario, Admin), API REST + posible app
+                móvil futura, sesiones con expiración configurable.
+              </td>
+            </tr>
+            <tr style="background: #fef7e6">
+              <td style="padding: 5px 10px; font-weight: bold; color: #1f3864">
+                Decisión
+              </td>
+              <td style="padding: 5px 10px">
+                <strong
+                  >JWT con Access Token (15 min) + Refresh Token (7 días
+                  lectores / 8h admin)</strong
+                >. Refresh token en HttpOnly cookie, almacenado en BD para
+                revocación.
+              </td>
+            </tr>
+            <tr style="background: #f0f5fd">
+              <td style="padding: 5px 10px; font-weight: bold; color: #1f3864">
+                Consecuencias ✅
+              </td>
+              <td style="padding: 5px 10px">
+                Stateless, multi-plataforma, rol incluido en token, revocación
+                controlada
+              </td>
+            </tr>
+            <tr style="background: #fef7e6">
+              <td style="padding: 5px 10px; font-weight: bold; color: #1f3864">
+                Consecuencias ⚠️
+              </td>
+              <td style="padding: 5px 10px">
+                Complejidad de dos tokens, access token no revocable
+                instantáneamente, payload mayor
+              </td>
+            </tr>
+            <tr style="background: #f0f5fd">
+              <td style="padding: 5px 10px; font-weight: bold; color: #1f3864">
+                Alternativas
+              </td>
+              <td style="padding: 5px 10px">
+                <strong>Sesiones + Redis</strong> (revocación instantánea pero
+                stateful, overhead Redis); <strong>OAuth2</strong> (incompatible
+                con carné institucional)
+              </td>
+            </tr>
+          </table>
+        </div>
+      </div>
+
+      <!-- ADR-003 -->
+      <div
+        style="
+          border: 1px solid #c8d6e8;
+          border-radius: 6px;
+          margin-bottom: 14px;
+          overflow: hidden;
+        "
+      >
+        <div
+          style="
+            background: #1f3864;
+            color: white;
+            padding: 8px 14px;
+            font-weight: bold;
+            font-size: 0.93em;
+          "
+        >
+          ADR-003 — Almacenamiento de archivos: Local vs AWS S3
+        </div>
+        <div style="padding: 12px 14px">
+          <table
+            style="width: 100%; border-collapse: collapse; font-size: 0.88em"
+          >
+            <tr style="background: #fef7e6">
+              <td
+                style="
+                  padding: 5px 10px;
+                  font-weight: bold;
+                  width: 30%;
+                  color: #1f3864;
+                "
+              >
+                Estado
+              </td>
+              <td style="padding: 5px 10px">
+                <span
+                  style="
+                    background: #c8f0c8;
+                    padding: 2px 8px;
+                    border-radius: 4px;
+                    font-weight: bold;
+                  "
+                  >Aceptado</span
+                >
+              </td>
+            </tr>
+            <tr style="background: #f0f5fd">
+              <td style="padding: 5px 10px; font-weight: bold; color: #1f3864">
+                Contexto
+              </td>
+              <td style="padding: 5px 10px">
+                Reportes PDF generados + posibles portadas de libros. Volumen
+                bajo en MVP.
+              </td>
+            </tr>
+            <tr style="background: #fef7e6">
+              <td style="padding: 5px 10px; font-weight: bold; color: #1f3864">
+                Decisión
+              </td>
+              <td style="padding: 5px 10px">
+                <strong>Almacenamiento local</strong> para MVP con interfaz
+                <code>IFileStorageService</code> para migración futura
+              </td>
+            </tr>
+            <tr style="background: #f0f5fd">
+              <td style="padding: 5px 10px; font-weight: bold; color: #1f3864">
+                Consecuencias ✅
+              </td>
+              <td style="padding: 5px 10px">
+                Costo cero, simple, protegido por DIP, volumen adecuado para MVP
+              </td>
+            </tr>
+            <tr style="background: #fef7e6">
+              <td style="padding: 5px 10px; font-weight: bold; color: #1f3864">
+                Consecuencias ⚠️
+              </td>
+              <td style="padding: 5px 10px">
+                No escalable horizontalmente, sin CDN, riesgo de pérdida si no
+                hay backup
+              </td>
+            </tr>
+            <tr style="background: #f0f5fd">
+              <td style="padding: 5px 10px; font-weight: bold; color: #1f3864">
+                Alternativas
+              </td>
+              <td style="padding: 5px 10px">
+                <strong>AWS S3</strong> ($0.023/GB, escala producción);
+                <strong>Cloudinary</strong> (solo imágenes, no PDFs)
+              </td>
+            </tr>
+            <tr style="background: #fef7e6">
+              <td style="padding: 5px 10px; font-weight: bold; color: #1f3864">
+                Plan de migración
+              </td>
+              <td style="padding: 5px 10px">
+                Implementar <code>S3FileStorageService</code> → intercambiar en
+                IoC → sin cambios en dominio
+              </td>
+            </tr>
+          </table>
+        </div>
+      </div>
+
+      <!-- ADR-004 -->
+      <div
+        style="
+          border: 1px solid #c8d6e8;
+          border-radius: 6px;
+          margin-bottom: 6px;
+          overflow: hidden;
+        "
+      >
+        <div
+          style="
+            background: #1f3864;
+            color: white;
+            padding: 8px 14px;
+            font-weight: bold;
+            font-size: 0.93em;
+          "
+        >
+          ADR-004 — Framework frontend: Next.js vs Remix
+        </div>
+        <div style="padding: 12px 14px">
+          <table
+            style="width: 100%; border-collapse: collapse; font-size: 0.88em"
+          >
+            <tr style="background: #fef7e6">
+              <td
+                style="
+                  padding: 5px 10px;
+                  font-weight: bold;
+                  width: 30%;
+                  color: #1f3864;
+                "
+              >
+                Estado
+              </td>
+              <td style="padding: 5px 10px">
+                <span
+                  style="
+                    background: #c8f0c8;
+                    padding: 2px 8px;
+                    border-radius: 4px;
+                    font-weight: bold;
+                  "
+                  >Aceptado</span
+                >
+              </td>
+            </tr>
+            <tr style="background: #f0f5fd">
+              <td style="padding: 5px 10px; font-weight: bold; color: #1f3864">
+                Contexto
+              </td>
+              <td style="padding: 5px 10px">
+                Catálogo público (SEO requerido), panel usuario autenticado y
+                panel administrador.
+              </td>
+            </tr>
+            <tr style="background: #fef7e6">
+              <td style="padding: 5px 10px; font-weight: bold; color: #1f3864">
+                Decisión
+              </td>
+              <td style="padding: 5px 10px">
+                <strong>Next.js 14+ con App Router</strong>
+              </td>
+            </tr>
+            <tr style="background: #f0f5fd">
+              <td style="padding: 5px 10px; font-weight: bold; color: #1f3864">
+                Consecuencias ✅
+              </td>
+              <td style="padding: 5px 10px">
+                SSR/SSG nativo, API Routes integradas, ecosistema masivo,
+                despliegue en Vercel, React Server Components
+              </td>
+            </tr>
+            <tr style="background: #fef7e6">
+              <td style="padding: 5px 10px; font-weight: bold; color: #1f3864">
+                Consecuencias ⚠️
+              </td>
+              <td style="padding: 5px 10px">
+                Complejidad del App Router, opinionado hacia Vercel, bundle
+                mayor para apps interactivas
+              </td>
+            </tr>
+            <tr style="background: #f0f5fd">
+              <td style="padding: 5px 10px; font-weight: bold; color: #1f3864">
+                Alternativas
+              </td>
+              <td style="padding: 5px 10px">
+                <strong>Remix</strong> (mejor manejo de formularios, comunidad
+                menor); <strong>SPA React+Vite</strong> (sin SSR, mal SEO)
+              </td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>
+    <!-- fin solución -->
+
+    <!-- CONCEPTOS CLAVE -->
+    <h5 style="color: #1f3864; font-size: 1em; margin: 22px 0 10px 0">
+      🎓 Conceptos Clave
+    </h5>
+    <div style="overflow-x: auto">
+      <table style="width: 100%; border-collapse: collapse; font-size: 0.88em">
+        <thead>
+          <tr style="background: #1f3864; color: white">
+            <th style="padding: 8px 12px; text-align: left; min-width: 200px">
+              Concepto
+            </th>
+            <th style="padding: 8px 12px; text-align: left">
+              Descripción breve
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr style="background: #fef7e6">
+            <td style="padding: 7px 12px; font-weight: bold">
+              Atributos de calidad
+            </td>
+            <td style="padding: 7px 12px">
+              Características no funcionales (escalabilidad, mantenibilidad,
+              disponibilidad) que guían la selección de una arquitectura
+            </td>
+          </tr>
+          <tr style="background: #f0f5fd">
+            <td style="padding: 7px 12px; font-weight: bold">
+              Arquitectura monolítica en capas
+            </td>
+            <td style="padding: 7px 12px">
+              Estructura N-Tier (Presentación → Aplicación → Dominio →
+              Infraestructura) en un único despliegue
+            </td>
+          </tr>
+          <tr style="background: #fef7e6">
+            <td style="padding: 7px 12px; font-weight: bold">
+              Arquitectura de microservicios
+            </td>
+            <td style="padding: 7px 12px">
+              Sistema compuesto de servicios independientes, desplegables y
+              escalables por separado
+            </td>
+          </tr>
+          <tr style="background: #f0f5fd">
+            <td style="padding: 7px 12px; font-weight: bold">
+              Arquitectura hexagonal (Ports &amp; Adapters)
+            </td>
+            <td style="padding: 7px 12px">
+              Patrón que aísla el núcleo de dominio de los detalles externos
+              mediante puertos (interfaces) y adaptadores (implementaciones)
+            </td>
+          </tr>
+          <tr style="background: #fef7e6">
+            <td style="padding: 7px 12px; font-weight: bold">
+              Puerto primario
+            </td>
+            <td style="padding: 7px 12px">
+              Interfaz de entrada al dominio; define lo que el sistema ofrece
+              (ej. casos de uso)
+            </td>
+          </tr>
+          <tr style="background: #f0f5fd">
+            <td style="padding: 7px 12px; font-weight: bold">
+              Puerto secundario
+            </td>
+            <td style="padding: 7px 12px">
+              Interfaz de salida del dominio; define lo que el sistema necesita
+              (ej. repositorios, notificaciones)
+            </td>
+          </tr>
+          <tr style="background: #fef7e6">
+            <td style="padding: 7px 12px; font-weight: bold">Adaptador</td>
+            <td style="padding: 7px 12px">
+              Implementación concreta de un puerto; conecta el dominio con
+              tecnologías externas (HTTP, BD, email)
+            </td>
+          </tr>
+          <tr style="background: #f0f5fd">
+            <td style="padding: 7px 12px; font-weight: bold">
+              Principio de Inversión de Dependencias (DIP)
+            </td>
+            <td style="padding: 7px 12px">
+              Las capas de alto nivel no dependen de capas de bajo nivel; ambas
+              dependen de abstracciones (interfaces)
+            </td>
+          </tr>
+          <tr style="background: #fef7e6">
+            <td style="padding: 7px 12px; font-weight: bold">
+              Separación de preocupaciones (SoC)
+            </td>
+            <td style="padding: 7px 12px">
+              Cada capa o componente tiene una única responsabilidad bien
+              definida
+            </td>
+          </tr>
+          <tr style="background: #f0f5fd">
+            <td style="padding: 7px 12px; font-weight: bold">
+              Architecture Decision Record (ADR)
+            </td>
+            <td style="padding: 7px 12px">
+              Documento breve que registra una decisión técnica importante:
+              contexto, opciones evaluadas y consecuencias
+            </td>
+          </tr>
+          <tr style="background: #fef7e6">
+            <td style="padding: 7px 12px; font-weight: bold">
+              Trade-off analysis
+            </td>
+            <td style="padding: 7px 12px">
+              Evaluación explícita de las ventajas y desventajas de cada
+              alternativa antes de tomar una decisión de diseño
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <!-- fin caja interna -->
+</div>
+<!-- fin caja principal -->
